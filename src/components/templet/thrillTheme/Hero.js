@@ -21,7 +21,7 @@ function Hero({ description }) {
 		}
 	};
 	return (
-		<div className="h-[100vh] w-full relative pb-[250px] md:pb-0">
+		<div className="h-[100vh] w-full relative pb-[250px] md:pb-0 bg-[#0D130A]">
 			
 			<div className="xl:left-[2%] 2xl:left-[calc((100%-1440px)/2)] absolute z-10 top-2.5 flex font_poppins ">
 				<Link
@@ -33,7 +33,7 @@ function Hero({ description }) {
 				</Link>
 			</div>
 			<video ref={videoRef} autoPlay loop muted={isMuted} playsInline className="h-full w-full object-cover">
-				<source src="/templet/thrillTheme/hero_video.mp4" type="video/mp4" />
+				<source src="https://res.cloudinary.com/duvvlysie/video/upload/v1736239911/hero_video_j91do9.mp4" type="video/mp4" />
 			</video>
 			<button
 				onClick={toggleMute}

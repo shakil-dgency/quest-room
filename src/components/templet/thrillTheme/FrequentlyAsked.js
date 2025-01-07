@@ -1,7 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import Image from "next/image";
 import React from "react";
-import faq from "@/public/templet/thrillTheme/faq.png";
 import Accordion, { AccordianItem } from "./allComponents/Faq/Accordion";
 
 function FrequentlyAsked() {

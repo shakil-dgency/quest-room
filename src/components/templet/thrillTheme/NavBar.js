@@ -75,20 +75,20 @@ function NavBar() {
 		if (toggle === false) {
 			hamburg.classList.remove("active");
 			if (window.innerWidth < 768) {
-				// document.documentElement.style.overflowY = "visible"; // For the <html> element
-				// document.body.style.overflowY = "visible";
+				// document.documentElement.style.overflow = "visible"; // For the <html> element
+				document.body.style.overflow = "visible";
 			}
 		} else {
 			hamburg.classList.add("active");
 			if (window.innerWidth < 768) {
-				// document.documentElement.style.overflowY = "hidden"; // For the <html> element
-				// document.body.style.overflowY = "hidden";
+				// document.documentElement.style.overflow = "hidden"; // For the <html> element
+				document.body.style.overflow = "hidden";
 			}
 		}
 	}, [toggle]);
 
 	useEffect(() => {
-		const navbar = document.getElementById("navbar1");
+		const navbar = document.getElementById("navbar");
 		// Navbar OnScroll functionality
 
 		var lastScrollTop = 0;
@@ -115,10 +115,10 @@ function NavBar() {
 		// 	// console.log(window.innerWidth);
 		// 	setResize(window.innerWidth);
 		// });
-	}, []);
+	});
 
 	return (
-		<div id="navbar1" className="w-full z-50 sticky top-0 duration-300">
+		<div id="navbar" className="w-full z-50 sticky  top-0 duration-300">
 			<div className="bg-[#000A19] pt-2.5 md:py-2.5 relative z-40 sm:z-50 ">
 				<div className="g_container--theme flex justify-between items-center gap-2 ">
 					{/* Logo */}
@@ -127,7 +127,7 @@ function NavBar() {
 					</div>
 
 					{/* Dropdown */}
-					<div className=" w-full sm:w-[300px]  xl:w-[364px] border-[2px] border-[#FC7008] py-1.5 rounded-3xl flex relative font_poppins">
+					<div className="cursor-pointer w-full sm:w-[300px]  xl:w-[364px] border-[2px] border-[#FC7008] py-1.5 rounded-3xl flex relative font_poppins">
 						<div
 							id="location"
 							className="bg-transparent relative outline-none text-[10px] sm:text-[14px] text-[#F5F5F5] pl-2 pr-1 sm:pl-3 sm:pr-0  md:pr-14 appearance-none w-full "
@@ -161,7 +161,7 @@ function NavBar() {
 						/> */}
 						<div
 							onClick={handleNavSidebar}
-							className="hamburg h-[30px] sm:h-[40px] w-[30px] sm:w-[40px] px-1 py-1.5 sm:px-[7px] sm:py-[11px] bg-[#FC700833] space-y-1 flex flex-col justify-center overflow-hidden"
+							className="hamburg cursor-pointer h-[30px] sm:h-[40px] w-[30px] sm:w-[40px] px-1 py-1.5 sm:px-[7px] sm:py-[11px] bg-[#FC700833] space-y-1 flex flex-col justify-center overflow-hidden"
 						>
 							<div className="top h-[3px] w-full rounded-2xl bg-[linear-gradient(90deg,_#F37F09,_#E7660F,_#D60200)]"></div>
 							<div className="middle h-[3px] w-full rounded-2xl bg-[linear-gradient(90deg,_#F37F09,_#E7660F,_#D60200)]"></div>
@@ -328,8 +328,8 @@ function NavBar() {
 
 			<div
 				className={`${
-					toggle ? " top-[45px] sm:top-[80px] md:top-[50px]" : "top-[-200%]"
-				}  duration-300  overflow-y-auto h-[100vh] sm:h-auto w-full sm:w-[480px] sm:border-[1px] border-[#3f3f3f70] fixed right-0 2xl:right-[calc((100%-1440px)/2)] z-40 px-8 py-10 bg-[#000A19] text-[#D9D9D9] font_poppins flex flex-col sm:grid sm:grid-cols-2 gap-4 sm:gap-8`}
+					toggle ? " top-[45px] sm:top-[80px] md:top-[50px] flex flex-col sm:grid sm:grid-cols-2" : "hidden md:grid md:grid-cols-2 md:top-[-200%]"
+				}  duration-300  overflow-y-auto h-[100vh] sm:h-auto w-full sm:w-[480px] sm:border-[1px] border-[#3f3f3f70] fixed right-0 2xl:right-[calc((100%-1440px)/2)] z-40 px-8 py-10 bg-[#000A19] text-[#D9D9D9] font_poppins  gap-4 sm:gap-8`}
 			>
 				<ul className=" space-y-4 flex-none">
 					<li className="block lg:hidden">
@@ -418,7 +418,7 @@ function NavBar() {
 			{/* -------escaperoom------ */}
 			<div
 				className={`${
-					escape ? "top-[48px]" : "-top-[200%]"
+					escape ? "top-[48px]" : "-top-[300%]"
 				} duration-300 bg-[#000A19] border-[1px] border-[#3f3f3f70] rounded-lg w-[1110px] px-[34px] py-[40px] fixed z-30  right-0 2xl:right-[calc((100%-1440px)/2)] `}
 			>
 				<p className="text_strokenav font_poppins uppercase text-center text-[28px] font-[900]">Hollywood Questrooms</p>
@@ -607,12 +607,12 @@ function NavBar() {
 
 			{/* --------breadcrum------ */}
 			<div className="bg-[#000F25] py-1">
-				<div className="g_container--theme text-[#737373] font_poppins text-[12px] flex items-center gap-1.5">
+				<div className="g_container--theme text-[#545454] font_poppins text-[12px] flex items-center gap-1.5">
 					<span>Home</span>
 					<span className="text-[14px]">•</span>
 					<span>Hollywood</span>
 					<span className="text-[14px]">•</span>
-					<span>Project Minotaur</span>
+					<span className="text-[#808080]">Project Minotaur</span>
 				</div>
 			</div>
 		</div>

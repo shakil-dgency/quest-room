@@ -1,7 +1,10 @@
 import BookingSection from "@/components/templet/thrillTheme/BookingSection";
+import Footer from "@/components/templet/thrillTheme/Footer";
+import FrequentlyAsked from "@/components/templet/thrillTheme/FrequentlyAsked";
 import Gallery from "@/components/templet/thrillTheme/Gallery";
 import GameDetails from "@/components/templet/thrillTheme/GameDetails";
 import Hero from "@/components/templet/thrillTheme/Hero";
+import OtherGames from "@/components/templet/thrillTheme/OtherGames";
 import StoryLine from "@/components/templet/thrillTheme/StoryLine";
 import Testimonial from "@/components/templet/thrillTheme/Testimonial";
 import Trailer from "@/components/templet/thrillTheme/Trailer";
@@ -17,6 +20,9 @@ function page() {
       <BookingSection />
       <Testimonial />
       <Gallery />
+      <FrequentlyAsked />
+      <OtherGames />
+      <Footer />
 		</div>
 	);
 }

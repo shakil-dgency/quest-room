@@ -1,15 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client"
 import Image from "next/image";
-import React, { useRef, useState } from "react";
-import people from "@/public/templet/thrillTheme/gameCard/people.svg";
-import age from "@/public/templet/thrillTheme/gameCard/age.svg";
-import duration from "@/public/templet/thrillTheme/gameCard/duration.svg";
+import React from "react";
+import people from "@/../../public/templet/thrillTheme/gameCard/people.svg";
+import age from "@/../../public/templet/thrillTheme/gameCard/age.svg";
+import duration from "@/../../public/templet/thrillTheme/gameCard/duration.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 function OtherGames() {
 	return (

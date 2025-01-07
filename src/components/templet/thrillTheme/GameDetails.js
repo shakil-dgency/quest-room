@@ -59,14 +59,14 @@ function GameDetails() {
 							<p className="font_bandex ">MULTIPLE ROOMS</p>
 						</div>
 					</div>
-					<div className="pt-[50px] pb-[22px] font_poppins">
+					<div className=" pt-[50px] pb-[22px] font_poppins">
 						<div className="flex  gap-2.5 mb-2.5">
 							<Image src={call} alt="location icon" height={16} width={16} className="flex-none" />
 							<p className="text-[#FC7008] text-[12px] md:text-lg text-center">323-880-0221</p>
 						</div>
 						<div className="flex items-start  gap-2.5">
 							<Image src={location} alt="location icon" height={21} width={16} className="flex-none " />
-							<p className="text-[#FC7008] text-[12px] md:text-lg text-center">Hollywood, 5517 Santa Monica Blvd, Los Angeles</p>
+							<p className="text-[#FC7008] text-[12px] md:text-lg md:text-center">Hollywood, 5517 Santa Monica Blvd, Los Angeles</p>
 						</div>
 					</div>
 					<p className="text-[#BFBFBF] max-w-[790px] text-[14px] md:text-[16px] font_poppins  pb-16">
