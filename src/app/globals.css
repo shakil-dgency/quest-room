@@ -212,7 +212,7 @@
 .thrillTempletSwiper .swiper-button-prev,
 .thrillTempletSwiper .swiper-button-next {
 	background: #000000;
-	border: 2px solid #808080;
+	border: 2px solid #fc7008;
 	height: 55px !important;
 	width: 55px !important;
 	border-radius: 50%;
@@ -220,7 +220,7 @@
 
 .thrillTempletSwiper .swiper-button-prev:hover,
 .thrillTempletSwiper .swiper-button-next:hover {
-	border-color: #808080;
+	border-color: #fc7008;
 }
 
 .thrillTempletSwiper .swiper-button-prev:hover::after,
@@ -291,10 +291,19 @@
 		font-size: 40px;
 		line-height: 48px;
 	}
+	.storyLine_header_2 {
+		font-size: 40px;
+		line-height: 48px;
+	}
 }
 
 @media only screen and (max-width: 640px) {
 	.header_2 {
+		font-size: 32px;
+		line-height: 38px;
+	}
+
+	.storyLine_header_2 {
 		font-size: 32px;
 		line-height: 38px;
 	}

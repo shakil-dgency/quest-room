@@ -27,7 +27,7 @@ function Hero({ description }) {
 				<Link
 					// onClick={backToPreviousPage}
 					href="#"
-					className="text-[#D9D9D9]  text-center text-[12px] md:text-[14px] flex items-center decoration-  underline underline-offset-4 "
+					className="text-[#F5F5F5]  text-center text-[12px] md:text-[14px] flex items-center decoration-  underline underline-offset-4 "
 				>
 					<BiChevronLeft className="text-xl" /> See all rooms of this location
 				</Link>
@@ -51,7 +51,7 @@ function Hero({ description }) {
 					<h1 className="font_rusolie heading_1 font-[400] text-[#CAFFBC] text-center text-[40px] sm:text-[60px] lg:text-[90px] leading-[46px] sm:leading-[70px] lg:leading-[90px] ">
 						PROJECT MINOTAUR <br /> ESCAPE ROOM
 					</h1>
-					<p className="max-w-[770px] mx-auto text-base md:text-lg text-[#a3a3a3] text-center mt-0 mb-[40px]">{description}</p>
+					<p className="max-w-[770px] mx-auto text-base md:text-lg text-[#8CA482] text-center mt-0 mb-[40px]">{description}</p>
 					<button className="box box-b py-[15px] md:py-[20px] px-[55px] md:px-[65px] font_bandex text-[#FFFFFF] text-[26px] bg-[#FF050535] relative">
 						<Image src={buttonLeft} alt="" height={71} width={9} className="h-full w-auto absolute left-[-5px] top-0" />
 						<Image src={buttonRight} alt="" height={71} width={9} className="h-full w-auto absolute right-[-5px] top-0" />
@@ -61,7 +61,7 @@ function Hero({ description }) {
 			</div>
 			<div className="absolute z-10 top-3 md:top-10 right-3 md:right-10">
 				<Image src={sticker} alt=" " height={40} width={78} className="h-[30px] sm:h-[inherit] w-auto" />
-				<div className="text-[#B5B5B5] font_poppins mt-1.5 sm:mt-2.5 relative">
+				<div className="text-[#CAFFBC] font_poppins mt-1.5 sm:mt-2.5 relative">
 					<Image src={gif} alt=" " height={30} width={50} className="h-[40px] w-auto absolute -left-10 -top-2" />
 					<p className="text-[10px] sm:text-[16px] font-[500] uppercase leading-[1]">
 						Live Experience <br /> <span className="text-[8px] sm:text-[12px] font-[500] lowercase">with multiple actors</span>

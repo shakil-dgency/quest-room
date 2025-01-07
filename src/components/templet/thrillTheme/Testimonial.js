@@ -139,14 +139,14 @@ function Testimonial() {
 					>
 						{videoList.map((videoSrc, index) => (
 							<SwiperSlide key={index}>
-								<div className="group h-[490px] max-w-[345px] mx-auto border-[1px] border-[#fc7008] rounded-lg relative font_poppins">
+								<div className="group h-[490px] max-w-[345px] mx-auto border-[1px] border-[#111B0D] rounded-lg relative font_poppins ">
 									{/* <Image src={testimonial} alt="" height={489} width={345} className="h-full w-full object-cover rounded-lg" /> */}
 									<video
 										ref={(el) => (videoRefs.current[index] = el)}
 										loop
 										muted
 										playsInline
-										className="h-full w-full object-cover rounded-lg"
+										className=" w-full h-full object-cover rounded-lg"
 									>
 										<source src={videoSrc.video} type="video/mp4" />
 									</video>
@@ -200,13 +200,13 @@ function Testimonial() {
 									<Image src={google} alt="" height={65} width={65} className="h-[25px] md:h-[65px] w-auto" />
 									<div>
 										<Image src={star} alt="" height={16} width={110} className=" h-[12px] md:h-[16px] w-auto" />
-										<p className="hidden md:block text-[12px] text-[#BFBFBF] pt-2 font_poppins">5.0 based on 3,080 reviews</p>
+										<p className="hidden md:block text-[12px] text-[#8CA482] pt-2 font_poppins">5.0 based on 3,080 reviews</p>
 									</div>
 								</div>
-								<p className=" md:hidden text-[12px] text-[#BFBFBF] pt-2 font_poppins w-[300px] text-center">5.0 based on 3,080 reviews</p>
+								<p className=" md:hidden text-[12px] text-[#8CA482] pt-2 font_poppins w-[300px] text-center">5.0 based on 3,080 reviews</p>
 							</div>
 							<div className="hidden md:block font_poppins absolute  md:top-[140px] right-0 md:right-28 z-10">
-								<button className="px-4 py-[5px]  flex items-center border-[1px] border-[#997F7F] rounded text-[#D9D9D9]">Read more reviews</button>
+								<button className="px-4 py-[5px]  flex items-center border-[1px] border-[#8CA482] rounded text-[#CAFFBC]">Read more reviews</button>
 							</div>
 							<Swiper
 								slidesPerView={1}
@@ -225,11 +225,11 @@ function Testimonial() {
 								<SwiperSlide>
 									<div className="font_poppins ">
 										<div className="max-w-[950px] ml-4 md:ml-24 mr-4 md:mr-20 ">
-											<p className="relative uppercase text-[24px] md:text-[38px]  text-[#D9D9D9] text-center md:text-start font_protest pt-[110px] md:pt-[140px] pb-[15px] md:pb-[25px]">
+											<p className="relative uppercase text-[24px] md:text-[38px]  text-[#CAFFBC] text-center md:text-start font_protest pt-[110px] md:pt-[140px] pb-[15px] md:pb-[25px]">
 												There were challenges for the puzzle experts
 											</p>
 											<div className="relative ">
-												<p className={`relative text-[13px] sm:text-[16px] md:text-[18px] italic text-center md:text-start text-[#A3A3A3]`}>
+												<p className={`relative text-[13px] sm:text-[16px] md:text-[18px] italic text-center md:text-start text-[#8CA482]`}>
 													We've done a lot of escape rooms and Warlocked has good production value in addition to the interesting puzzles and actor
 													interaction scaling the difficulty to keep things fun Steve was really great, the kids had a blast (the 7 year old couldn't
 													stop asking questions/talking about it after, the youngest was confused at times but still had lots to do and was not
@@ -237,16 +237,16 @@ function Testimonial() {
 													animals / find stuff kind of things
 												</p>
 											</div>
-											<p className="mt-[24px] sm:mt-[34px] text-[14px] font_poppins text-[#737373] text-center md:text-start">
+											<p className="mt-[24px] sm:mt-[34px] text-[14px] font_poppins text-[#8CA482] text-center md:text-start">
 												— J L., Hollywood, LA{" "}
 											</p>
 											<div className="mt-[10px] sm:mt-[25px] flex md:block justify-center text-[16px] font-[500] pb-0 md:pb-20">
-												<button className="text-[#808080] flex items-center gap-1.5 ">
+												<button className="text-[#8CA482] flex items-center gap-1.5 ">
 													See Original <BiLinkExternal className=" text-[18px] md:text-[20px]" />
 												</button>
 											</div>
 											<div className="flex md:hidden font_poppins pt-[25px]  justify-center">
-												<button className=" px-4 py-[3px] text-[14px]  flex items-center border-[1px] border-[#997F7F] rounded text-[#D9D9D9]">
+												<button className=" px-4 py-[3px] text-[14px]  flex items-center border-[1px] border-[#8CA482] rounded text-[#CAFFBC]">
 													Read more reviews
 												</button>
 											</div>
@@ -256,27 +256,27 @@ function Testimonial() {
 								<SwiperSlide>
 									<div className="font_poppins ">
 										<div className="max-w-[850px] ml-4 md:ml-24 mr-4 md:mr-20 ">
-											<p className="relative uppercase text-[24px] md:text-[38px]  text-[#D9D9D9] text-center md:text-start font_protest pt-[110px] md:pt-[140px] pb-[15px] md:pb-[25px]">
+											<p className="relative uppercase text-[24px] md:text-[38px]  text-[#CAFFBC] text-center md:text-start font_protest pt-[110px] md:pt-[140px] pb-[15px] md:pb-[25px]">
 												The best escape rooms I’ve ever done out of my entire life!
 											</p>
 											<div className="relative ">
-												<p className={`relative text-[13px] sm:text-[16px] md:text-[18px] italic text-center md:text-start text-[#A3A3A3]`}>
+												<p className={`relative text-[13px] sm:text-[16px] md:text-[18px] italic text-center md:text-start text-[#8CA482]`}>
 													Awesome! Just awesome. Worth every minutes and penny. We played many of their games and they are all very high-end and
 													immersive. The Perfumer was more immersive than any other room we've done before, and we've done a lot! The Game Master John
 													was masterful. It really felt like you were in historic Paris! The puzzles were engaging and non-linear. We would HIGHLY
 													recommend this game and this venue!
 												</p>
 											</div>
-											<p className="mt-[24px] sm:mt-[34px] text-[14px] font_poppins text-[#737373] text-center md:text-start">
+											<p className="mt-[24px] sm:mt-[34px] text-[14px] font_poppins text-[#8CA482] text-center md:text-start">
 												— Bryanna M., Hollywood, LA{" "}
 											</p>
 											<div className="mt-[10px] sm:mt-[25px] flex md:block justify-center text-[16px] font-[500] pb-0 md:pb-20">
-												<button className="text-[#808080] flex items-center gap-1.5 ">
+												<button className="text-[#8CA482] flex items-center gap-1.5 ">
 													See Original <BiLinkExternal className=" text-[18px] md:text-[20px]" />
 												</button>
 											</div>
 											<div className="flex md:hidden font_poppins pt-[25px]  justify-center">
-												<button className=" px-4 py-[3px] text-[14px]  flex items-center border-[1px] border-[#997F7F] rounded text-[#D9D9D9]">
+												<button className=" px-4 py-[3px] text-[14px]  flex items-center border-[1px] border-[#8CA482] rounded text-[#CAFFBC]">
 													Read more reviews
 												</button>
 											</div>

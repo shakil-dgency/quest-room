@@ -29,32 +29,32 @@ function GameDetails() {
 				/>
 				<div className="max-w-[1050px] lg:pl-32 mx-auto px-2.5 lg:pt-20 relative z-20">
 					<h2 className="header_2 mb-[60px]">Experience Details</h2>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-y-[27px] md:gap-y-14 gap-x-10 text-[16px] md:text-[22px] lg:text-[32px]  ">
-						<div className="flex items-center gap-5 font_poppins text-[#BFBFBF]">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-y-[27px] md:gap-y-14 gap-x-10 text-[20px] md:text-[22px] lg:text-[32px]  ">
+						<div className="flex items-center gap-5 font_poppins text-[#ACB8A6]">
 							<Image src={player} alt="" height={55} width={51} className="h-[40px] md:h-[inherit] object-contain " />
 							<p className="font_bandex ">PLAYERS: 2 - 8</p>
 						</div>
-						<div className="flex items-center gap-5 font_poppins text-[#BFBFBF]">
+						<div className="flex items-center gap-5 font_poppins text-[#ACB8A6]">
 							<Image src={time} alt="" height={55} width={51} className="h-[40px]  md:h-[inherit] object-contain " />
 							<p className=" font_bandex">TIME: 100 MIN</p>
 						</div>
-						<div className="flex items-center gap-5 font_poppins text-[#BFBFBF]">
+						<div className="flex items-center gap-5 font_poppins text-[#ACB8A6]">
 							<Image src={genra} alt="" height={55} width={51} className="h-[40px]  md:h-[inherit] object-contain" />
 							<p className=" font_bandex">GENRA: INTERACTIVE HORROR ADVENTURE</p>
 						</div>
-						<div className="flex items-center gap-5 font_poppins text-[#BFBFBF]">
+						<div className="flex items-center gap-5 font_poppins text-[#ACB8A6]">
 							<Image src={keyHole} alt="" height={55} width={51} className="h-[40px]  md:h-[inherit] object-contain" />
 							<p className="font_bandex ">COMPLEXITY: MEDIUM</p>
 						</div>
-						<div className="flex items-center gap-5 font_poppins text-[#BFBFBF]">
+						<div className="flex items-center gap-5 font_poppins text-[#ACB8A6]">
 							<Image src={area} alt="" height={55} width={51} className="h-[40px]  md:h-[inherit] object-contain" />
 							<p className="font_bandex ">1600 SQUARE FEET</p>
 						</div>
-						<div className="flex items-center gap-5 font_poppins text-[#BFBFBF]">
+						<div className="flex items-center gap-5 font_poppins text-[#ACB8A6]">
 							<Image src={hat} alt="" height={55} width={51} className="h-[40px] md:h-[inherit] object-contain" />
 							<p className=" font_bandex">MULTIPLE LIVE ACTORS</p>
 						</div>
-						<div className="flex items-center gap-5 font_poppins text-[#BFBFBF]">
+						<div className="flex items-center gap-5 font_poppins text-[#ACB8A6]">
 							<Image src={multiple} alt="" height={55} width={51} className="h-[40px] md:h-[inherit] object-contain" />
 							<p className="font_bandex ">MULTIPLE ROOMS</p>
 						</div>
@@ -69,12 +69,12 @@ function GameDetails() {
 							<p className="text-[#FC7008] text-[12px] md:text-lg md:text-center">Hollywood, 5517 Santa Monica Blvd, Los Angeles</p>
 						</div>
 					</div>
-					<p className="text-[#BFBFBF] max-w-[790px] text-[14px] md:text-[16px] font_poppins pb-10 md:pb-16">
+					<p className="text-[#798373] max-w-[790px] text-[14px] md:text-[16px] font_poppins pb-10 md:pb-16 relative z-30">
 						<span className="text-[#FC7008]">**</span>Not recommended for individuals with neck, back, or knee injuries, severe claustrophobia, or
 						those uncomfortable with physical interaction. Players must be at least 18 years old, or have an adult present.
 					</p>
 				</div>
-				<div className=" w-full h-[100px] bg-gradient-to-t from-[#0D130A] to-transparent absolute z-20 bottom-0"></div>
+				<div className=" w-full h-[100px] bg-gradient-to-t from-[#0D130A] to-transparent absolute z-10 bottom-0"></div>
 			</div>
 			{/* <Image src={torch} alt="" height={926} width={1920} className="w-full -mt-[150px] lg:-mt-[400px] relative z-20 text-transparent" /> */}
 		</div>

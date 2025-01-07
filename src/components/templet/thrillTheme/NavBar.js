@@ -194,8 +194,8 @@ function NavBar() {
 				</div>
 				<p className="text-[36px] md:text-[48px] leading-10 uppercase font-[700] text-[#FC7008] text-center pt-14 pb-[30px]">Choose your location</p>
 
-				<div className="grid justify-items-center md:justify-items-start md:grid-cols-2 gap-y-16 gap-x-5 lg:gap-x-[88px] mx-2.5">
-					<div className="max-w-[455px] lg:justify-self-end">
+				<div className=" md:grid  md:justify-items-start md:grid-cols-2 gap-y-16 gap-x-5 lg:gap-x-[88px] mx-2.5">
+					<div className="max-w-[455px] mx-auto md:mx-[inherit]  lg:justify-self-end pb-16 md:pb-0">
 						<div className="group h-[250px] relative rounded-lg overflow-hidden ">
 							<Image src={LA} alt="" height={250} width={457} className="h-full w-full object-cover group-hover:scale-110 duration-700" />
 							<div className="h-full w-full absolute top-0 bg-gradient-to-t from-[#0B1D4B] to-transparent mix-blend-multiply"></div>
@@ -283,7 +283,7 @@ function NavBar() {
 							</div>
 						</div>
 					</div>
-					<div className="max-w-[455px]">
+					<div className="max-w-[455px] mx-auto md:mx-[inherit] ">
 						<div className="group h-[250px] relative rounded-lg overflow-hidden ">
 							<Image src={dallas} alt="" height={250} width={457} className="h-full w-full object-cover group-hover:scale-110 duration-700" />
 							<div className="h-full w-full absolute top-0 bg-gradient-to-t from-[#0B1D4B] to-transparent mix-blend-multiply"></div>
@@ -384,7 +384,7 @@ function NavBar() {
 								eventPopUp ? "h-auto pb-2.5 pt-1" : "h-0 "
 							}`}
 						>
-							<p className="flex items-center gap-1.5">Birthday Parties</p>
+							<p className="flex items-center gap-1.5"><Image src={Lock} alt="" height={14} width={12} />Birthday Parties</p>
 							<p className="flex items-center gap-1.5">
 								<Image src={Lock} alt="" height={14} width={12} />
 								Family Bonding
@@ -607,12 +607,12 @@ function NavBar() {
 
 			{/* --------breadcrum------ */}
 			<div className="bg-[#000F25] py-1">
-				<div className="g_container--theme text-[#545454] font_poppins text-[12px] flex items-center gap-1.5">
+				<div className="g_container--theme text-[#697383] font_poppins text-[12px] flex items-center gap-1.5">
 					<span>Home</span>
 					<span className="text-[14px]">•</span>
 					<span>Hollywood</span>
 					<span className="text-[14px]">•</span>
-					<span className="text-[#808080]">Project Minotaur</span>
+					<span className="text-[#97A4B7]">Project Minotaur</span>
 				</div>
 			</div>
 		</div>
