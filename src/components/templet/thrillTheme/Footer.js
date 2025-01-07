@@ -24,9 +24,9 @@ function Footer() {
 		<div className="bg-[#000A19] bg-[url('/templet/thrillTheme/footer/footer_pattern.png')] bg-repeat  px-2.5 ">
 			<div className="pt-[67px] font_poppins">
 				<div className="flex justify-center pb-[25px]">
-					<Image src={logo} alt="logo" height={96} width={496} />
+					<Image src={logo} alt="logo" height={96} width={496} className="w-[200px] md:w-[300px]" />
 				</div>
-				<p className="text-lg text-[#808080] max-w-[762px] mx-auto text-center ">
+				<p className="text-[16px] md:text-lg text-[#808080] max-w-[762px] mx-auto text-center ">
 					At the core of our project's concept is the desire to provide people with maximum immersion. Each room has a meticulously thought-out story,
 					from a detailed script to a cinematic set on par with Hollywood.
 				</p>
@@ -235,7 +235,7 @@ function Footer() {
 					
 					<div className="flex md:block flex-col items-center">
 						<p className="text-[#808080] text-[14px]">© 2025 QUESTRoom | All Rights Reserved</p>
-						<div className="pt-[2px] pb-[40px]  text-[#545454] text-[12px] sm:text-[14px] flex justify-center items-center gap-1.5 sm:gap-3">
+						<div className="pt-[2px] pb-[30px] md:pb-[40px]  text-[#545454] text-[12px] sm:text-[14px] flex justify-center items-center gap-1.5 sm:gap-3">
 							<span className="cursor-pointer">Privacy Policy</span>
 							<span className="text-[18px]">•</span>
 							<span className="cursor-pointer">Terms of Services</span>
@@ -244,11 +244,11 @@ function Footer() {
 						</div>
 					</div>
 					<div className="flex md:block flex-col items-center">
-						<p className="text-[22px] font-[500] text-[#808080]">FOLLOW US ON SOCIAL</p>
-						<div className="flex items-center gap-4 pt-[12px] pb-[26px]">
-							<FaFacebookSquare className="text-[40px] text-[#737373]" />
-							<FaInstagramSquare className="text-[40px] text-[#737373]" />
-							<FaYoutubeSquare className="text-[40px] text-[#737373]" />
+						<p className=" text-[18px] md:text-[22px] font-[500] text-[#808080]">FOLLOW US ON SOCIAL</p>
+						<div className="flex items-center gap-2 md:gap-4 pt-[12px] pb-[26px]">
+							<FaFacebookSquare className="text-[25px] md:text-[40px] text-[#737373]" />
+							<FaInstagramSquare className="text-[25px] md:text-[40px] text-[#737373]" />
+							<FaYoutubeSquare className="text-[25px] md:text-[40px] text-[#737373]" />
 						</div>
 					</div>
 				</div>

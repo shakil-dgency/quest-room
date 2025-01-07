@@ -26,7 +26,7 @@ function Hero({ description }) {
 			<div className="xl:left-[2%] 2xl:left-[calc((100%-1440px)/2)] absolute z-10 top-2.5 flex font_poppins ">
 				<Link
 					// onClick={backToPreviousPage}
-					href="/blog"
+					href="#"
 					className="text-[#D9D9D9]  text-center text-[12px] md:text-[14px] flex items-center decoration-  underline underline-offset-4 "
 				>
 					<BiChevronLeft className="text-xl" /> See all rooms of this location
@@ -37,7 +37,7 @@ function Hero({ description }) {
 			</video>
 			<button
 				onClick={toggleMute}
-				className={` hidden md:flex  absolute z-20 top-[100%] right-14 -mt-32 md:-mt-[200px]  justify-center items-center bg-[#0F1A0C]  px-1 py-1 rounded-full after:absolute after:bg-[#0F1A0C80] after:h-10 after:w-10 after:rounded-full before:absolute before:bg-[#0F1A0C90] before:h-8 before:w-8 before:rounded-full `}
+				className={` flex  absolute z-20 top-[42%] lg:top-[100%] right-3 lg:right-14  lg:-mt-[200px]  justify-center items-center bg-[#0F1A0C]  px-1 py-1 rounded-full after:absolute after:bg-[#0F1A0C80] after:h-10 after:w-10 after:rounded-full before:absolute before:bg-[#0F1A0C90] before:h-8 before:w-8 before:rounded-full `}
 			>
 				{isMuted ? (
 					<ImVolumeMute2 className="relative z-10 text-[15px] text-[#fff]" />
@@ -68,7 +68,7 @@ function Hero({ description }) {
 					</p>
 				</div>
 			</div>
-			<div className="absolute bottom-56 md:-bottom-2 h-[600px] w-full bg-gradient-to-t from-[#0D130A]  to-transparent "></div>
+			<div className="absolute bottom-56 md:bottom-0 h-[600px] w-full bg-gradient-to-t from-[#0D130A] from-5%  to-transparent to-95%  "></div>
 		</div>
 	);
 }

@@ -8,11 +8,11 @@ function StoryLineCard({ id, item }) {
 	return (
 		<div className=" flex flex-col-reverse xl:grid xl:grid-cols-5 w-full ">
 			<div className={` xl:self-center max-w-[760px] xl:max-w-[570px] px-2.5   ${id % 2 !== 0 ? " xl:col-span-2 xl:ml-auto " : "xl:col-start-4 xl:col-end-6 xl:ml-5"}`}>
-				<p className="font_poppins text-[#8CA482] text-[19px] mb-[18px] font-[500] uppercase">{item.storyCategory}</p>
-				<h2 className="header_2  bg-[linear-gradient(90deg,_#CAFFBC_0%,_#172817_100%)] bg-clip-text text-transparent">
+				<p className="font_poppins text-[#8CA482] text-[14px] md:text-[19px] mb-[18px] font-[500] uppercase">{item.storyCategory}</p>
+				<h2 className="storyLine_header_2  bg-[linear-gradient(90deg,_#CAFFBC_0%,_#172817_100%)] bg-clip-text text-transparent">
 					{item.title}
 				</h2>
-				<p className="mt-[25px] font_poppins text-[#8CA482] text-[18px]">
+				<p className="mt-[25px] font_poppins text-[#8CA482] text-[16px] md:text-[18px]">
 					{item.description}
 				</p>
 				<div className="relative">

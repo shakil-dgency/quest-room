@@ -32,6 +32,7 @@ function BookingSection() {
 				</div>
 				{/* <Image src={doc} alt="" height={1112} width={488} className="h-[70%] w-auto  absolute bottom-0 right-0 z-20   " /> */}
 				<div className=" w-full h-[300px] bg-gradient-to-t from-[#0D130A] to-transparent absolute z-10 bottom-0"></div>
+				<div className=" w-full h-[300px] bg-gradient-to-b from-[#0D130A] to-transparent absolute z-10 top-0"></div>
 			</div>
 		</div>
 	);

@@ -69,7 +69,7 @@ function GameDetails() {
 							<p className="text-[#FC7008] text-[12px] md:text-lg md:text-center">Hollywood, 5517 Santa Monica Blvd, Los Angeles</p>
 						</div>
 					</div>
-					<p className="text-[#BFBFBF] max-w-[790px] text-[14px] md:text-[16px] font_poppins  pb-16">
+					<p className="text-[#BFBFBF] max-w-[790px] text-[14px] md:text-[16px] font_poppins pb-10 md:pb-16">
 						<span className="text-[#FC7008]">**</span>Not recommended for individuals with neck, back, or knee injuries, severe claustrophobia, or
 						those uncomfortable with physical interaction. Players must be at least 18 years old, or have an adult present.
 					</p>

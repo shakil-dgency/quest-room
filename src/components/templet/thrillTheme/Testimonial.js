@@ -80,21 +80,29 @@ function Testimonial() {
 	const videoRefs = useRef([]); // Store refs for all videos
 
 	const handlePlayPause = (index) => {
-		// Pause the currently playing video
+		// Pause and mute the currently playing video if it's different from the clicked one
 		if (playingVideo !== null && playingVideo !== index) {
-			videoRefs.current[playingVideo].pause();
+		  videoRefs.current[playingVideo].pause();
+		  videoRefs.current[playingVideo].muted = true;
 		}
-
+	  
 		if (playingVideo === index) {
-			// If the same video is clicked, toggle play/pause
-			videoRefs.current[index].paused ? videoRefs.current[index].play() : videoRefs.current[index].pause();
-			setPlayingVideo(videoRefs.current[index].paused ? null : index);
-		} else {
-			// Play the new video
+		  // Toggle play/pause for the same video
+		  if (videoRefs.current[index].paused) {
 			videoRefs.current[index].play();
-			setPlayingVideo(index);
+			videoRefs.current[index].muted = false; // Unmute when playing
+		  } else {
+			videoRefs.current[index].pause();
+			videoRefs.current[index].muted = true; // Mute when paused
+		  }
+		  setPlayingVideo(videoRefs.current[index].paused ? null : index);
+		} else {
+		  // Play the new video and unmute it
+		  videoRefs.current[index].play();
+		  videoRefs.current[index].muted = false;
+		  setPlayingVideo(index);
 		}
-	};
+	  };
 
 	return (
 		<div className="bg-[url('/templet/thrillTheme/testimonial_bg_full.png')] bg-no-repeat bg-[length:100%_100%] relative">
@@ -136,7 +144,7 @@ function Testimonial() {
 									<video
 										ref={(el) => (videoRefs.current[index] = el)}
 										loop
-										muted={false}
+										muted
 										playsInline
 										className="h-full w-full object-cover rounded-lg"
 									>
