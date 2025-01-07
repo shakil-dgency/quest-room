@@ -1,16 +1,15 @@
 import Image from "next/image";
 import React from "react";
-import player from "@/public/templet/thrillTheme/gameDetails/player.png";
-import genra from "@/public/templet/thrillTheme/gameDetails/ganra.png";
-import area from "@/public/templet/thrillTheme/gameDetails/area.png";
-import multiple from "@/public/templet/thrillTheme/gameDetails/multiple.png";
-import time from "@/public/templet/thrillTheme/gameDetails/time.png";
-import keyHole from "@/public/templet/thrillTheme/gameDetails/keyHole.png";
-import hat from "@/public/templet/thrillTheme/gameDetails/hat.png";
-import girl from "@/public/templet/thrillTheme/girl.png";
-import torch from "@/public/templet/thrillTheme/torch.png";
-import location from "@/public/templet/thrillTheme/storyLine/location_icon.svg";
-import call from "@/public/templet/thrillTheme/storyLine/call_icon.svg";
+import player from "@/../../public/templet/thrillTheme/gameDetails/player.png";
+import genra from "@/../../public/templet/thrillTheme/gameDetails/ganra.png";
+import area from "@/../../public/templet/thrillTheme/gameDetails/area.png";
+import multiple from "@/../../public/templet/thrillTheme/gameDetails/multiple.png";
+import time from "@/../../public/templet/thrillTheme/gameDetails/time.png";
+import keyHole from "@/../../public/templet/thrillTheme/gameDetails/keyHole.png";
+import hat from "@/../../public/templet/thrillTheme/gameDetails/hat.png";
+import girl from "@/../../public/templet/thrillTheme/girl.png";
+import location from "@/../../public/templet/thrillTheme/storyLine/location_icon.svg";
+import call from "@/../../public/templet/thrillTheme/storyLine/call_icon.svg";
 
 function GameDetails() {
 	return (

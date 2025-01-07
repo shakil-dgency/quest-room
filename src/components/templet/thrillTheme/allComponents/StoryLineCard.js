@@ -1,9 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import story1 from "@/public/templet/thrillTheme/storyLine/storyLine1.png";
-import coma from "@/public/templet/thrillTheme/coma.png";
-import buttonLeft from "@/public/templet/thrillTheme/hero/button_left.svg";
-import buttonRight from "@/public/templet/thrillTheme/hero/button_right.svg";
+import coma from "@/../../public/templet/thrillTheme/coma.png";
+import buttonLeft from "@/../../public/templet/thrillTheme/hero/button_left.svg";
+import buttonRight from "@/../../public/templet/thrillTheme/hero/button_right.svg";
 
 function StoryLineCard({ id, item }) {
 	return (

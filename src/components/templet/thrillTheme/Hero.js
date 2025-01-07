@@ -53,16 +53,16 @@ function Hero({ description }) {
 					</h1>
 					<p className="max-w-[770px] mx-auto text-base md:text-lg text-[#a3a3a3] text-center mt-0 mb-[40px]">{description}</p>
 					<button className="box box-b py-[15px] md:py-[20px] px-[55px] md:px-[65px] font_bandex text-[#FFFFFF] text-[26px] bg-[#FF050535] relative">
-						<Image src={buttonLeft} alt="" height={71} width={9} className="h-full absolute left-[-4px] top-0" />
-						<Image src={buttonRight} alt="" height={71} width={9} className="h-full absolute right-[-4px] top-0" />
+						<Image src={buttonLeft} alt="" height={71} width={9} className="h-full w-auto absolute left-[-5px] top-0" />
+						<Image src={buttonRight} alt="" height={71} width={9} className="h-full w-auto absolute right-[-5px] top-0" />
 						BOOK THIS GAME
 					</button>
 				</div>
 			</div>
 			<div className="absolute z-10 top-3 md:top-10 right-3 md:right-10">
-				<Image src={sticker} alt=" " height={40} width={78} className="h-[30px] sm:h-[inherit]" />
+				<Image src={sticker} alt=" " height={40} width={78} className="h-[30px] sm:h-[inherit] w-auto" />
 				<div className="text-[#B5B5B5] font_poppins mt-1.5 sm:mt-2.5 relative">
-					<Image src={gif} alt=" " height={30} width={50} className="absolute -left-10 -top-2.5" />
+					<Image src={gif} alt=" " height={30} width={50} className="h-[40px] w-auto absolute -left-10 -top-2" />
 					<p className="text-[10px] sm:text-[16px] font-[500] uppercase leading-[1]">
 						Live Experience <br /> <span className="text-[8px] sm:text-[12px] font-[500] lowercase">with multiple actors</span>
 					</p>

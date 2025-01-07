@@ -1,12 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client"
 import React, { useRef, useState } from "react";
-import testimonial from "@/public/templet/thrillTheme/faq.png";
 import Image from "next/image";
-import coma from "@/public/templet/thrillTheme/coma.png";
-import google from "@/public/templet/thrillTheme/google.svg";
-import star from "@/public/templet/thrillTheme/star.svg";
+import coma from "@/../../public/templet/thrillTheme/coma.png";
+import google from "@/../../public/templet/thrillTheme/google.svg";
+import star from "@/../../public/templet/thrillTheme/star.svg";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import { MdKeyboardArrowRight } from "react-icons/md";
 import { BiLinkExternal } from "react-icons/bi";
 import { FaPlayCircle } from "react-icons/fa";
 import { MdPauseCircle } from "react-icons/md";

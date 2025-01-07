@@ -1,10 +1,5 @@
 "use client";
-
-import Image from "next/image";
 import React from "react";
-import trailer from "@/public/templet/thrillTheme/trailer.png";
-import bg from "@/public/templet/thrillTheme/trailerBg.png";
-import title from "@/public/templet/thrillTheme/title.png";
 import { useRef, useEffect, useState } from "react";
 
 function Trailer() {
