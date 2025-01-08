@@ -354,6 +354,8 @@
 
 
 
+/* -----------button border animation----------- */
+
 .box {
 	/* width: 240px; */
 	background-image: repeating-linear-gradient(
@@ -379,6 +381,26 @@
 	}
 	to {
 		background-position: 0 -10.94px, 0 0, 100% 0, -10.94px 100%;
+	}
+}
+
+/* -----------Monitour head animation-------------- */
+
+.visible_head .monitour_head{
+	right: 0px;
+	transform: translateX(100%);
+	animation: headpull 2s forwards ease-in;
+}
+
+@keyframes headpull {
+	0% {
+		transform: translateX(100%);
+	}
+	50% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(100%);
 	}
 }
 

@@ -10,10 +10,12 @@ import hat from "@/../../public/templet/thrillTheme/gameDetails/hat.png";
 import girl from "@/../../public/templet/thrillTheme/girl.png";
 import location from "@/../../public/templet/thrillTheme/storyLine/location_icon.svg";
 import call from "@/../../public/templet/thrillTheme/storyLine/call_icon.svg";
+import GameDetailObserver from "./allComponents/GameDetailObserver";
 
 function GameDetails() {
 	return (
-		<div className="">
+		<div id="game_detail" className="">
+			<GameDetailObserver />
 			<div className=" mt-[150px]  relative overflow-x-hidden">
 				<div className="absolute top-0  bg-[url('/templet/thrillTheme/jail_bg.png')] bg-no-repeat bg-cover lg:bg-[length:90%_auto] bg-right h-full w-full mix-blend-color-dodge"></div>
 				<div className="absolute top-0 z-10  bg-[url('/templet/thrillTheme/jail_front.png')] bg-no-repeat bg-cover lg:bg-[length:90%_auto] bg-right h-full w-full flex justify-end">
@@ -75,6 +77,15 @@ function GameDetails() {
 					</p>
 				</div>
 				<div className=" w-full h-[100px] bg-gradient-to-t from-[#0D130A] to-transparent absolute z-10 bottom-0"></div>
+				{/* <div className="overflow-hidden h-[80px] sm:h-[120px] 2xl:h-[160px] w-[120px] sm:w-[180] 2xl:w-[230px] absolute right-0 bottom-0"> */}
+					<Image
+						src="/templet/thrillTheme/minotaur_head.png"
+						alt="help me"
+						height={196}
+						width={281}
+						className="monitour_head w-[120px] sm:w-[200px] h-auto absolute z-20 bottom-[250px] sm:bottom-32 right-[-100%] "
+					/>
+				{/* </div> */}
 			</div>
 			{/* <Image src={torch} alt="" height={926} width={1920} className="w-full -mt-[150px] lg:-mt-[400px] relative z-20 text-transparent" /> */}
 		</div>

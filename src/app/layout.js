@@ -18,7 +18,7 @@ export const metadata = {
 	description: "So, you dare to enter? Bravo! Get ready to experience LA’s #1 scary escape room, where the fear is real, and the actors are part of the thrill",
 	openGraph: {
 		images: [
-			"https://questroom-app-onzmd.ondigitalocean.app/templet/thrillTheme/thumbnail.jpg",
+			"https://questroom-app-onzmd.ondigitalocean.app/templet/thrillTheme/meta_image.jpg",
 		],
 	},
 };
