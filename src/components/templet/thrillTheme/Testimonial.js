@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-"use client"
+"use client";
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import coma from "@/../../public/templet/thrillTheme/coma.png";
@@ -82,36 +82,36 @@ function Testimonial() {
 	const handlePlayPause = (index) => {
 		// Pause and mute the currently playing video if it's different from the clicked one
 		if (playingVideo !== null && playingVideo !== index) {
-		  videoRefs.current[playingVideo].pause();
-		  videoRefs.current[playingVideo].muted = true;
+			videoRefs.current[playingVideo].pause();
+			videoRefs.current[playingVideo].muted = true;
 		}
-	  
+
 		if (playingVideo === index) {
-		  // Toggle play/pause for the same video
-		  if (videoRefs.current[index].paused) {
-			videoRefs.current[index].play();
-			videoRefs.current[index].muted = false; // Unmute when playing
-		  } else {
-			videoRefs.current[index].pause();
-			videoRefs.current[index].muted = true; // Mute when paused
-		  }
-		  setPlayingVideo(videoRefs.current[index].paused ? null : index);
+			// Toggle play/pause for the same video
+			if (videoRefs.current[index].paused) {
+				videoRefs.current[index].play();
+				videoRefs.current[index].muted = false; // Unmute when playing
+			} else {
+				videoRefs.current[index].pause();
+				videoRefs.current[index].muted = true; // Mute when paused
+			}
+			setPlayingVideo(videoRefs.current[index].paused ? null : index);
 		} else {
-		  // Play the new video and unmute it
-		  videoRefs.current[index].play();
-		  videoRefs.current[index].muted = false;
-		  setPlayingVideo(index);
+			// Play the new video and unmute it
+			videoRefs.current[index].play();
+			videoRefs.current[index].muted = false;
+			setPlayingVideo(index);
 		}
-	  };
+	};
 
 	return (
 		<div className="bg-[url('/templet/thrillTheme/testimonial_bg_full.png')] bg-no-repeat bg-[length:100%_100%] relative">
 			<div className="g_container--theme pt-4 md:pt-28 pb-20 ">
-				<h2 className="header_2 relative z-20">Reviews of Project Minotaur </h2>
+				<h2 className="header_2 relative z-20 pb-[30px] md:pb-[40px]">Reviews of Project Minotaur </h2>
 				<div className="">
 					<Swiper
-						slidesPerView={1}
-						spaceBetween={50}
+						slidesPerView={1.1}
+						spaceBetween={20}
 						loop={false}
 						speed={1000}
 						pagination={{
@@ -121,17 +121,21 @@ function Testimonial() {
 						navigation={true}
 						modules={[Pagination, Navigation]}
 						className="thrillTempletTestimonialVideoSwiper thrillOnlyTestimonialSwiper thrillTempletSwiper "
-						style={{ paddingBottom: "50px", paddingTop: "30px", paddingLeft: "30px", paddingRight: "30px" }}
+						style={{}}
 						breakpoints={{
+							450: {
+								slidesPerView: 1.4,
+								spaceBetween: 20,
+							},
 							600: {
 								slidesPerView: 2,
 								spaceBetween: 30,
 							},
 							900: {
 								slidesPerView: 3,
-								spaceBetween: 30,
+								spaceBetween: 20,
 							},
-							1100: {
+							1250: {
 								slidesPerView: 4,
 								spaceBetween: 30,
 							},
@@ -141,13 +145,7 @@ function Testimonial() {
 							<SwiperSlide key={index}>
 								<div className="group h-[490px] max-w-[345px] mx-auto border-[1px] border-[#111B0D] rounded-lg relative font_poppins ">
 									{/* <Image src={testimonial} alt="" height={489} width={345} className="h-full w-full object-cover rounded-lg" /> */}
-									<video
-										ref={(el) => (videoRefs.current[index] = el)}
-										loop
-										muted
-										playsInline
-										className=" w-full h-full object-cover rounded-lg"
-									>
+									<video ref={(el) => (videoRefs.current[index] = el)} loop muted playsInline className=" w-full h-full object-cover rounded-lg">
 										<source src={videoSrc.video} type="video/mp4" />
 									</video>
 									<button
@@ -162,8 +160,8 @@ function Testimonial() {
 									</button>
 									<div
 										className={`${
-											parseInt(isOpen) === index && toggle ? "top-0 bottom-0" : "left-5 right-5 bottom-20"
-										}  px-3 py-2 max-w-full absolute z-10 bg-[#03030380] backdrop-blur-sm rounded-lg transition-all duration-300 ease-in-out`}
+											parseInt(isOpen) === index && toggle ? "top-0 bottom-0 bg-[#03030380] backdrop-blur-sm" : "left-5 right-5 bottom-20"
+										}  px-3 py-2 max-w-full absolute z-10  rounded-lg `}
 									>
 										<div className="testimonial_text h-[calc(100%-64px)] overflow-auto">
 											<p className={`text-white text-[15px]  ${parseInt(isOpen) === index && toggle ? "hidden" : "block"}`}>
@@ -172,18 +170,18 @@ function Testimonial() {
 											<p className={`text-white text-[15px]  ${parseInt(isOpen) === index && toggle ? "block" : "hidden"}`}>{videoSrc.description}</p>
 										</div>
 									</div>
-									<div className="absolute z-0 bottom-0 h-[160px] w-full bg-gradient-to-b from-transparent to-[#00112c] rounded-lg"></div>
+									<div className="absolute z-0 bottom-0 h-[40%] w-full bg-gradient-to-b from-transparent from-0% to-[#00112cc6] to-70% rounded-lg"></div>
 									<div className={`absolute left-0 right-0  z-10  max-w-full bottom-0 h-20  `}>
 										<div className="flex justify-between items-center pt-4 px-5">
 											<button
 												id={index}
 												onClick={(Event) => handleTextExpand(Event, index)}
-												className="text-[#d9d9d9] px-5 py-1.5 bg-transparent border-[1px] border-[#997f7f] text-[14px] font-[400] rounded-md"
+												className="text-[#d9d9d9] px-5 py-1.5 bg-transparent border-[1px] border-[#BFBFBF] text-[14px] font-[400] rounded-md"
 											>
 												{parseInt(isOpen) === index && toggle ? "Close" : "Full Review"}
 											</button>
 											<a href={`${videoSrc.google_link}`} target="_blank" className="text-[#d9d9d9] text-[14px] font-[400] flex items-center gap-1.5">
-												Google <HiOutlineArrowNarrowRight className="text-lg" />{" "}
+												See Original <BiLinkExternal className=" text-[14px] md:text-[16px]" />
 											</a>
 										</div>
 									</div>
@@ -220,11 +218,11 @@ function Testimonial() {
 								navigation={true}
 								modules={[Pagination, Navigation]}
 								className="thrillTempletTestimonialSwiper thrillOnlyTestimonialSwiper thrillTempletSwiper"
-								style={{}}
+								style={{ paddingTop: "50px" }}
 							>
 								<SwiperSlide>
 									<div className="font_poppins ">
-										<div className="max-w-[950px] ml-4 md:ml-24 mr-4 md:mr-20 ">
+										<div className="max-w-[950px] pt-[50px] md:pt-[100px] ml-4 md:ml-28 mr-4 md:mr-20 ">
 											<p className="relative uppercase text-[24px] md:text-[38px]  text-[#CAFFBC] text-center md:text-start font_protest pt-[110px] md:pt-[140px] pb-[15px] md:pb-[25px]">
 												There were challenges for the puzzle experts
 											</p>
@@ -255,7 +253,7 @@ function Testimonial() {
 								</SwiperSlide>
 								<SwiperSlide>
 									<div className="font_poppins ">
-										<div className="max-w-[850px] ml-4 md:ml-24 mr-4 md:mr-20 ">
+										<div className="max-w-[950px] pt-[50px] md:pt-[100px] ml-4 md:ml-28 mr-4 md:mr-20 ">
 											<p className="relative uppercase text-[24px] md:text-[38px]  text-[#CAFFBC] text-center md:text-start font_protest pt-[110px] md:pt-[140px] pb-[15px] md:pb-[25px]">
 												The best escape rooms I’ve ever done out of my entire life!
 											</p>

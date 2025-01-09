@@ -11,30 +11,27 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
 }
-
 
 @font-face {
 	src: url("/font/Rusoile-Grunge.ttf");
 	font-family: "Rusoile";
-  }
-  @font-face {
+}
+@font-face {
 	src: url("/font/BANDEX.ttf");
 	font-family: "Bandex";
-  }
-  
-  .font_rusolie {
+}
+
+.font_rusolie {
 	font-family: "Rusoile", sans-serif; /* Add a fallback font */
-  }
-  .font_bandex {
+}
+.font_bandex {
 	font-family: "Bandex", sans-serif; /* Add a fallback font */
-  }
-
-
+}
 
 /* @font-face {
 	src: url("../public/font/Rusoile-Grunge.ttf");
@@ -83,7 +80,7 @@
 }
 
 .text_strokenav {
-	color: #BFBFBF;
+	color: #bfbfbf;
 }
 
 .storyLine_header_2 {
@@ -91,7 +88,6 @@
 	font-size: 64px;
 	line-height: 68px;
 	font-weight: 400;
-	
 }
 .header_2 {
 	font-family: Rusoile;
@@ -132,27 +128,23 @@
 	background-color: #fc7008 !important;
 }
 
-.thrillTempletSwiper .swiper-pagination {
-	width: 100px !important;
-}
-
 /* ---------------- */
 .thrillTempletTestimonialSwiper {
-	padding: 100px 30px 50px 30px !important;
+	/* padding: 100px 30px 50px 30px !important; */
 	background-image: url("/templet/thrillTheme/testimonialBg.png");
 	position: relative;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
 
-.thrillTempletTestimonialSwiper .swiper-button-prev,
+/* .thrillTempletTestimonialSwiper .swiper-button-prev,
 .thrillTempletTestimonialSwiper .swiper-button-next {
 	background: #000000;
 	border: 2px solid #0085ff;
 	height: 55px !important;
 	width: 55px !important;
 	border-radius: 50%;
-}
+} */
 
 .thrillTempletTestimonialSwiper .swiper-button-prev {
 	/* left: -12px !important; */
@@ -175,21 +167,20 @@
 	width: 80px !important;
 }
 
-.thrillTempletTestimonialSwiper .swiper-pagination-bullet {
+.thrillTempletSwiper .swiper-pagination-bullet {
 	width: 8px !important;
 	height: 8px !important;
 	background-color: #fc7008 !important;
 }
-.thrillTempletTestimonialSwiper .swiper-pagination-bullet-active {
-	width: 18px !important;
-	height: 5px !important;
+.thrillTempletSwiper .swiper-pagination-bullet-active {
+	width: 20px !important;
+	height: 7px !important;
 	border-radius: 10px !important;
+	
 }
 
 /* ---------Gallery Swiper--------- */
 .thrillTempletGallerySwiper .swiper-slide {
-
-
 	max-width: 954px !important;
 }
 
@@ -199,7 +190,7 @@
 	opacity: 0.6;
 }
 
-.thrillTempletGallerySwiper .swiper-button-next {
+/* .thrillTempletGallerySwiper .swiper-button-next {
 	right: 29%;
 	transform: translateX(29%);
 }
@@ -207,15 +198,34 @@
 .thrillTempletGallerySwiper .swiper-button-prev {
 	left: 29%;
 	transform: translateX(-29%);
+} */
+
+.thrillTempletSwiper {
+	padding: 0 0 80px 0 !important;
 }
 
 .thrillTempletSwiper .swiper-button-prev,
 .thrillTempletSwiper .swiper-button-next {
 	background: #000000;
 	border: 2px solid #fc7008;
-	height: 55px !important;
-	width: 55px !important;
+	height: 33px !important;
+	width: 33px !important;
 	border-radius: 50%;
+	top: calc(100% - 15px) !important;
+}
+
+.thrillTempletSwiper .swiper-button-disabled{
+	border: 2px solid #545454;
+}
+.thrillTempletSwiper .swiper-button-disabled:after{
+	color: #545454 !important;
+}
+
+.thrillTempletSwiper .swiper-button-prev {
+	left: calc(100% - 250px);
+}
+.thrillTempletSwiper .swiper-button-next {
+	left: calc(100% - 180px);
 }
 
 .thrillTempletSwiper .swiper-button-prev:hover,
@@ -234,23 +244,20 @@
 	font-weight: 700;
 	color: #fc7008;
 }
-.thrillTempletGallerySwiper .swiper-button-prev:after {
+
+.thrillTempletSwiper .swiper-pagination {
+	bottom: 15px !important;
+}
+
+.thrillTempletSwiper .swiper-button-prev:after {
 	margin-left: -2px;
 }
-.thrillTempletGallerySwiper .swiper-button-next:after {
+.thrillTempletSwiper .swiper-button-next:after {
 	margin-left: 2px;
 }
 
 /* ------------game swiper------------ */
-.thrillGameSwiper {
-	padding: 30px 20px 40px 20px !important;
-}
-.thrillGameSwiper .swiper-button-prev {
-	left: 0px !important;
-}
-.thrillGameSwiper .swiper-button-next {
-	right: 0px !important;
-}
+
 
 /* ---------nav Animation---------- */
 
@@ -286,6 +293,7 @@
 
 /* ------------------------------- */
 
+
 @media only screen and (max-width: 1024px) {
 	.header_2 {
 		font-size: 40px;
@@ -294,6 +302,13 @@
 	.storyLine_header_2 {
 		font-size: 40px;
 		line-height: 48px;
+	}
+
+	.thrillTempletSwiper .swiper-button-prev {
+		left: calc(100% - 100px);
+	}
+	.thrillTempletSwiper .swiper-button-next {
+		left: calc(100% - 50px);
 	}
 }
 
@@ -308,51 +323,22 @@
 		line-height: 38px;
 	}
 
-	.thrillTempletTestimonialSwiper .swiper-pagination {
-		/* bottom: 140px !important; */
-	}
 
-	.thrillTempletSwiper .swiper-button-prev,
-	.thrillTempletSwiper .swiper-button-next {
-		height: 35px !important;
-		width: 35px !important;
-	}
-
-	.thrillGameSwiper {
-		padding: 30px 10px 40px 10px !important;
-	}
-
-	.thrillTempletTestimonialSwiper .swiper-button-next {
-		right: 0;
-	}
-
-	.thrillTempletTestimonialSwiper .swiper-button-prev {
-		left: 0;
-	}
-	.thrillTempletTestimonialSwiper {
-		padding: 50px 25px 60px 25px !important;
-	}
+	
 }
 
-@media only screen and (max-width: 400px) {
-	.logo {
-		/* height: ; */
+@media only screen and (max-width: 425px) {
+
+	.thrillTempletSwiper .swiper-pagination {
+		left: 0px !important;
+		transform: translateX(0%) !important;
+	}
+
+	.thrillTempletSwiper .swiper-pagination-bullets,
+	.thrillTempletSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+		width: 80px !important;
 	}
 }
-
-@media only screen and (max-width: 1100px) {
-	.thrillTempletGallerySwiper .swiper-button-next {
-		right: 8%;
-		transform: translateX(8%);
-	}
-
-	.thrillTempletGallerySwiper .swiper-button-prev {
-		left: 8%;
-		transform: translateX(-8%);
-	}
-}
-
-
 
 /* -----------button border animation----------- */
 
@@ -386,10 +372,10 @@
 
 /* -----------Monitour head animation-------------- */
 
-.visible_head .monitour_head{
+.monitour_head {
 	right: 0px;
 	transform: translateX(100%);
-	animation: headpull 2s forwards ease-in;
+	animation: headpull 2s ease-out;
 }
 
 @keyframes headpull {
@@ -403,6 +389,3 @@
 		transform: translateX(100%);
 	}
 }
-
-
-

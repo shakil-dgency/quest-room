@@ -44,7 +44,7 @@ export function AccordianItem({ children, value, trigger, ...props }) {
 					<span className="mr-3 text-[22px] md:text-[32px]">Q.</span>
 					{trigger}
 				</div>
-				<IoIosArrowDown size={22} className={`border-[1px] border-[#345029] text-[#FC7008] rounded-full p-[3px] transition-transform absolute right-0 sm:right-4 ${open ? "rotate-180" : ""}`} />
+				<IoIosArrowDown size={23} className={` text-[#D9D9D9] rounded-full p-[3px] transition-transform absolute right-0 sm:right-4 ${open ? "rotate-180" : ""}`} />
 			</header>
 			<div
 				className="overflow-y-hidden transition-all border-b-[1px] border-b-[#1C2B17] max-w-[1095px] mx-auto text-[14px] md:text-[18px] leading-[1.6] text-[#A3A3A3]"

@@ -1,15 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
-"use client"
+"use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import logo from "@/../../public/templet/thrillTheme/questroom_logo.svg";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 import LA from "@/../../public/templet/thrillTheme/navBar/LA.png";
 import dallas from "@/../../public/templet/thrillTheme/navBar/dallas.png";
 import dallas_mall from "@/../../public/templet/thrillTheme/navBar/dallas_mall.png";
 import Lock from "@/../../public/templet/thrillTheme/navBar/lock.svg";
-import { IoLocationSharp } from "react-icons/io5";
+import { CiLocationOn } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
 import location1 from "@/../../public/templet/thrillTheme/footer/location1.png";
 import location2 from "@/../../public/templet/thrillTheme/footer/location2.png";
@@ -24,6 +24,7 @@ import event1 from "@/../../public/templet/thrillTheme/navBar/event1.png";
 import event2 from "@/../../public/templet/thrillTheme/navBar/event2.png";
 import event3 from "@/../../public/templet/thrillTheme/navBar/event3.png";
 import event4 from "@/../../public/templet/thrillTheme/navBar/event4.png";
+import location from "@/../../public/templet/thrillTheme/navBar/locationIcon.svg";
 
 function NavBar() {
 	const [toggle, setToggle] = useState(false);
@@ -119,23 +120,21 @@ function NavBar() {
 
 	return (
 		<div id="navbar" className="w-full z-50 sticky  top-0 duration-300">
-			<div className="bg-[#000A19] pt-2.5 md:py-2.5 relative z-40 sm:z-50 ">
+			<div className="bg-[#000A19] pt-2.5 md:py-[14px] relative z-40 sm:z-50 ">
 				<div className="g_container--theme flex justify-between items-center gap-2 ">
 					{/* Logo */}
-					<div className="flex-none">
-						<Image src={logo} alt="logo" height={44} width={227} className="h-[18px] sm:h-[40px] w-auto" />
-					</div>
+					<div className="flex-none"><Image src={logo} alt="logo" height={44} width={227} className="h-[16px] 2xs:h-[20px] xs:h-[22px] sm:h-[35px] w-auto" /> </div>
 
 					{/* Dropdown */}
-					<div className="cursor-pointer w-full sm:w-[300px]  xl:w-[364px] border-[2px] border-[#FC7008] py-1.5 rounded-3xl flex relative font_poppins">
+					<div className="cursor-pointer w-full 2xs:w-[200px] xs:w-[260px] sm:w-[320px]  xl:w-[364px] border-[2px] border-[#FC7008] py-[8px] rounded-full flex relative font_poppins">
 						<div
 							id="location"
-							className="bg-transparent relative outline-none text-[10px] sm:text-[14px] text-[#F5F5F5] pl-2 pr-1 sm:pl-3 sm:pr-0  md:pr-14 appearance-none w-full "
+							className="bg-transparent relative outline-none text-[10px] 2xs:text-[11px] sm:text-[16px] font-[500] text-[#F5F5F5] pl-2 pr-1 2xs:pl-2.5 xs:pl-[14px] sm:pl-[20px] sm:pr-0  md:pr-14 appearance-none w-full "
 							onClick={handleLocationBarOpen}
 						>
-							<p className="uppercase flex items-center gap-[2px] lg:gap-2.5 ">
-								<IoLocationSharp className="text-[13px]" />
-								Hollywood, LA <IoIosArrowDown className="text-[14px] absolute z-10 right-1.5 sm:right-2.5" />
+							<p className="uppercase flex items-center gap-1.5 2xs:gap-2 sm:gap-2.5 leading-0">
+								<Image src={location} alt="" height={14} width={12} className="-mt-[1px] h-[11px] 2xs:h-[14px] sm:h-[18px] w-auto"  />
+								<span>Redando beach, LA</span> <IoIosArrowDown className=" text-[11px] 2xs:text-[13px] xs:text-[16px] absolute z-10 right-1.5 xs:right-2.5 sm:right-[20px]" />
 							</p>
 						</div>
 					</div>
@@ -149,7 +148,7 @@ function NavBar() {
 							<div onClick={handleEventBar} className={`${event ? "text-[#FC7008] " : ""} hidden lg:flex items-center gap-1 cursor-pointer`}>
 								EVENTS <IoMdArrowDropdown className={`text-[18px] duration-300 ${event ? "rotate-180" : ""}`} />
 							</div>
-							<button className="hidden md:block uppercase px-2.5 xl:px-[14px] py-[10px] font-[600] bg-[#D60200] ">Book this game</button>
+							<button className="hidden md:block uppercase text-[13px] lg:text-[15px] px-2.5 lg:px-[14px] py-[10px] font-[600] bg-[#D60200] ">Book this game</button>
 						</div>
 						{/* <Image
 							onClick={handleNavSidebar}
@@ -170,8 +169,8 @@ function NavBar() {
 					</div>
 				</div>
 
-				<div className="flex justify-center mt-2">
-					<button className="block md:hidden uppercase w-full px-[25px] py-[7px] bg-[#D60200] text-white font_poppins">Book this game</button>
+				<div className="flex justify-center">
+					<button className="block md:hidden mt-2 uppercase w-full py-[7px] bg-[#D60200] font-[600] text-white font_poppins">Book this game</button>
 				</div>
 			</div>
 
@@ -384,7 +383,10 @@ function NavBar() {
 								eventPopUp ? "h-auto pb-2.5 pt-1" : "h-0 "
 							}`}
 						>
-							<p className="flex items-center gap-1.5"><Image src={Lock} alt="" height={14} width={12} />Birthday Parties</p>
+							<p className="flex items-center gap-1.5">
+								<Image src={Lock} alt="" height={14} width={12} />
+								Birthday Parties
+							</p>
 							<p className="flex items-center gap-1.5">
 								<Image src={Lock} alt="" height={14} width={12} />
 								Family Bonding

@@ -15,12 +15,12 @@ import { Navigation, Pagination } from "swiper/modules";
 function OtherGames() {
 	return (
 		<div className="g_container--theme pt-10 pb-20">
-			<h2 className="header_2 uppercase">Other games at Hollywood location</h2>
+			<h2 className="header_2 uppercase pb-[30px] md:pb-[40px]">Other games at Hollywood location</h2>
 
 			<div className="">
 				<Swiper
-					slidesPerView={1}
-					spaceBetween={50}
+					slidesPerView={1.1}
+					spaceBetween={20}
 					loop={false}
 					speed={1000}
 					pagination={{
@@ -60,7 +60,7 @@ function OtherGames() {
 								<source src="https://cdn.gbase.online/Perfumer_4k_2_fin_2_893dd3a39c.mp4" type="video/mp4" />
 							</video>
 
-							<div className="absolute top-0 left-0 right-0 z-20 flex gap-3 justify-between text-[11px] sm:text-[14px] text-[#D9D9D9] font_roboto  mt-2.5 px-4">
+							<div className="absolute top-0 left-0 right-0 z-20 flex gap-3 justify-between text-[11px] 2xs:text-[13px] sm:text-[14px] text-[#D9D9D9] font_roboto  mt-2.5 px-4">
 								<div className="flex items-center gap-1.5">
 									<Image src={people} alt="" height={15} width={15} className="h-[12px] sm:h-[15px] w-auto" />
 									<span className="">Team: 2-6</span>

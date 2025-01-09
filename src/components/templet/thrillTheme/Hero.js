@@ -37,7 +37,7 @@ function Hero({ description }) {
 			</video>
 			<button
 				onClick={toggleMute}
-				className={` flex  absolute z-20 top-[42%] lg:top-[100%] right-3 lg:right-14  lg:-mt-[200px]  justify-center items-center bg-[#0F1A0C]  px-1 py-1 rounded-full after:absolute after:bg-[#0F1A0C80] after:h-10 after:w-10 after:rounded-full before:absolute before:bg-[#0F1A0C90] before:h-8 before:w-8 before:rounded-full `}
+				className={`animate-pulse flex  absolute z-20 top-[52%] sm:top-[42%] lg:top-[100%] right-3 lg:right-14  lg:-mt-[200px]  justify-center items-center bg-[#0F1A0C]  px-1 py-1 rounded-full after:absolute after:bg-[#0F1A0C80] after:h-10 after:w-10 after:rounded-full before:absolute before:bg-[#0F1A0C90] before:h-8 before:w-8 before:rounded-full `}
 			>
 				{isMuted ? (
 					<ImVolumeMute2 className="relative z-10 text-[15px] text-[#fff]" />
