@@ -55,12 +55,12 @@ function OtherGames() {
 					}}
 				>
 					<SwiperSlide>
-						<div className="relative group h-[578px] max-w-[390px] mx-auto border-[2px] border-[#0B1D4B] rounded-lg overflow-hidden bg-[url('/templet/thrillTheme/gameCard/Perfumer.jpg')] bg-center bg-no-repeat bg-cover ">
+						<div className="relative group h-[578px] max-w-[390px] mx-auto  rounded-lg overflow-hidden bg-[url('/templet/thrillTheme/gameCard/Perfumer.jpg')] bg-center bg-no-repeat bg-cover ">
 							<video id="1" autoPlay loop muted playsInline className="hidden group-hover:block h-full w-full object-cover">
 								<source src="https://cdn.gbase.online/Perfumer_4k_2_fin_2_893dd3a39c.mp4" type="video/mp4" />
 							</video>
 
-							<div className="absolute top-0 left-0 right-0 z-20 flex gap-3 justify-between text-[11px] 2xs:text-[13px] sm:text-[14px] text-[#D9D9D9] font_roboto  mt-2.5 px-4">
+							<div className="absolute top-0 left-0 right-0 z-20 flex gap-3 justify-between text-[11px] 2xs:text-[14px] text-[#D9D9D9] font_roboto  mt-2.5 px-4">
 								<div className="flex items-center gap-1.5">
 									<Image src={people} alt="" height={15} width={15} className="h-[12px] sm:h-[15px] w-auto" />
 									<span className="">Team: 2-6</span>
@@ -82,8 +82,8 @@ function OtherGames() {
 									The greatest perfumer in the world has been executed. The scents he crafted were well-known throughout...
 								</p>
 								<div className="flex justify-between">
-									<button className="rounded-sm bg-[#FC7008] py-2 px-4 sm:px-7 text-[#000A19] text-[14px] font-[700]">BOOK NOW</button>
-									<button className="rounded-sm border-[1px] border-[#D9D9D9] bg-transparent py-2 px-6 sm:px-9 text-[#D9D9D9] text-[14px] font-[700]">
+									<button className="rounded-sm bg-[#FC7008] py-2 px-4 2xs:px-8 sm:px-7 text-[#000A19] text-[14px] font-[700]">BOOK NOW</button>
+									<button className="rounded-sm border-[1px] border-[#D9D9D9] bg-transparent py-2 px-6 2xs:px-10 sm:px-9 text-[#D9D9D9] text-[14px] font-[700]">
 										EXPLORE
 									</button>
 								</div>
@@ -93,12 +93,12 @@ function OtherGames() {
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>
-						<div className="relative group h-[578px] max-w-[390px] mx-auto border-[2px] border-[#0B1D4B] rounded-lg overflow-hidden bg-[url('/templet/thrillTheme/gameCard/RedGiant.png')] bg-center bg-no-repeat bg-cover ">
+						<div className="relative group h-[578px] max-w-[390px] mx-auto  rounded-lg overflow-hidden bg-[url('/templet/thrillTheme/gameCard/RedGiant.png')] bg-center bg-no-repeat bg-cover ">
 							<video id="1" autoPlay loop muted playsInline className="hidden group-hover:block h-full w-full object-cover">
 								<source src="https://cdn.gbase.online/Red_Giant_Escape_room_fin_2_dba64856ae.mp4" type="video/mp4" />
 							</video>
 
-							<div className="absolute top-0 left-0 right-0 z-20 flex gap-3 justify-between text-[11px] sm:text-[14px] text-[#D9D9D9] font_roboto  mt-2.5 px-4">
+							<div className="absolute top-0 left-0 right-0 z-20 flex gap-3 justify-between text-[11px] 2xs:text-[14px] text-[#D9D9D9] font_roboto  mt-2.5 px-4">
 								<div className="flex items-center gap-1.5">
 									<Image src={people} alt="" height={15} width={15} className="h-[12px] sm:h-[15px] w-auto" />
 									<span className="">Team: 2-6</span>
@@ -120,8 +120,8 @@ function OtherGames() {
 									The Pink Pyramid. A testament to the civilization who crafted it and surrounded it with glorious cities and streets...
 								</p>
 								<div className="flex justify-between">
-									<button className="rounded-sm bg-[#FC7008] py-2 px-4 sm:px-7 text-[#000A19] text-[14px] font-[700]">BOOK NOW</button>
-									<button className="rounded-sm border-[1px] border-[#D9D9D9] bg-transparent py-2 px-6 sm:px-9 text-[#D9D9D9] text-[14px] font-[700]">
+									<button className="rounded-sm bg-[#FC7008] py-2 px-4 2xs:px-8 sm:px-7 text-[#000A19] text-[14px] font-[700]">BOOK NOW</button>
+									<button className="rounded-sm border-[1px] border-[#D9D9D9] bg-transparent py-2 px-6 2xs:px-10 sm:px-9 text-[#D9D9D9] text-[14px] font-[700]">
 										EXPLORE
 									</button>
 								</div>
@@ -131,12 +131,12 @@ function OtherGames() {
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>
-						<div className="relative group h-[578px] max-w-[390px] mx-auto border-[2px] border-[#0B1D4B] rounded-lg overflow-hidden bg-[url('/templet/thrillTheme/gameCard/Cannibal.jpg')] bg-center bg-no-repeat bg-cover ">
+						<div className="relative group h-[578px] max-w-[390px] mx-auto  rounded-lg overflow-hidden bg-[url('/templet/thrillTheme/gameCard/Cannibal.jpg')] bg-center bg-no-repeat bg-cover ">
 							<video id="1" autoPlay loop muted playsInline className="hidden group-hover:block h-full w-full object-cover">
 								<source src="https://cdn.gbase.online/FULL_CANNIBAL_S_DEN_fin_2_6a4bb0b1ec.mp4" type="video/mp4" />
 							</video>
 
-							<div className="absolute top-0 left-0 right-0 z-20 flex gap-3 justify-between text-[11px] sm:text-[14px] text-[#D9D9D9] font_roboto  mt-2.5 px-4">
+							<div className="absolute top-0 left-0 right-0 z-20 flex gap-3 justify-between text-[11px] 2xs:text-[14px] text-[#D9D9D9] font_roboto  mt-2.5 px-4">
 								<div className="flex items-center gap-1.5">
 									<Image src={people} alt="" height={15} width={15} className="h-[12px] sm:h-[15px] w-auto" />
 									<span className="">Team: 2-6</span>
@@ -158,8 +158,8 @@ function OtherGames() {
 								Your head hurts; the world is still fuzzy. You remember being with your friends, stuck on the side of the road...
 								</p>
 								<div className="flex justify-between">
-									<button className="rounded-sm bg-[#FC7008] py-2 px-4 sm:px-7 text-[#000A19] text-[14px] font-[700]">BOOK NOW</button>
-									<button className="rounded-sm border-[1px] border-[#D9D9D9] bg-transparent py-2 px-6 sm:px-9 text-[#D9D9D9] text-[14px] font-[700]">
+									<button className="rounded-sm bg-[#FC7008] py-2 px-4 2xs:px-8 sm:px-7 text-[#000A19] text-[14px] font-[700]">BOOK NOW</button>
+									<button className="rounded-sm border-[1px] border-[#D9D9D9] bg-transparent py-2 px-6 2xs:px-10 sm:px-9 text-[#D9D9D9] text-[14px] font-[700]">
 										EXPLORE
 									</button>
 								</div>
@@ -169,12 +169,12 @@ function OtherGames() {
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>
-						<div className="relative group h-[578px] max-w-[390px] mx-auto border-[2px] border-[#0B1D4B] rounded-lg overflow-hidden bg-[url('/templet/thrillTheme/gameCard/reply.jpg')] bg-center bg-no-repeat bg-cover ">
+						<div className="relative group h-[578px] max-w-[390px] mx-auto  rounded-lg overflow-hidden bg-[url('/templet/thrillTheme/gameCard/reply.jpg')] bg-center bg-no-repeat bg-cover ">
 							<video id="1" autoPlay loop muted playsInline className="hidden group-hover:block h-full w-full object-cover">
 								<source src="https://cdn.gbase.online/PROJECT_MINOTAUR_fin_2_d97411cd3d.mp4" type="video/mp4" />
 							</video>
 
-							<div className="absolute top-0 left-0 right-0 z-20 flex gap-3 justify-between text-[11px] sm:text-[14px] text-[#D9D9D9] font_roboto  mt-2.5 px-4">
+							<div className="absolute top-0 left-0 right-0 z-20 flex gap-3 justify-between text-[11px] 2xs:text-[14px] text-[#D9D9D9] font_roboto  mt-2.5 px-4">
 								<div className="flex items-center gap-1.5">
 									<Image src={people} alt="" height={15} width={15} className="h-[12px] sm:h-[15px] w-auto" />
 									<span className="">Team: 2-6</span>
@@ -196,8 +196,8 @@ function OtherGames() {
 								You were having a wonderful vacation when you and your friends decided to participate in a very exclusive...
 								</p>
 								<div className="flex justify-between">
-									<button className="rounded-sm bg-[#FC7008] py-2 px-4 sm:px-7 text-[#000A19] text-[14px] font-[700]">BOOK NOW</button>
-									<button className="rounded-sm border-[1px] border-[#D9D9D9] bg-transparent py-2 px-6 sm:px-9 text-[#D9D9D9] text-[14px] font-[700]">
+									<button className="rounded-sm bg-[#FC7008] py-2 px-4 2xs:px-8 sm:px-7 text-[#000A19] text-[14px] font-[700]">BOOK NOW</button>
+									<button className="rounded-sm border-[1px] border-[#D9D9D9] bg-transparent py-2 px-6 2xs:px-10 sm:px-9 text-[#D9D9D9] text-[14px] font-[700]">
 										EXPLORE
 									</button>
 								</div>

@@ -65,6 +65,14 @@
 	width: 0rem;
 }
 
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+
 .g_container--theme {
 	max-width: 1440px;
 	margin: auto;
@@ -156,27 +164,28 @@
 .thrillTempletSwiper .swiper-pagination-bullets,
 .thrillTempletSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
 	width: 100px !important;
+	display: flex;
+	align-items: center;
 }
 
 .thrillTempletTestimonialSwiper .swiper-pagination {
 	/* bottom: 100px !important; */
 }
 
-.thrillTempletTestimonialSwiper .swiper-pagination-bullets,
+/* .thrillTempletTestimonialSwiper .swiper-pagination-bullets,
 .thrillTempletTestimonialSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
 	width: 80px !important;
-}
+} */
 
 .thrillTempletSwiper .swiper-pagination-bullet {
-	width: 8px !important;
-	height: 8px !important;
+	width: 13px !important;
+	height: 13px !important;
 	background-color: #fc7008 !important;
 }
 .thrillTempletSwiper .swiper-pagination-bullet-active {
-	width: 20px !important;
+	width: 28px !important;
 	height: 7px !important;
 	border-radius: 10px !important;
-	
 }
 
 /* ---------Gallery Swiper--------- */
@@ -214,10 +223,10 @@
 	top: calc(100% - 15px) !important;
 }
 
-.thrillTempletSwiper .swiper-button-disabled{
+.thrillTempletSwiper .swiper-button-disabled {
 	border: 2px solid #545454;
 }
-.thrillTempletSwiper .swiper-button-disabled:after{
+.thrillTempletSwiper .swiper-button-disabled:after {
 	color: #545454 !important;
 }
 
@@ -258,7 +267,6 @@
 
 /* ------------game swiper------------ */
 
-
 /* ---------nav Animation---------- */
 
 .bottom {
@@ -293,7 +301,6 @@
 
 /* ------------------------------- */
 
-
 @media only screen and (max-width: 1024px) {
 	.header_2 {
 		font-size: 40px;
@@ -322,13 +329,9 @@
 		font-size: 32px;
 		line-height: 38px;
 	}
-
-
-	
 }
 
-@media only screen and (max-width: 425px) {
-
+@media only screen and (max-width: 475px) {
 	.thrillTempletSwiper .swiper-pagination {
 		left: 0px !important;
 		transform: translateX(0%) !important;
@@ -336,7 +339,7 @@
 
 	.thrillTempletSwiper .swiper-pagination-bullets,
 	.thrillTempletSwiper .swiper-pagination-bullets.swiper-pagination-horizontal {
-		width: 80px !important;
+		width: 110px !important;
 	}
 }
 
@@ -372,17 +375,35 @@
 
 /* -----------Monitour head animation-------------- */
 
-.monitour_head {
+.visible_head .monitour_head {
 	right: 0px;
 	transform: translateX(100%);
-	animation: headpull 2s ease-out;
+	animation: headpull 13s ease-out;
 }
 
 @keyframes headpull {
 	0% {
 		transform: translateX(100%);
 	}
-	50% {
+	13% {
+		transform: translateX(0%);
+	}
+	26% {
+		transform: translateX(100%);
+	}
+	40% {
+		transform: translateX(0%);
+	}
+	53% {
+		transform: translateX(100%);
+	}
+	67% {
+		transform: translateX(0%);
+	}
+	80% {
+		transform: translateX(100%);
+	}
+	90% {
 		transform: translateX(0%);
 	}
 	100% {

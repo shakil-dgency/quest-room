@@ -17,10 +17,10 @@ function StoryLineCard({ id, item }) {
 				</p>
 				<div className="relative">
 					<Image src={coma} alt="" height={34} width={44} className="h-[34px] w-auto object-cover absolute  top-[-15px] left-0 opacity-[0.4]" />
-					<p className="mt-[48px] italic font_puritan text-[#2C732C] ml-[20px] relative z-10">
+					<p className="mt-[48px] italic font_puritan text-[#6D8C60] ml-[20px] relative z-10">
 						{item.testimonial}
 					</p>
-					<p className="mt-[13px] ml-[20px] italic text-[14px] font_puritan text-[#2C732C]">—{item.name} </p>
+					<p className="mt-[13px] ml-[20px] italic text-[14px] font_puritan text-[#6D8C60]"><span className="mr-2">—</span> {item.name} </p>
 				</div>
 				{/* <button className="text-white bg-[url('/templet/thrillTheme/storyLine/button.svg')] bg-no-repeat bg-[length:100%_100%] px-[50px] py-[15px] mt-[73px]">
 					<span className="font_bandex">will you survive?</span>

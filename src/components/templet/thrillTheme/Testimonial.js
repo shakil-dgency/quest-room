@@ -24,6 +24,7 @@ const videoList = [
 		video: "https://cdn.gbase.online/Project_Minotaur_feedback_27b45dc956.MOV",
 		google_link:
 			"https://www.google.com/maps/place/QUEST+ROOM+-+Hollywood+Escape+Rooms/@34.0911441,-118.3120851,17z/data=!4m8!3m7!1s0x80c2b8ad41fb1b4b:0xdafb2f036b6bafca!8m2!3d34.0911441!4d-118.3098964!9m1!1b1!16s%2Fg%2F11f3n17vbg?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D",
+		thumbnail: "bg-[url('/templet/thrillTheme/testimonial/video1.png')]",
 	},
 	{
 		description:
@@ -31,7 +32,8 @@ const videoList = [
 		short_description: "Wow, five out of five doesn't even do justice to the amazing time we had! 🌟🌟🌟",
 		video: "https://cdn.gbase.online/Amnesia_Reaction_1_7c5bdffd1e.mov",
 		google_link:
-			"https://www.google.com/maps/place/QUEST+ROOM+-+Redondo+Beach+Escape+Rooms/@33.8717108,-118.3560566,17z/data=!3m2!4b1!5s0x80c2b4f99ff8bd1b:0x663c92cc538c4696!4m6!3m5!1s0x80c2b56425a6dc9f:0x7a414a6be0c41758!8m2!3d33.8717108!4d-118.3560566!16s%2Fg%2F11fl9kpq3s?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D",
+		"https://www.google.com/maps/place/QUEST+ROOM+-+Redondo+Beach+Escape+Rooms/@33.8717108,-118.3560566,17z/data=!3m2!4b1!5s0x80c2b4f99ff8bd1b:0x663c92cc538c4696!4m6!3m5!1s0x80c2b56425a6dc9f:0x7a414a6be0c41758!8m2!3d33.8717108!4d-118.3560566!16s%2Fg%2F11fl9kpq3s?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D",
+		thumbnail: "bg-[url('/templet/thrillTheme/testimonial/video2.png')]",
 	},
 	{
 		description:
@@ -40,6 +42,7 @@ const videoList = [
 		video: "https://cdn.gbase.online/Resurrection_Reaction_1_286e1896ca.mov",
 		google_link:
 			"https://www.google.com/maps/place/QUESTROOM+-+Redondo+Beach+Escape+Rooms+and+Thrill+Theater/@33.8717152,-118.3586315,17z/data=!3m2!4b1!5s0x80c2b4f99ff8bd1b:0x663c92cc538c4696!4m6!3m5!1s0x80c2b56425a6dc9f:0x7a414a6be0c41758!8m2!3d33.8717108!4d-118.3560566!16s%2Fg%2F11fl9kpq3s?shorturl=1",
+			thumbnail: "bg-[url('/templet/thrillTheme/testimonial/video3.png')]",
 	},
 	{
 		description:
@@ -48,6 +51,7 @@ const videoList = [
 		video: "https://cdn.gbase.online/Bloody_Elbow_reaction_1_d1fec30152.MOV",
 		google_link:
 			"https://www.google.com/maps/place/QUESTROOM+-+Los+Angeles+Escape+Rooms/@34.0716725,-118.3111623,17z/data=!4m8!3m7!1s0x80c2b8987a4ec7b9:0x28dc8832d51cd56b!8m2!3d34.0716725!4d-118.3089736!9m1!1b1!16s%2Fg%2F11c20cpc82",
+			thumbnail: "bg-[url('/templet/thrillTheme/testimonial/video4.png')]",
 	},
 	{
 		description:
@@ -56,6 +60,7 @@ const videoList = [
 		video: "https://cdn.gbase.online/Polar_Station_Reaction_1_70074289a0.mp4",
 		google_link:
 			"https://www.google.com/maps/place/QUEST+ROOM+-+Redondo+Beach+Escape+Rooms/@33.8717108,-118.3560566,17z/data=!3m2!4b1!5s0x80c2b4f99ff8bd1b:0x663c92cc538c4696!4m6!3m5!1s0x80c2b56425a6dc9f:0x7a414a6be0c41758!8m2!3d33.8717108!4d-118.3560566!16s%2Fg%2F11fl9kpq3s?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D",
+			thumbnail: "bg-[url('/templet/thrillTheme/testimonial/video5.png')]",
 	},
 ];
 
@@ -143,7 +148,7 @@ function Testimonial() {
 					>
 						{videoList.map((videoSrc, index) => (
 							<SwiperSlide key={index}>
-								<div className="group h-[490px] max-w-[345px] mx-auto border-[1px] border-[#111B0D] rounded-lg relative font_poppins ">
+								<div className={`group h-[490px] max-w-[345px] mx-auto border-[1px] border-[#111B0D] rounded-lg relative font_poppins ${videoSrc.thumbnail}  bg-center bg-no-repeat bg-cover`} >
 									{/* <Image src={testimonial} alt="" height={489} width={345} className="h-full w-full object-cover rounded-lg" /> */}
 									<video ref={(el) => (videoRefs.current[index] = el)} loop muted playsInline className=" w-full h-full object-cover rounded-lg">
 										<source src={videoSrc.video} type="video/mp4" />
@@ -223,11 +228,11 @@ function Testimonial() {
 								<SwiperSlide>
 									<div className="font_poppins ">
 										<div className="max-w-[950px] pt-[50px] md:pt-[100px] ml-4 md:ml-28 mr-4 md:mr-20 ">
-											<p className="relative uppercase text-[24px] md:text-[38px]  text-[#CAFFBC] text-center md:text-start font_protest pt-[110px] md:pt-[140px] pb-[15px] md:pb-[25px]">
+											<p className="relative uppercase text-[24px] md:text-[38px]  text-[#CAFFBC] text-center md:text-start leading-[1.2] font_rusolie pt-[110px] md:pt-[140px] pb-[15px] md:pb-[25px]">
 												There were challenges for the puzzle experts
 											</p>
 											<div className="relative ">
-												<p className={`relative text-[13px] sm:text-[16px] md:text-[18px] italic text-center md:text-start text-[#8CA482]`}>
+												<p className={`relative text-[15px] sm:text-[16px] md:text-[18px] italic text-center md:text-start text-[#8CA482]`}>
 													We've done a lot of escape rooms and Warlocked has good production value in addition to the interesting puzzles and actor
 													interaction scaling the difficulty to keep things fun Steve was really great, the kids had a blast (the 7 year old couldn't
 													stop asking questions/talking about it after, the youngest was confused at times but still had lots to do and was not
@@ -244,7 +249,7 @@ function Testimonial() {
 												</button>
 											</div>
 											<div className="flex md:hidden font_poppins pt-[25px]  justify-center">
-												<button className=" px-4 py-[3px] text-[14px]  flex items-center border-[1px] border-[#8CA482] rounded text-[#CAFFBC]">
+												<button className=" px-5 py-[4px] text-[14px]  flex items-center border-[1px] border-[#8CA482] rounded text-[#CAFFBC]">
 													Read more reviews
 												</button>
 											</div>
@@ -254,11 +259,11 @@ function Testimonial() {
 								<SwiperSlide>
 									<div className="font_poppins ">
 										<div className="max-w-[950px] pt-[50px] md:pt-[100px] ml-4 md:ml-28 mr-4 md:mr-20 ">
-											<p className="relative uppercase text-[24px] md:text-[38px]  text-[#CAFFBC] text-center md:text-start font_protest pt-[110px] md:pt-[140px] pb-[15px] md:pb-[25px]">
+											<p className="relative uppercase text-[24px] md:text-[38px]  text-[#CAFFBC] text-center md:text-start leading-[1.2] font_rusolie pt-[110px] md:pt-[140px] pb-[15px] md:pb-[25px]">
 												The best escape rooms I’ve ever done out of my entire life!
 											</p>
 											<div className="relative ">
-												<p className={`relative text-[13px] sm:text-[16px] md:text-[18px] italic text-center md:text-start text-[#8CA482]`}>
+												<p className={`relative text-[15px] sm:text-[16px] md:text-[18px] italic text-center md:text-start text-[#8CA482]`}>
 													Awesome! Just awesome. Worth every minutes and penny. We played many of their games and they are all very high-end and
 													immersive. The Perfumer was more immersive than any other room we've done before, and we've done a lot! The Game Master John
 													was masterful. It really felt like you were in historic Paris! The puzzles were engaging and non-linear. We would HIGHLY
@@ -274,7 +279,7 @@ function Testimonial() {
 												</button>
 											</div>
 											<div className="flex md:hidden font_poppins pt-[25px]  justify-center">
-												<button className=" px-4 py-[3px] text-[14px]  flex items-center border-[1px] border-[#8CA482] rounded text-[#CAFFBC]">
+												<button className=" px-5 py-[4px] text-[14px]  flex items-center border-[1px] border-[#8CA482] rounded text-[#CAFFBC]">
 													Read more reviews
 												</button>
 											</div>

@@ -101,8 +101,10 @@ function NavBar() {
 				if (scrollTop > 100) {
 					if (scrollTop > lastScrollTop) {
 						navbar.style.top = "-50px";
+						
 					} else if (lastScrollTop > scrollTop + 20) {
 						navbar.style.top = "0";
+						
 					} else if (scrollTop === 0) {
 						navbar.style.top = "0";
 					}
@@ -134,7 +136,7 @@ function NavBar() {
 						>
 							<p className="uppercase flex items-center gap-1.5 2xs:gap-2 sm:gap-2.5 leading-0">
 								<Image src={location} alt="" height={14} width={12} className="-mt-[1px] h-[11px] 2xs:h-[14px] sm:h-[18px] w-auto"  />
-								<span>Redando beach, LA</span> <IoIosArrowDown className=" text-[11px] 2xs:text-[13px] xs:text-[16px] absolute z-10 right-1.5 xs:right-2.5 sm:right-[20px]" />
+								<span>Hollyood, LA</span> <IoIosArrowDown className=" text-[11px] 2xs:text-[13px] xs:text-[16px] absolute z-10 right-1.5 xs:right-2.5 sm:right-[20px]" />
 							</p>
 						</div>
 					</div>
@@ -148,7 +150,7 @@ function NavBar() {
 							<div onClick={handleEventBar} className={`${event ? "text-[#FC7008] " : ""} hidden lg:flex items-center gap-1 cursor-pointer`}>
 								EVENTS <IoMdArrowDropdown className={`text-[18px] duration-300 ${event ? "rotate-180" : ""}`} />
 							</div>
-							<button className="hidden md:block uppercase text-[13px] lg:text-[15px] px-2.5 lg:px-[14px] py-[10px] font-[600] bg-[#D60200] ">Book this game</button>
+							<a href="#bookingSlot" className="hidden md:block uppercase text-[13px] lg:text-[15px] px-2.5 lg:px-[14px] py-[10px] font-[600] bg-[#D60200] ">Book this game</a>
 						</div>
 						{/* <Image
 							onClick={handleNavSidebar}
@@ -160,7 +162,7 @@ function NavBar() {
 						/> */}
 						<div
 							onClick={handleNavSidebar}
-							className="hamburg cursor-pointer h-[30px] sm:h-[40px] w-[30px] sm:w-[40px] px-1 py-1.5 sm:px-[7px] sm:py-[11px] bg-[#FC700833] space-y-1 flex flex-col justify-center overflow-hidden"
+							className="hamburg cursor-pointer h-[30px] 2xs:h-[40px] w-[30px] 2xs:w-[40px] px-1 py-1.5 2xs:px-[7px] 2xs:py-[11px] bg-[#FC700833] space-y-1 flex flex-col justify-center overflow-hidden"
 						>
 							<div className="top h-[3px] w-full rounded-2xl bg-[linear-gradient(90deg,_#F37F09,_#E7660F,_#D60200)]"></div>
 							<div className="middle h-[3px] w-full rounded-2xl bg-[linear-gradient(90deg,_#F37F09,_#E7660F,_#D60200)]"></div>
@@ -169,9 +171,9 @@ function NavBar() {
 					</div>
 				</div>
 
-				<div className="flex justify-center">
-					<button className="block md:hidden mt-2 uppercase w-full py-[7px] bg-[#D60200] font-[600] text-white font_poppins">Book this game</button>
-				</div>
+				{/* <div className="flex justify-center w-full"> */}
+					<a href="#bookingSlot"  className="flex justify-center md:hidden mt-2 uppercase w-full py-[7px] bg-[#D60200] font-[600] text-white font_poppins ">Book this game</a>
+				{/* </div> */}
 			</div>
 
 			{/* ----------all pop up card------ */}
@@ -179,24 +181,24 @@ function NavBar() {
 			{/* ---location--- */}
 			<div
 				id="locationbar"
-				className={`w-full h-[100vh] overflow-y-auto pb-10 bg-[rgba(11,29,75)] backdrop-blur-[5px] font_poppins fixed z-50 duration-300 ${
+				className={`w-full h-[100vh] overflow-y-auto pb-28 xs:pb-20 bg-[rgba(11,29,75)] backdrop-blur-[5px] font_poppins fixed z-50 duration-300 ${
 					isLocationOpen ? "top-0" : "-top-[200%] "
 				}  `}
 			>
 				<div className="relative">
 					<p
 						onClick={handleLocationBarClose}
-						className="text-white text-2xl absolute right-6 top-3 rotate-45 border-[1px] px-2 rounded-full cursor-pointer"
+						className="text-white text-lg xs:text-2xl absolute right-4 xs:right-6 top-3 rotate-45 border-[1px] px-2 rounded-full cursor-pointer"
 					>
 						+
 					</p>
 				</div>
-				<p className="text-[36px] md:text-[48px] leading-10 uppercase font-[700] text-[#FC7008] text-center pt-14 pb-[30px]">Choose your location</p>
+				<p className="text-[28px] xs:text-[36px] md:text-[48px] leading-10 uppercase font-[700] text-[#FC7008] text-center pt-14 pb-[20px] xs:pb-[30px]">Choose your location</p>
 
 				<div className=" md:grid  md:justify-items-start md:grid-cols-2 gap-y-16 gap-x-5 lg:gap-x-[88px] mx-2.5">
-					<div className="max-w-[455px] mx-auto md:mx-[inherit]  lg:justify-self-end pb-16 md:pb-0">
-						<div className="group h-[250px] relative rounded-lg overflow-hidden ">
-							<Image src={LA} alt="" height={250} width={457} className="h-full w-full object-cover group-hover:scale-110 duration-700" />
+					<div className="max-w-[455px] mx-auto md:mx-[inherit]  lg:justify-self-end pb-16 md:pb-0 ">
+						<div className="group h-[200px] xs:h-[250px] relative rounded-lg overflow-hidden ">
+							<Image src={LA} alt="" height={250} width={457} className="h-full w-full object-cover group-hover:scale-110 duration-700 " />
 							<div className="h-full w-full absolute top-0 bg-gradient-to-t from-[#0B1D4B] to-transparent mix-blend-multiply"></div>
 							<div className="flex items-center gap-2.5 absolute bottom-[30px] lg:bottom-[17px] left-[20px]">
 								<svg xmlns="http://www.w3.org/2000/svg" width="15" height="22" viewBox="0 0 15 22" fill="none">
@@ -207,7 +209,7 @@ function NavBar() {
 								</svg>
 								<p className="text-[24px] font-[700] uppercase text-[#fff]">Los Angeles, CA</p>
 							</div>
-							<p className="text-[11px] text-white absolute bottom-4 lg:bottom-[20px] left-[45px] lg:left-[inherit] lg:right-[20px]">
+							<p className="text-[12px] xs:text-[11px] mt-[2px] xs:mt-0 text-white absolute bottom-4 lg:bottom-[20px] left-[45px] lg:left-[inherit] lg:right-[20px]">
 								16 Games | 4 Locations{" "}
 							</p>
 						</div>
@@ -222,7 +224,7 @@ function NavBar() {
 										className="h-[78px] w-full sm:w-auto object-cover rounded-lg group-hover:scale-110 duration-700"
 									/>
 									<div className="h-full w-full absolute top-0 bg-gradient-to-t from-[#0B1D4B] to-transparent mix-blend-multiply"></div>
-									<p className="absolute bottom-2.5 right-2 text-white text-[11px]">4 games</p>
+									<p className="absolute bottom-2.5 right-2 text-white text-[12px] xs:text-[11px]">4 games</p>
 								</div>
 								<div>
 									<p className="text-[18px] font-[600] text-[#0B1D4B]">Redondo Beach</p>
@@ -239,7 +241,7 @@ function NavBar() {
 										className="h-[78px] w-full sm:w-auto object-cover rounded-lg group-hover:scale-110 duration-700"
 									/>
 									<div className="h-full w-full absolute top-0 bg-gradient-to-t from-[#0B1D4B] to-transparent mix-blend-multiply"></div>
-									<p className="absolute bottom-2.5 right-2 text-white text-[11px]">5 games</p>
+									<p className="absolute bottom-2.5 right-2 text-white text-[12px] xs:text-[11px]">5 games</p>
 								</div>
 								<div>
 									<p className="text-[18px] font-[600] text-[#0B1D4B]">Hollywood</p>
@@ -256,7 +258,7 @@ function NavBar() {
 										className="h-[78px] w-full sm:w-auto object-cover rounded-lg group-hover:scale-110 duration-700"
 									/>
 									<div className="h-full w-full absolute top-0 bg-gradient-to-t from-[#0B1D4B] to-transparent mix-blend-multiply"></div>
-									<p className="absolute bottom-2.5 right-2 text-white text-[11px]">4 games</p>
+									<p className="absolute bottom-2.5 right-2 text-white text-[12px] xs:text-[11px]">4 games</p>
 								</div>
 								<div>
 									<p className="text-[18px] font-[600] text-[#0B1D4B]">Korea Town</p>
@@ -273,7 +275,7 @@ function NavBar() {
 										className="h-[78px] w-full sm:w-auto object-cover rounded-lg group-hover:scale-110 duration-700"
 									/>
 									<div className="h-full w-full absolute top-0 bg-gradient-to-t from-[#0B1D4B] to-transparent mix-blend-multiply"></div>
-									<p className="absolute bottom-2.5 right-2 text-white text-[11px]">3 games</p>
+									<p className="absolute bottom-2.5 right-2 text-white text-[12px] xs:text-[11px]">3 games</p>
 								</div>
 								<div>
 									<p className="text-[18px] font-[600] text-[#0B1D4B]">Culver City</p>
@@ -283,7 +285,7 @@ function NavBar() {
 						</div>
 					</div>
 					<div className="max-w-[455px] mx-auto md:mx-[inherit] ">
-						<div className="group h-[250px] relative rounded-lg overflow-hidden ">
+						<div className="group h-[200px] xs:h-[250px] relative rounded-lg overflow-hidden ">
 							<Image src={dallas} alt="" height={250} width={457} className="h-full w-full object-cover group-hover:scale-110 duration-700" />
 							<div className="h-full w-full absolute top-0 bg-gradient-to-t from-[#0B1D4B] to-transparent mix-blend-multiply"></div>
 							<div className="flex items-center gap-2.5 absolute bottom-[30px] lg:bottom-[17px] left-[20px]">
@@ -295,7 +297,7 @@ function NavBar() {
 								</svg>
 								<p className="text-[24px] font-[700] uppercase text-[#fff]">Dallas, TX</p>
 							</div>
-							<p className="text-[11px] text-white absolute bottom-4 lg:bottom-[20px] left-[45px] lg:left-[inherit] lg:right-[20px]">
+							<p className="text-[12px] xs:text-[11px] mt-[2px] xs:mt-0 text-white absolute bottom-4 lg:bottom-[20px] left-[45px] lg:left-[inherit] lg:right-[20px]">
 								6 Games | 1 Location{" "}
 							</p>
 						</div>
@@ -310,13 +312,12 @@ function NavBar() {
 										className="h-[78px] w-full sm:w-auto object-cover rounded-lg group-hover:scale-110 duration-700"
 									/>
 									<div className="h-full w-full absolute top-0 bg-gradient-to-t from-[#0B1D4B] to-transparent mix-blend-multiply"></div>
-									<p className="absolute bottom-2.5 right-2 text-white text-[11px]">6 games</p>
+									<p className="absolute bottom-2.5 right-2 text-white text-[12px] xs:text-[11px]">6 games</p>
 								</div>
 								<div>
 									<p className="text-[18px] font-[600] text-[#0B1D4B]">Plano</p>
 									<p className="text-[14px] text-[rgba(11,29,75,0.60)] pr-2">
-										3420 K Ave Unit 309, Plano,
-										<br /> TX 75074
+										3420 K Ave Unit 309, Plano, TX 75074
 									</p>
 								</div>
 							</div>
@@ -327,7 +328,7 @@ function NavBar() {
 
 			<div
 				className={`${
-					toggle ? " top-[45px] sm:top-[80px] md:top-[50px] flex flex-col sm:grid sm:grid-cols-2" : "hidden md:grid md:grid-cols-2 md:top-[-200%]"
+					toggle ? " top-[50px] sm:top-[80px] md:top-[50px] flex flex-col sm:grid sm:grid-cols-2" : "hidden md:grid md:grid-cols-2 md:top-[-200%]"
 				}  duration-300  overflow-y-auto h-[100vh] sm:h-auto w-full sm:w-[480px] sm:border-[1px] border-[#3f3f3f70] fixed right-0 2xl:right-[calc((100%-1440px)/2)] z-40 px-8 py-10 bg-[#000A19] text-[#D9D9D9] font_poppins  gap-4 sm:gap-8`}
 			>
 				<ul className=" space-y-4 flex-none">
@@ -608,15 +609,7 @@ function NavBar() {
 			</div>
 
 			{/* --------breadcrum------ */}
-			<div className="bg-[#000F25] py-1">
-				<div className="g_container--theme text-[#697383] font_poppins text-[12px] flex items-center gap-1.5">
-					<span>Home</span>
-					<span className="text-[14px]">•</span>
-					<span>Hollywood</span>
-					<span className="text-[14px]">•</span>
-					<span className="text-[#97A4B7]">Project Minotaur</span>
-				</div>
-			</div>
+		
 		</div>
 	);
 }

@@ -45,8 +45,8 @@ function Trailer() {
 				{/* <div className="flex items-center justify-center max-w-[1050px] mx-auto px-8">
 				<Image src={title} alt="" height={82} width={1173} className="relative z-10 -mb-4 sm:-mb-6 md:-mb-10 xl:-mb-16 " />
 			</div> */}
-				<div className="bg-[url('/templet/thrillTheme/trailerBg.png')] bg-no-repeat bg-[length:100%_100%] flex justify-center max-w-[1355px] mx-auto pb-3 sm:pb-6 px-3 sm:px-6 lg:px-20 pt-[50px] sm:pt-[130px] relative">
-					<div className="w-full h-0 relative " style={{ paddingTop: "60.25%" }}>
+				<div className="bg-[url('/templet/thrillTheme/trailerBgPhone.jpg')] xs:bg-[url('/templet/thrillTheme/trailerBg.png')] bg-no-repeat bg-[length:auto_100%] bg-center xs:bg-[length:100%_100%] flex justify-center max-w-[1355px] mx-auto pb-5 xs:pb-3 sm:pb-6 px-3 sm:px-6 lg:px-20 pt-[100px]  xs:pt-[50px] sm:pt-[130px] relative">
+					<div className="w-full h-0 relative pt-[60.25%] xs:pt-[60.25%] "  >
 						<iframe
 							src="https://player.vimeo.com/video/561954150"
 							className="absolute top-0 left-0 w-full h-full"

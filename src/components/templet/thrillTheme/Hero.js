@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useRef, useState } from "react";
 import { ImVolumeMute2 } from "react-icons/im";
 import { GoUnmute } from "react-icons/go";
@@ -22,7 +22,6 @@ function Hero({ description }) {
 	};
 	return (
 		<div className="h-[100vh] w-full relative pb-[250px] md:pb-0 bg-[#0D130A]">
-			
 			<div className="xl:left-[2%] 2xl:left-[calc((100%-1440px)/2)] absolute z-10 top-2.5 flex font_poppins ">
 				<Link
 					// onClick={backToPreviousPage}
@@ -36,6 +35,7 @@ function Hero({ description }) {
 				<source src="https://res.cloudinary.com/duvvlysie/video/upload/v1736239911/hero_video_j91do9.mp4" type="video/mp4" />
 			</video>
 			<button
+				
 				onClick={toggleMute}
 				className={`animate-pulse flex  absolute z-20 top-[52%] sm:top-[42%] lg:top-[100%] right-3 lg:right-14  lg:-mt-[200px]  justify-center items-center bg-[#0F1A0C]  px-1 py-1 rounded-full after:absolute after:bg-[#0F1A0C80] after:h-10 after:w-10 after:rounded-full before:absolute before:bg-[#0F1A0C90] before:h-8 before:w-8 before:rounded-full `}
 			>
@@ -52,17 +52,17 @@ function Hero({ description }) {
 						PROJECT MINOTAUR <br /> ESCAPE ROOM
 					</h1>
 					<p className="max-w-[770px] mx-auto text-base md:text-lg text-[#8CA482] text-center mt-0 mb-[40px]">{description}</p>
-					<button className="box box-b py-[15px] md:py-[20px] px-[55px] md:px-[65px] font_bandex text-[#FFFFFF] text-[26px] bg-[#FF050535] relative">
+					<a href="#bookingSlot" className="box box-b py-[15px] md:py-[20px] px-[55px] md:px-[65px] font_bandex text-[#FFFFFF] text-[26px] bg-[#FF050535] relative">
 						<Image src={buttonLeft} alt="" height={71} width={9} className="h-full w-auto absolute left-[-5px] top-0" />
 						<Image src={buttonRight} alt="" height={71} width={9} className="h-full w-auto absolute right-[-5px] top-0" />
 						BOOK THIS GAME
-					</button>
+					</a>
 				</div>
 			</div>
 			<div className="absolute z-10 top-3 md:top-10 right-3 md:right-10">
 				<Image src={sticker} alt=" " height={40} width={78} className="h-[30px] sm:h-[inherit] w-auto" />
 				<div className="text-[#CAFFBC] font_poppins mt-1.5 sm:mt-2.5 relative">
-					<Image src={gif} alt=" " height={30} width={50} className="h-[40px] w-auto absolute -left-10 -top-2" />
+					<Image src={gif} alt=" " height={30} width={50} className=" h-[45px] sm:h-[48px] w-auto absolute -left-9 sm:-left-10 -top-1 sm:top-0" />
 					<p className="text-[10px] sm:text-[16px] font-[500] uppercase leading-[1]">
 						Live Experience <br /> <span className="text-[8px] sm:text-[12px] font-[500] lowercase">with multiple actors</span>
 					</p>

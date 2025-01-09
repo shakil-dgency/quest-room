@@ -1,3 +1,4 @@
+import BreadCum from "@/components/templet/thrillTheme/allComponents/BreadCum";
 import BookingSection from "@/components/templet/thrillTheme/BookingSection";
 import Footer from "@/components/templet/thrillTheme/Footer";
 import FrequentlyAsked from "@/components/templet/thrillTheme/FrequentlyAsked";
@@ -12,7 +13,8 @@ import React from "react";
 
 function page() {
 	return (
-		<div className="bg-[#0D130A]">
+		<div className="bg-[#0D130A] scrollable_container">
+      <BreadCum />
 			<Hero description="So, you dare to enter? Bravo! Get ready to experience LA’s #1 scary escape room, where the fear is real, and the actors are part of the thrill!" />
       <GameDetails />
       <StoryLine />

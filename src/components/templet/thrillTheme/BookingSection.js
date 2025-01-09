@@ -3,10 +3,11 @@ import React from "react";
 import light1 from "@/../../public/templet/thrillTheme/booking/ligh1.png";
 import light from "@/../../public/templet/thrillTheme/booking/ligh.png";
 import bookingSlot from "@/../../public/templet/thrillTheme/booking/bookingSlot.png";
+import bookingSlotPhone from "@/../../public/templet/thrillTheme/booking/bookingSlotPhone.png";
 
 function BookingSection() {
 	return (
-		<div className=" pt-[0px] sm:pt-[20px]  sm:overflow-x-hidden xl:overflow-x-visible">
+		<div id="bookingSlot" className=" pt-[0px] sm:pt-[20px]  sm:overflow-x-hidden xl:overflow-x-visible">
 			<div className="bg-[url('/templet/thrillTheme/booking/bookingbg.png')] bg-no-repeat bg-cover pb-20 relative ">
 				<div className=" pt-16 sm:pt-[145px] ">
 					<div className="relative z-20 max-w-[1236px] pb-20 px-8  mx-auto rounded-lg bg-[#0D130A] shadow-[0px_2px_50px_0px_rgba(210,0,0,0.2)] ">
@@ -27,7 +28,8 @@ function BookingSection() {
 						/>
 						{/* </div> */}
 						<h2 className="header_2 text-center pt-14 sm:pt-28 md:pt-[180px] pb-5">BEGIN YOUR JOURNEY TODAY!</h2>
-						<Image src={bookingSlot} alt="" height={639} width={1269} className=" " />
+						<Image src={bookingSlot} alt="" height={639} width={1269} className="hidden sm:block " />
+						<Image src={bookingSlotPhone} alt="" height={639} width={1269} className="block sm:hidden " />
 					</div>
 				</div>
 				{/* <Image src={doc} alt="" height={1112} width={488} className="h-[70%] w-auto  absolute bottom-0 right-0 z-20   " /> */}
