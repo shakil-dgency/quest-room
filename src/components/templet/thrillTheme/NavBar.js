@@ -90,6 +90,12 @@ function NavBar() {
 
 	useEffect(() => {
 		const navbar = document.getElementById("navbar");
+		const rooms = document.getElementById("roomsNavbar");
+		const roomsButton = document.getElementById("roomsButton");
+		const eventDropdown = document.getElementById("eventDropdown");
+		const eventButton = document.getElementById("eventButton");
+		const hamburgMenu = document.getElementById("hamburgMenu");
+		const hamburgButton = document.getElementById("hamburgButton");
 		// Navbar OnScroll functionality
 
 		var lastScrollTop = 0;
@@ -101,10 +107,8 @@ function NavBar() {
 				if (scrollTop > 100) {
 					if (scrollTop > lastScrollTop) {
 						navbar.style.top = "-50px";
-						
 					} else if (lastScrollTop > scrollTop + 20) {
 						navbar.style.top = "0";
-						
 					} else if (scrollTop === 0) {
 						navbar.style.top = "0";
 					}
@@ -118,14 +122,29 @@ function NavBar() {
 		// 	// console.log(window.innerWidth);
 		// 	setResize(window.innerWidth);
 		// });
-	});
+
+		window.addEventListener("click", (e) => {
+			if (!rooms.contains(e.target) && !roomsButton.contains(e.target)) {
+				setEscape(false);
+			}
+
+			if (!eventDropdown.contains(e.target) && !eventButton.contains(e.target)) {
+				setEvent(false);
+			}
+			if (!hamburgMenu.contains(e.target) && !hamburgButton.contains(e.target)) {
+				setToggle(false);
+			}
+		});
+	}, []);
 
 	return (
 		<div id="navbar" className="w-full z-50 sticky  top-0 duration-300">
 			<div className="bg-[#000A19] pt-2.5 md:py-[14px] relative z-40 sm:z-50 ">
 				<div className="g_container--theme flex justify-between items-center gap-2 ">
 					{/* Logo */}
-					<div className="flex-none"><Image src={logo} alt="logo" height={44} width={227} className="h-[16px] 2xs:h-[20px] xs:h-[22px] sm:h-[35px] w-auto" /> </div>
+					<div className="flex-none">
+						<Image src={logo} alt="logo" height={44} width={227} className="h-[16px] 2xs:h-[20px] xs:h-[22px] sm:h-[35px] w-auto" />{" "}
+					</div>
 
 					{/* Dropdown */}
 					<div className="cursor-pointer w-full 2xs:w-[200px] xs:w-[260px] sm:w-[320px]  xl:w-[364px] border-[2px] border-[#FC7008] py-[8px] rounded-full flex relative font_poppins">
@@ -135,8 +154,9 @@ function NavBar() {
 							onClick={handleLocationBarOpen}
 						>
 							<p className="uppercase flex items-center gap-1.5 2xs:gap-2 sm:gap-2.5 leading-0">
-								<Image src={location} alt="" height={14} width={12} className="-mt-[1px] h-[11px] 2xs:h-[14px] sm:h-[18px] w-auto"  />
-								<span>Hollyood, LA</span> <IoIosArrowDown className=" text-[11px] 2xs:text-[13px] xs:text-[16px] absolute z-10 right-1.5 xs:right-2.5 sm:right-[20px]" />
+								<Image src={location} alt="" height={14} width={12} className="-mt-[1px] h-[11px] 2xs:h-[14px] sm:h-[18px] w-auto" />
+								<span>Hollyood, LA</span>{" "}
+								<IoIosArrowDown className=" text-[11px] 2xs:text-[13px] xs:text-[16px] absolute z-10 right-1.5 xs:right-2.5 sm:right-[20px]" />
 							</p>
 						</div>
 					</div>
@@ -144,13 +164,26 @@ function NavBar() {
 					{/* Navigation Links */}
 					<div className="flex gap-5">
 						<div className="hidden md:flex text-[14px] gap-5 items-center text-[#f5f5f5] font_poppins">
-							<div onClick={handleescapeBar} className={`${escape ? "text-[#FC7008] " : ""} hidden lg:flex cursor-pointer items-center gap-1`}>
+							<div
+								id="roomsButton"
+								onClick={handleescapeBar}
+								className={`${escape ? "text-[#FC7008] " : ""} hidden lg:flex cursor-pointer items-center gap-1`}
+							>
 								ESCAPE ROOMS <IoMdArrowDropdown className={`text-[18px] duration-300 ${escape ? "rotate-180 " : ""}`} />
 							</div>
-							<div onClick={handleEventBar} className={`${event ? "text-[#FC7008] " : ""} hidden lg:flex items-center gap-1 cursor-pointer`}>
+							<div
+								id="eventButton"
+								onClick={handleEventBar}
+								className={`${event ? "text-[#FC7008] " : ""} hidden lg:flex items-center gap-1 cursor-pointer`}
+							>
 								EVENTS <IoMdArrowDropdown className={`text-[18px] duration-300 ${event ? "rotate-180" : ""}`} />
 							</div>
-							<a href="#bookingSlot" className="hidden md:block uppercase text-[13px] lg:text-[15px] px-2.5 lg:px-[14px] py-[10px] font-[600] bg-[#D60200] ">Book this game</a>
+							<a
+								href="#bookingSlot"
+								className="hidden md:block uppercase text-[13px] lg:text-[15px] px-2.5 lg:px-[14px] py-[10px] font-[600] bg-[#D60200] "
+							>
+								Book this game
+							</a>
 						</div>
 						{/* <Image
 							onClick={handleNavSidebar}
@@ -161,6 +194,7 @@ function NavBar() {
 							className="h-[35px] xl:h-[40px] w-auto cursor-pointer"
 						/> */}
 						<div
+							id="hamburgButton"
 							onClick={handleNavSidebar}
 							className="hamburg cursor-pointer h-[30px] 2xs:h-[40px] w-[30px] 2xs:w-[40px] px-1 py-1.5 2xs:px-[7px] 2xs:py-[11px] bg-[#FC700833] space-y-1 flex flex-col justify-center overflow-hidden"
 						>
@@ -172,7 +206,12 @@ function NavBar() {
 				</div>
 
 				{/* <div className="flex justify-center w-full"> */}
-					<a href="#bookingSlot"  className="flex justify-center md:hidden mt-2 uppercase w-full py-[7px] bg-[#D60200] font-[600] text-white font_poppins ">Book this game</a>
+				<a
+					href="#bookingSlot"
+					className="flex justify-center md:hidden mt-2 uppercase w-full py-[7px] bg-[#D60200] font-[600] text-white font_poppins "
+				>
+					Book this game
+				</a>
 				{/* </div> */}
 			</div>
 
@@ -193,7 +232,9 @@ function NavBar() {
 						+
 					</p>
 				</div>
-				<p className="text-[28px] xs:text-[36px] md:text-[48px] leading-10 uppercase font-[700] text-[#FC7008] text-center pt-14 pb-[20px] xs:pb-[30px]">Choose your location</p>
+				<p className="text-[28px] xs:text-[36px] md:text-[48px] leading-10 uppercase font-[700] text-[#FC7008] text-center pt-14 pb-[20px] xs:pb-[30px]">
+					Choose your location
+				</p>
 
 				<div className=" md:grid  md:justify-items-start md:grid-cols-2 gap-y-16 gap-x-5 lg:gap-x-[88px] mx-2.5">
 					<div className="max-w-[455px] mx-auto md:mx-[inherit]  lg:justify-self-end pb-16 md:pb-0 ">
@@ -316,9 +357,7 @@ function NavBar() {
 								</div>
 								<div>
 									<p className="text-[18px] font-[600] text-[#0B1D4B]">Plano</p>
-									<p className="text-[14px] text-[rgba(11,29,75,0.60)] pr-2">
-										3420 K Ave Unit 309, Plano, TX 75074
-									</p>
+									<p className="text-[14px] text-[rgba(11,29,75,0.60)] pr-2">3420 K Ave Unit 309, Plano, TX 75074</p>
 								</div>
 							</div>
 						</div>
@@ -327,6 +366,7 @@ function NavBar() {
 			</div>
 
 			<div
+			id="hamburgMenu"
 				className={`${
 					toggle ? " top-[50px] sm:top-[80px] md:top-[50px] flex flex-col sm:grid sm:grid-cols-2" : "hidden md:grid md:grid-cols-2 md:top-[-200%]"
 				}  duration-300  overflow-y-auto h-[100vh] sm:h-auto w-full sm:w-[480px] sm:border-[1px] border-[#3f3f3f70] fixed right-0 2xl:right-[calc((100%-1440px)/2)] z-40 px-8 py-10 bg-[#000A19] text-[#D9D9D9] font_poppins  gap-4 sm:gap-8`}
@@ -420,6 +460,7 @@ function NavBar() {
 
 			{/* -------escaperoom------ */}
 			<div
+				id="roomsNavbar"
 				className={`${
 					escape ? "top-[48px]" : "-top-[300%]"
 				} duration-300 bg-[#000A19] border-[1px] border-[#3f3f3f70] rounded-lg w-[1110px] px-[34px] py-[40px] fixed z-30  right-0 2xl:right-[calc((100%-1440px)/2)] `}
@@ -525,6 +566,7 @@ function NavBar() {
 
 			{/* -------event------ */}
 			<div
+				id="eventDropdown"
 				className={`${
 					event ? "top-[48px]" : "-top-[200%]"
 				} duration-300 bg-[#000A19] border-[1px] border-[#3f3f3f70] rounded-lg w-[1110px] px-[34px] py-[40px] fixed z-30  right-0 2xl:right-[calc((100%-1440px)/2)] `}
@@ -609,7 +651,6 @@ function NavBar() {
 			</div>
 
 			{/* --------breadcrum------ */}
-		
 		</div>
 	);
 }

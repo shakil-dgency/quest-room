@@ -22,7 +22,7 @@ function Gallery() {
 				// slidesPerView={2.5}
 				// spaceBetween={40}
 				// centeredSlides={true}
-				// freeMode={true}
+				freeMode={true}
 
 				// loop={true}
 				// speed={1000}
