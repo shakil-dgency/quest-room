@@ -1,15 +1,17 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from 'next/font/local';
 import "./globals.css";
 import NavBar from "@/components/templet/thrillTheme/NavBar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const bandexFont = localFont({
+  src: '../../public/fonts/BANDEX.ttf', // Correct path
+  display: 'swap', // Optional but recommended for better UX
+  variable: '--font-bandex',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const rusoileFont = localFont({
+  src: '../../public/fonts/Rusoile-Grunge.ttf', // Correct path
+  display: 'swap', // Optional but recommended for better UX
+  variable: '--font-rusoile',
 });
 
 
@@ -34,7 +36,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${bandexFont.variable} ${rusoileFont.variable}  antialiased`}
       >
         <NavBar />
         {children}

@@ -27,6 +27,7 @@ import event4 from "@/../../public/templet/thrillTheme/navBar/event4.png";
 import location from "@/../../public/templet/thrillTheme/navBar/locationIcon.svg";
 
 function NavBar() {
+
 	const [toggle, setToggle] = useState(false);
 	const [escape, setEscape] = useState(false);
 	const [event, setEvent] = useState(false);
@@ -35,6 +36,7 @@ function NavBar() {
 	const [escapePopUp, setEscapePopUp] = useState(false);
 	const [eventPopUp, setEventPopUp] = useState(false);
 	const router = useRouter();
+
 
 	const handleNavSidebar = () => {
 		setToggle(!toggle);
@@ -366,7 +368,7 @@ function NavBar() {
 			</div>
 
 			<div
-			id="hamburgMenu"
+				id="hamburgMenu"
 				className={`${
 					toggle ? " top-[50px] sm:top-[80px] md:top-[50px] flex flex-col sm:grid sm:grid-cols-2" : "hidden md:grid md:grid-cols-2 md:top-[-200%]"
 				}  duration-300  overflow-y-auto h-[100vh] sm:h-auto w-full sm:w-[480px] sm:border-[1px] border-[#3f3f3f70] fixed right-0 2xl:right-[calc((100%-1440px)/2)] z-40 px-8 py-10 bg-[#000A19] text-[#D9D9D9] font_poppins  gap-4 sm:gap-8`}

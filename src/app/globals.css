@@ -17,20 +17,20 @@
 	}
 }
 
-@font-face {
-	src: url("/font/Rusoile-Grunge.ttf");
+/* @font-face {
+	src: url("/fonts/Rusoile-Grunge.ttf");
 	font-family: "Rusoile";
 }
 @font-face {
-	src: url("/font/BANDEX.ttf");
+	src: url("/fonts/BANDEX.ttf");
 	font-family: "Bandex";
-}
+} */
 
 .font_rusolie {
-	font-family: "Rusoile", sans-serif; /* Add a fallback font */
+	font-family: var(--font-rusoile), sans-serif; /* Add a fallback font */
 }
 .font_bandex {
-	font-family: "Bandex", sans-serif; /* Add a fallback font */
+	font-family: var(--font-bandex), sans-serif; /* Add a fallback font */
 }
 
 /* @font-face {
@@ -92,13 +92,13 @@
 }
 
 .storyLine_header_2 {
-	font-family: Rusoile;
+	font-family: var(--font-rusoile), sans-serif;
 	font-size: 64px;
 	line-height: 68px;
 	font-weight: 400;
 }
 .header_2 {
-	font-family: Rusoile;
+	font-family: var(--font-rusoile), sans-serif;
 	font-size: 64px;
 	line-height: 68px;
 	font-weight: 400;
