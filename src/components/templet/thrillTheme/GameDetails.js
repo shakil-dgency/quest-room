@@ -15,7 +15,7 @@ import GameDetailObserver from "./allComponents/GameDetailObserver";
 
 function GameDetails() {
 	const imageLoader = ({ src, width, quality }) => {
-		return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`;
+		return `https://questroom-app-onzmd.ondigitalocean.app${src}?w=${width}&q=${quality || 75}`;
 	};
 	return (
 		<div id="game_detail" className="">
@@ -28,7 +28,7 @@ function GameDetails() {
 
 				<Image
 					loader={imageLoader}
-					src={girl}
+					src={"/templet/thrillTheme/girl.png"}
 					alt=""
 					height={1199}
 					width={672}

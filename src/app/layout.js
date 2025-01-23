@@ -34,6 +34,8 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
 			<head>
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 				<link rel="preload" href="/fonts/Rusoile-Grunge.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
 				<link rel="preload" href="/fonts/BANDEX.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
 				<link rel="icon" href="/favicon.svg" type="image/x-icon" sizes="32X30" />

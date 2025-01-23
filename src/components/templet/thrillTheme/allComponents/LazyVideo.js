@@ -21,6 +21,7 @@ const LazyVideo = ({ src, poster, type }) => {
 			<video
 				poster={poster} // Placeholder image before video loads
 				ref={videoRef}
+                loading="lazy"
 				autoPlay
 				loop
 				muted={isMuted}
