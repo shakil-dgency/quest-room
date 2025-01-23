@@ -29,7 +29,7 @@ const LazyVideo = ({ src, poster, type }) => {
 				className="h-full w-full object-cover"
 			>
 				{isPageLoaded && <source src="https://res.cloudinary.com/duvvlysie/video/upload/v1736239911/hero_video_j91do9.mp4" type="video/mp4" />}
-				Your browser does not support the video tag.
+				
 			</video>
 			<button
 				onClick={toggleMute}

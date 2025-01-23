@@ -34,12 +34,12 @@ function Hero({ description }) {
 			</div>
 			<LazyVideo poster={'/templet/thrillTheme/hero/hero_poster.jpg'} />
 		
-			<div className="flex justify-center   font_poppins ">
+			<div className="flex justify-center ">
 				<div className="absolute z-20 bottom-5 flex flex-col items-center px-2.5">
-					<h1 className="font_rusolie heading_1 font-[400] text-[#CAFFBC] text-center text-[40px] sm:text-[60px] lg:text-[90px] leading-[46px] sm:leading-[70px] lg:leading-[90px] ">
+					<h1 className="font_rusolie heading_1  text-[#CAFFBC] text-center text-[40px] sm:text-[60px] lg:text-[90px] leading-[46px] sm:leading-[70px] lg:leading-[90px] ">
 						PROJECT MINOTAUR <br /> ESCAPE ROOM
 					</h1>
-					<p className="max-w-[770px] mx-auto text-base md:text-lg text-[#8CA482] text-center mt-0 mb-[40px]">{description}</p>
+					<p className="max-w-[770px] mx-auto text-base md:text-lg text-[#8CA482] text-center mt-0 mb-[40px] font_poppins">{description}</p>
 					<a href="#bookingSlot" className="box box-b py-[15px] md:py-[20px] px-[55px] md:px-[65px] font_bandex text-[#FFFFFF] text-[26px] bg-[#FF050535] relative">
 						<Image src={buttonLeft} alt="" height={71} width={9} className="h-full w-auto absolute left-[-5px] top-0" />
 						<Image src={buttonRight} alt="" height={71} width={9} className="h-full w-auto absolute right-[-5px] top-0" />

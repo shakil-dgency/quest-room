@@ -14,17 +14,17 @@ import React from "react";
 function page() {
 	return (
 		<div className="bg-[#0D130A] scrollable_container">
-      <BreadCum />
+			<BreadCum />
 			<Hero description="So, you dare to enter? Bravo! Get ready to experience LA’s #1 scary escape room, where the fear is real, and the actors are part of the thrill!" />
-      <GameDetails />
-      <StoryLine />
-      <Trailer />
-      <BookingSection />
-      <Testimonial />
-      <Gallery />
-      <FrequentlyAsked />
-      <OtherGames />
-      <Footer />
+			<GameDetails />
+			<StoryLine />
+			<Trailer />
+			<BookingSection />
+			<Testimonial />
+			<Gallery />
+			<FrequentlyAsked />
+			<OtherGames />
+			<Footer />
 		</div>
 	);
 }

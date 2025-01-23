@@ -27,10 +27,10 @@
 } */
 
 .font_rusolie {
-	font-family: var(--font-rusoile), sans-serif; /* Add a fallback font */
+	font-family: var(--font-rusoile); /* Add a fallback font */
 }
 .font_bandex {
-	font-family: var(--font-bandex), sans-serif; /* Add a fallback font */
+	font-family: var(--font-bandex); /* Add a fallback font */
 }
 
 /* @font-face {

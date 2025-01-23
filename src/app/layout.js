@@ -9,7 +9,7 @@ const bandexFont = localFont({
 });
 
 const rusoileFont = localFont({
-	src: "../../public/fonts/Rusoile-Grunge.ttf", // Correct path
+	src: "../../public/fonts/Rusoile-Grunge.woff2", // Correct path
 	display: "swap", // Optional but recommended for better UX
 	variable: "--font-rusoile",
 });
@@ -35,8 +35,8 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<head>
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-				<link rel="preload" href="/fonts/Rusoile-Grunge.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
+				<link rel="preconnect" href="https://fonts.gstatic.com"  />
+				<link rel="preload" href="/fonts/Rusoile-Grunge.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
 				<link rel="preload" href="/fonts/BANDEX.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
 				<link rel="icon" href="/favicon.svg" type="image/x-icon" sizes="32X30" />
 			</head>
