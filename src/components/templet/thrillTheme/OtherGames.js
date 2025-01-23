@@ -11,8 +11,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
+import usePageLoad from "@/hooks/usePageLoad";
 
 function OtherGames() {
+	const isPageLoaded = usePageLoad()
 	return (
 		<div className="g_container--theme pt-10 pb-20">
 			<h2 className="header_2 uppercase pb-[30px] md:pb-[40px]">Other games at Hollywood location</h2>
@@ -57,7 +59,7 @@ function OtherGames() {
 					<SwiperSlide>
 						<div className="relative group h-[578px] max-w-[390px] mx-auto  rounded-lg overflow-hidden bg-[url('/templet/thrillTheme/gameCard/Perfumer.jpg')] bg-center bg-no-repeat bg-cover ">
 							<video id="1" autoPlay loop muted playsInline className="hidden group-hover:block h-full w-full object-cover">
-								<source src="https://cdn.gbase.online/Perfumer_4k_2_fin_2_893dd3a39c.mp4" type="video/mp4" />
+								{isPageLoaded && <source src="https://cdn.gbase.online/Perfumer_4k_2_fin_2_893dd3a39c.mp4" type="video/mp4" />}
 							</video>
 
 							<div className="absolute top-0 left-0 right-0 z-20 flex gap-3 justify-between text-[11px] 2xs:text-[14px] text-[#D9D9D9] font_roboto  mt-2.5 px-4">
@@ -95,7 +97,7 @@ function OtherGames() {
 					<SwiperSlide>
 						<div className="relative group h-[578px] max-w-[390px] mx-auto  rounded-lg overflow-hidden bg-[url('/templet/thrillTheme/gameCard/RedGiant.png')] bg-center bg-no-repeat bg-cover ">
 							<video id="1" autoPlay loop muted playsInline className="hidden group-hover:block h-full w-full object-cover">
-								<source src="https://cdn.gbase.online/Red_Giant_Escape_room_fin_2_dba64856ae.mp4" type="video/mp4" />
+								{isPageLoaded && <source src="https://cdn.gbase.online/Red_Giant_Escape_room_fin_2_dba64856ae.mp4" type="video/mp4" />}
 							</video>
 
 							<div className="absolute top-0 left-0 right-0 z-20 flex gap-3 justify-between text-[11px] 2xs:text-[14px] text-[#D9D9D9] font_roboto  mt-2.5 px-4">
@@ -133,7 +135,7 @@ function OtherGames() {
 					<SwiperSlide>
 						<div className="relative group h-[578px] max-w-[390px] mx-auto  rounded-lg overflow-hidden bg-[url('/templet/thrillTheme/gameCard/Cannibal.jpg')] bg-center bg-no-repeat bg-cover ">
 							<video id="1" autoPlay loop muted playsInline className="hidden group-hover:block h-full w-full object-cover">
-								<source src="https://cdn.gbase.online/FULL_CANNIBAL_S_DEN_fin_2_6a4bb0b1ec.mp4" type="video/mp4" />
+								{isPageLoaded && <source src="https://cdn.gbase.online/FULL_CANNIBAL_S_DEN_fin_2_6a4bb0b1ec.mp4" type="video/mp4" />}
 							</video>
 
 							<div className="absolute top-0 left-0 right-0 z-20 flex gap-3 justify-between text-[11px] 2xs:text-[14px] text-[#D9D9D9] font_roboto  mt-2.5 px-4">
@@ -171,7 +173,7 @@ function OtherGames() {
 					<SwiperSlide>
 						<div className="relative group h-[578px] max-w-[390px] mx-auto  rounded-lg overflow-hidden bg-[url('/templet/thrillTheme/gameCard/reply.jpg')] bg-center bg-no-repeat bg-cover ">
 							<video id="1" autoPlay loop muted playsInline className="hidden group-hover:block h-full w-full object-cover">
-								<source src="https://cdn.gbase.online/PROJECT_MINOTAUR_fin_2_d97411cd3d.mp4" type="video/mp4" />
+								{isPageLoaded && <source src="https://cdn.gbase.online/PROJECT_MINOTAUR_fin_2_d97411cd3d.mp4" type="video/mp4" />}
 							</video>
 
 							<div className="absolute top-0 left-0 right-0 z-20 flex gap-3 justify-between text-[11px] 2xs:text-[14px] text-[#D9D9D9] font_roboto  mt-2.5 px-4">

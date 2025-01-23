@@ -1,10 +1,12 @@
 "use client";
+import usePageLoad from "@/hooks/usePageLoad";
 import React from "react";
 import { useRef, useEffect, useState } from "react";
 
 function Trailer() {
 	const videoRef = useRef(null);
 	const [isVisible, setIsVisible] = useState(false);
+	const isPageLoaded = usePageLoad()
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
@@ -21,6 +23,7 @@ function Trailer() {
 
 		return () => {
 			if (section) observer.unobserve(section);
+			
 		};
 	}, []);
 
@@ -39,28 +42,25 @@ function Trailer() {
 	}, [isVisible]);
 
 	return (
-		
-			<div ref={videoRef} className="g_container--theme  xl:pt-10 pb-[50px] sm:pb-[80px]">
-				
-				{/* <div className="flex items-center justify-center max-w-[1050px] mx-auto px-8">
+		<div ref={videoRef} className="g_container--theme  xl:pt-10 pb-[50px] sm:pb-[80px]">
+			{/* <div className="flex items-center justify-center max-w-[1050px] mx-auto px-8">
 				<Image src={title} alt="" height={82} width={1173} className="relative z-10 -mb-4 sm:-mb-6 md:-mb-10 xl:-mb-16 " />
 			</div> */}
-				<div className="bg-[url('/templet/thrillTheme/trailerBgPhone.jpg')] xs:bg-[url('/templet/thrillTheme/trailerBg.png')] bg-no-repeat bg-[length:auto_100%] bg-center xs:bg-[length:100%_100%] flex justify-center max-w-[1355px] mx-auto pb-5 xs:pb-3 sm:pb-6 px-3 sm:px-6 lg:px-20 pt-[100px]  xs:pt-[50px] sm:pt-[130px] relative">
-					<div className="w-full h-0 relative pt-[60.25%] xs:pt-[60.25%] "  >
-						<iframe
-							src="https://player.vimeo.com/video/561954150"
-							className="absolute top-0 left-0 w-full h-full"
-							frameBorder="0"
-							allow=" fullscreen"
-							allowFullScreen
-						></iframe>
-					</div>
+			<div className="bg-[url('/templet/thrillTheme/trailerBgPhone.jpg')] xs:bg-[url('/templet/thrillTheme/trailerBg.png')] bg-no-repeat bg-[length:auto_100%] bg-center xs:bg-[length:100%_100%] flex justify-center max-w-[1355px] mx-auto pb-5 xs:pb-3 sm:pb-6 px-3 sm:px-6 lg:px-20 pt-[100px]  xs:pt-[50px] sm:pt-[130px] relative">
+				<div className="w-full h-0 relative pt-[60.25%] xs:pt-[60.25%] ">
+					{isPageLoaded && <iframe
+						src={` https://player.vimeo.com/video/561954150 `}
+						className="absolute top-0 left-0 w-full h-full"
+						frameBorder="0"
+						allow=" fullscreen"
+						allowFullScreen
+					></iframe>}
 				</div>
-				{/* <video autoPlay loop muted className="h-full w-full object-cover relative z-10 ml-2.5">
+			</div>
+			{/* <video autoPlay loop muted className="h-full w-full object-cover relative z-10 ml-2.5">
 				<source src="https://player.vimeo.com/video/561954150?autoplay=1&title=0&portrait=0&byline=0&title=0&quality=1080p#t=0s" type="video/mp4" />
 			</video> */}
-			</div>
-		
+		</div>
 	);
 }
 

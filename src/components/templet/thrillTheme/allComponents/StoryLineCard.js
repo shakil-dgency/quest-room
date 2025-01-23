@@ -7,20 +7,20 @@ import buttonRight from "@/../../public/templet/thrillTheme/hero/button_right.sv
 function StoryLineCard({ id, item }) {
 	return (
 		<div className=" flex flex-col-reverse gap-4 xl:grid xl:grid-cols-5 w-full ">
-			<div className={` xl:self-center max-w-[760px] xl:max-w-[570px] px-2.5   ${id % 2 !== 0 ? " xl:col-span-2 xl:ml-auto " : "xl:col-start-4 xl:col-end-6 xl:ml-5"}`}>
+			<div
+				className={` xl:self-center max-w-[760px] xl:max-w-[570px] px-2.5   ${
+					id % 2 !== 0 ? " xl:col-span-2 xl:ml-auto " : "xl:col-start-4 xl:col-end-6 xl:ml-5"
+				}`}
+			>
 				<p className="font_poppins text-[#8CA482] text-[14px] md:text-[19px] mb-[6px] md:mb-[18px] font-[500] uppercase">{item.storyCategory}</p>
-				<h2 className="storyLine_header_2  bg-[linear-gradient(90deg,_#CAFFBC_0%,_#172817_100%)] bg-clip-text text-transparent">
-					{item.title}
-				</h2>
-				<p className="mt-[25px] font_poppins text-[#8CA482] text-[16px] md:text-[18px]">
-					{item.description}
-				</p>
+				<h2 className="storyLine_header_2  bg-[linear-gradient(90deg,_#CAFFBC_0%,_#172817_100%)] bg-clip-text text-transparent">{item.title}</h2>
+				<p className="mt-[25px] font_poppins text-[#8CA482] text-[16px] md:text-[18px]">{item.description}</p>
 				<div className="relative">
 					<Image src={coma} alt="" height={34} width={44} className="h-[34px] w-auto object-cover absolute  top-[-15px] left-0 opacity-[0.4]" />
-					<p className="mt-[48px] italic font_puritan text-[#6D8C60] ml-[20px] relative z-10">
-						{item.testimonial}
+					<p className="mt-[48px] italic font_puritan text-[#6D8C60] ml-[20px] relative z-10">{item.testimonial}</p>
+					<p className="mt-[13px] ml-[20px] italic text-[14px] font_puritan text-[#6D8C60]">
+						<span className="mr-2">—</span> {item.name}{" "}
 					</p>
-					<p className="mt-[13px] ml-[20px] italic text-[14px] font_puritan text-[#6D8C60]"><span className="mr-2">—</span> {item.name} </p>
 				</div>
 				{/* <button className="text-white bg-[url('/templet/thrillTheme/storyLine/button.svg')] bg-no-repeat bg-[length:100%_100%] px-[50px] py-[15px] mt-[73px]">
 					<span className="font_bandex">will you survive?</span>
@@ -32,12 +32,13 @@ function StoryLineCard({ id, item }) {
 				</button>
 			</div>
 			<Image
+				loading="lazy"
 				src={item.image}
 				alt=""
 				height={758}
 				width={1213}
 				quality={60}
-				priority={true}
+				// priority={true}
 				className={` w-full  ${id % 2 !== 0 ? "xl:col-start-3 xl:col-end-6 " : "xl:col-start-1 xl:col-end-4 xl:row-start-1"}`}
 			/>
 		</div>

@@ -9,17 +9,18 @@ import buttonLeft from "@/../../public/templet/thrillTheme/hero/button_left.svg"
 import buttonRight from "@/../../public/templet/thrillTheme/hero/button_right.svg";
 import sticker from "@/../../public/templet/thrillTheme/hero/stiker.svg";
 import gif from "@/../../public/templet/thrillTheme/hero/hero.gif";
+import LazyVideo from "./allComponents/LazyVideo";
 
 function Hero({ description }) {
-	const videoRef = useRef(null);
-	const [isMuted, setIsMuted] = useState(true);
+	// const videoRef = useRef(null);
+	// const [isMuted, setIsMuted] = useState(true);
 
-	const toggleMute = () => {
-		if (videoRef.current) {
-			videoRef.current.muted = !isMuted;
-			setIsMuted(!isMuted);
-		}
-	};
+	// const toggleMute = () => {
+	// 	if (videoRef.current) {
+	// 		videoRef.current.muted = !isMuted;
+	// 		setIsMuted(!isMuted);
+	// 	}
+	// };
 	return (
 		<div className="h-[100vh] w-full relative pb-[250px] md:pb-0 bg-[#0D130A]">
 			<div className="xl:left-[2%] 2xl:left-[calc((100%-1440px)/2)] absolute z-10 top-2.5 flex font_poppins ">
@@ -31,21 +32,8 @@ function Hero({ description }) {
 					<BiChevronLeft className="text-xl" /> See all rooms of this location
 				</Link>
 			</div>
-			<video ref={videoRef} autoPlay loop muted={isMuted} playsInline className="h-full w-full object-cover">
-				<source src="https://res.cloudinary.com/duvvlysie/video/upload/v1736239911/hero_video_j91do9.mp4" type="video/mp4" />
-			</video>
-			<button
-				
-				onClick={toggleMute}
-				className={`animate-pulse flex  absolute z-20 top-[52%] sm:top-[42%] lg:top-[100%] right-3 lg:right-14  lg:-mt-[200px]  justify-center items-center bg-[#0F1A0C]  px-1 py-1 rounded-full after:absolute after:bg-[#0F1A0C80] after:h-10 after:w-10 after:rounded-full before:absolute before:bg-[#0F1A0C90] before:h-8 before:w-8 before:rounded-full `}
-			>
-				{isMuted ? (
-					<ImVolumeMute2 className="relative z-10 text-[15px] text-[#fff]" />
-				) : (
-					<GoUnmute className="relative z-10 text-[15px] text-[#fff] " />
-				)}
-			</button>
-
+			<LazyVideo poster={'/templet/thrillTheme/hero/hero_poster.jpg'} />
+		
 			<div className="flex justify-center   font_poppins ">
 				<div className="absolute z-20 bottom-5 flex flex-col items-center px-2.5">
 					<h1 className="font_rusolie heading_1 font-[400] text-[#CAFFBC] text-center text-[40px] sm:text-[60px] lg:text-[90px] leading-[46px] sm:leading-[70px] lg:leading-[90px] ">

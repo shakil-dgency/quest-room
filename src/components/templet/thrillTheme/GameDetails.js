@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import player from "@/../../public/templet/thrillTheme/gameDetails/player.png";
@@ -13,6 +14,9 @@ import call from "@/../../public/templet/thrillTheme/storyLine/call_icon.svg";
 import GameDetailObserver from "./allComponents/GameDetailObserver";
 
 function GameDetails() {
+	const imageLoader = ({ src, width, quality }) => {
+		return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`;
+	};
 	return (
 		<div id="game_detail" className="">
 			<GameDetailObserver />
@@ -23,6 +27,7 @@ function GameDetails() {
 				</div>
 
 				<Image
+					loader={imageLoader}
 					src={girl}
 					alt=""
 					height={1199}
@@ -78,13 +83,13 @@ function GameDetails() {
 				</div>
 				<div className=" w-full h-[100px] bg-gradient-to-t from-[#0D130A] to-transparent absolute z-10 bottom-0"></div>
 				{/* <div className="overflow-hidden h-[80px] sm:h-[120px] 2xl:h-[160px] w-[120px] sm:w-[180] 2xl:w-[230px] absolute right-0 bottom-0"> */}
-					<Image
-						src="/templet/thrillTheme/minotaur_head.png"
-						alt="help me"
-						height={196}
-						width={281}
-						className="monitour_head w-[120px] sm:w-[200px] h-auto absolute z-20 bottom-[250px] sm:bottom-32 right-[-100%] "
-					/>
+				<Image
+					src="/templet/thrillTheme/minotaur_head.png"
+					alt="help me"
+					height={196}
+					width={281}
+					className="monitour_head w-[120px] sm:w-[200px] h-auto absolute z-20 bottom-[250px] sm:bottom-32 right-[-100%] "
+				/>
 				{/* </div> */}
 			</div>
 			{/* <Image src={torch} alt="" height={926} width={1920} className="w-full -mt-[150px] lg:-mt-[400px] relative z-20 text-transparent" /> */}

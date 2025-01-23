@@ -15,6 +15,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import usePageLoad from "@/hooks/usePageLoad";
 
 const videoList = [
 	{
@@ -67,6 +68,7 @@ const videoList = [
 function Testimonial() {
 	const [isOpen, setIsOpen] = useState();
 	const [toggle, setToggle] = useState(false);
+	const isPageLoaded = usePageLoad()
 
 	const handleTextExpand = (e, id) => {
 		// console.log(e.target.id ,id);
@@ -151,7 +153,7 @@ function Testimonial() {
 								<div className={`group h-[490px] max-w-[345px] mx-auto border-[1px] border-[#111B0D] rounded-lg relative font_poppins ${videoSrc.thumbnail}  bg-center bg-no-repeat bg-cover`} >
 									{/* <Image src={testimonial} alt="" height={489} width={345} className="h-full w-full object-cover rounded-lg" /> */}
 									<video ref={(el) => (videoRefs.current[index] = el)} loop muted playsInline className=" w-full h-full object-cover rounded-lg">
-										<source src={videoSrc.video} type="video/mp4" />
+										{isPageLoaded && <source src={videoSrc.video} type="video/mp4" />}
 									</video>
 									<button
 										onClick={() => handlePlayPause(index)}
