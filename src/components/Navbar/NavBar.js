@@ -1,0 +1,502 @@
+/* eslint-disable react/no-unescaped-entities */
+"use client";
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
+import logo from "@/../../public/templet/thrillTheme/questroom_logo.svg";
+import { IoMdArrowDropdown } from "react-icons/io";
+import { usePathname } from "next/navigation";
+import Lock from "@/../../public/templet/thrillTheme/navBar/lock.svg";
+import { CiLocationOn } from "react-icons/ci";
+import { IoIosArrowDown } from "react-icons/io";
+
+
+
+import LocationCard from "./LocationCard";
+import RoomsCard from "./roomsCard/RoomsCard";
+import SelectLocation from "./SelectLocation";
+import LocationWatcher from "./LocationWatcher";
+import EventCard from "./eventCard/EventCard";
+import Link from "next/link";
+
+
+const locationGame = [
+	{
+		mejorcity: "Los Angeles, CA",
+		subcity: [
+			{
+				name: "Redondo Beach",
+				address: "1815 Hawthorne Blvd",
+				slug:"redondo-beach",
+				games: [
+					{
+						name: "Warlocked",
+						description: "You remember being with your friends, stuck on the side of the road. ",
+						image: "",
+						slug:"warlocked"
+					},
+					{
+						name: "Kablam",
+						description: "You remember being with your friends, stuck on the side of the road. ",
+						image: "",
+						slug:"kablam"
+					},
+					{
+						name: "Resurrection",
+						description: "You remember being with your friends, stuck on the side of the road. ",
+						image: "",
+						slug:"resurrection"
+					},
+					{
+						name: "Polar Station",
+						description: "You remember being with your friends, stuck on the side of the road. ",
+						image: "",
+						slug:"polar-station"
+					},
+				],
+			},
+			{
+				name: "Hollywood",
+				address: "5517 Santa Monica Blvd",
+				slug:"hollywood",
+				games: [
+					{
+						name: "Project Minotaur",
+						description: "You remember being with your friends, stuck on the side of the road. ",
+						image: "",
+						slug:"project-minotour"
+					},
+					{
+						name: "Cannibal's Den 2.0",
+						description: "You remember being with your friends, stuck on the side of the road. ",
+						image: "",
+						slug:"cannibals-den"
+					},
+					{
+						name: "Perfumer",
+						description: "You remember being with your friends, stuck on the side of the road. ",
+						image: "",
+						slug:"perfumer"
+					},
+					{
+						name: "Red Giant",
+						description: "You remember being with your friends, stuck on the side of the road. ",
+						image: "",
+						slug:"red-giant"
+					},
+					{
+						name: "Project Minotaur: Replay",
+						description: "You remember being with your friends, stuck on the side of the road. ",
+						image: "",
+						slug:"project-minotour-replay"
+					},
+				],
+			},
+			{
+				name: "Korea Town",
+				address: "170 S. Western Ave",
+				slug:"korea-town",
+				games: [
+					{
+						name: "Malediction",
+						description: "You remember being with your friends, stuck on the side of the road.",
+						image: "",
+						slug:"malediction"
+					},
+					{
+						name: "Spell Breakers",
+						description: "You remember being with your friends, stuck on the side of the road.",
+						image: "",
+						slug:"spell-breakers"
+					},
+					{
+						name: "Heretics",
+						description: "You remember being with your friends, stuck on the side of the road.",
+						image: "",
+						slug:"heretics"
+					},
+					{
+						name: "Da Vinci's Challenge",
+						description: "You remember being with your friends, stuck on the side of the road.",
+						image: "",
+						slug: "da-vincis-challenge"
+					},
+				],
+			},
+			{
+				name: "Culver City",
+				address: "5235 W Adams Blvd",
+				slug:"culver-city",
+				games: [
+					{
+						name: "Amnesia",
+						description: "You remember being with your friends, stuck on the side of the road.",
+						image: "",
+						slug:"amnesia"
+					},
+					{
+						name: "Pirates: Wanted!",
+						description: "You remember being with your friends, stuck on the side of the road.",
+						image: "",
+						slug:"pirates-wanted"
+					},
+					{
+						name: "Greedy",
+						description: "You remember being with your friends, stuck on the side of the road.",
+						image: "",
+						slug:"greedy"
+					},
+				],
+			},
+		],
+	},
+	{
+		mejorcity: "Dallas, TX",
+		subcity: [
+			{
+				name: "Plano",
+				address: "3420 K Ave Unit 309",
+				slug:"plano",
+				games: [
+					{
+						name: "Cannibal's Den",
+						description: "You remember being with your friends, stuck on the side of the road. ",
+						image: "",
+						slug:"canibals-den"
+					},
+					{
+						name: "Da Vinci's Challenge",
+						description: "You remember being with your friends, stuck on the side of the road. ",
+						image: "",
+						slug:"da-vincis-challenge"
+					},
+					{
+						name: "Malediction",
+						description: "You remember being with your friends, stuck on the side of the road. ",
+						image: "",
+						slug:"malediction"
+					},
+					{
+						name: "Red Giant",
+						description: "You remember being with your friends, stuck on the side of the road. ",
+						image: "",
+						slug:"red-giant"
+					},
+					{
+						name: "Spell Breakers",
+						description: "You remember being with your friends, stuck on the side of the road. ",
+						image: "",
+						slug:"spell-breakers"
+					},
+					{
+						name: "Heretics",
+						description: "You remember being with your friends, stuck on the side of the road. ",
+						image: "",
+						slug:"heretics"
+					},
+				],
+			},
+	
+		],
+	},
+];
+
+function NavBar() {
+	const [toggle, setToggle] = useState(false);
+	const [escape, setEscape] = useState(false);
+	const [event, setEvent] = useState(false);
+	const [isLocationOpen, setIsLocationOpen] = useState(false);
+	const [resize, setResize] = useState();
+	const [escapePopUp, setEscapePopUp] = useState(false);
+	const [eventPopUp, setEventPopUp] = useState(false);
+	const pathname = usePathname();
+
+	const handleNavSidebar = () => {
+		setToggle(!toggle);
+
+		setEscape(false);
+		setEvent(false);
+		setIsLocationOpen(false);
+	};
+	const handleescapeBar = () => {
+		setEscape(!escape);
+		setEvent(false);
+		setToggle(false);
+	};
+	const handleEventBar = () => {
+		setEvent(!event);
+		setEscape(false);
+		setToggle(false);
+	};
+
+	const handleLocationBarOpen = () => {
+		setIsLocationOpen(true);
+		setToggle(false);
+
+		document.documentElement.style.overflowY = "hidden"; // For the <html> element
+		document.body.style.overflowY = "hidden";
+	};
+
+	const handleLocationBarClose = () => {
+		const location = document.getElementById("locationbar");
+		setIsLocationOpen(false);
+		setToggle(false);
+
+		document.documentElement.style.overflowY = "visible"; // For the <html> element
+		document.body.style.overflowY = "visible";
+	};
+
+	useEffect(() => {
+		let hamburg = document.querySelector(".hamburg");
+		if (toggle === false) {
+			hamburg.classList.remove("active");
+			if (window.innerWidth < 768) {
+				// document.documentElement.style.overflow = "visible"; // For the <html> element
+				document.body.style.overflow = "visible";
+			}
+		} else {
+			hamburg.classList.add("active");
+			if (window.innerWidth < 768) {
+				// document.documentElement.style.overflow = "hidden"; // For the <html> element
+				document.body.style.overflow = "hidden";
+			}
+		}
+	}, [toggle]);
+
+	useEffect(() => {
+		const navbar = document.getElementById("navbar");
+		const rooms = document.getElementById("roomsNavbar");
+		const roomsButton = document.getElementById("roomsButton");
+		const eventDropdown = document.getElementById("eventDropdown");
+		const eventButton = document.getElementById("eventButton");
+		const hamburgMenu = document.getElementById("hamburgMenu");
+		const hamburgButton = document.getElementById("hamburgButton");
+		// Navbar OnScroll functionality
+
+		var lastScrollTop = 0;
+
+		window.addEventListener("scroll", function () {
+			let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+			if (this.window.innerWidth < 768) {
+				if (scrollTop > 100) {
+					if (scrollTop > lastScrollTop) {
+						navbar.style.top = "-50px";
+					} else if (lastScrollTop > scrollTop + 20) {
+						navbar.style.top = "0";
+					} else if (scrollTop === 0) {
+						navbar.style.top = "0";
+					}
+				}
+
+				lastScrollTop = scrollTop;
+			}
+		});
+
+		// window.addEventListener("resize", () => {
+		// 	// console.log(window.innerWidth);
+		// 	setResize(window.innerWidth);
+		// });
+
+		window.addEventListener("click", (e) => {
+			if (!rooms.contains(e.target) && !roomsButton.contains(e.target)) {
+				setEscape(false);
+			}
+
+			if (!eventDropdown.contains(e.target) && !eventButton.contains(e.target)) {
+				setEvent(false);
+			}
+			if (!hamburgMenu.contains(e.target) && !hamburgButton.contains(e.target)) {
+				setToggle(false);
+			}
+		});
+	}, []);
+
+	useEffect(()=>{
+
+		handleLocationBarClose()
+		setEscape(false)
+		// setEvent(false)
+		
+	},[pathname])
+	
+
+	return (
+		<div id="navbar" className="w-full z-50 sticky  top-0 duration-300">
+			<div className="bg-[#000A19] pt-2.5 md:py-[14px] relative z-40 sm:z-50 ">
+				<div className="g_container--theme flex justify-between items-center gap-2 ">
+					{/* Logo */}
+					<Link href={'/'} className="flex-none">
+						<Image src={logo} alt="logo" height={44} width={227} className="h-[16px] 2xs:h-[20px] xs:h-[22px] sm:h-[35px] w-auto" />{" "}
+					</Link>
+
+					{/* Dropdown */}
+					<SelectLocation handleLocationBarOpen={handleLocationBarOpen} />
+
+					{/* Navigation Links */}
+					<div className="flex gap-5">
+						<div className="hidden md:flex text-[14px] gap-5 items-center text-[#f5f5f5] font_poppins">
+							<div
+								id="roomsButton"
+								onClick={handleescapeBar}
+								className={`${escape ? "text-[#FC7008] " : ""} hidden lg:flex cursor-pointer items-center gap-1`}
+							>
+								ESCAPE ROOMS <IoMdArrowDropdown className={`text-[18px] duration-300 ${escape ? "rotate-180 " : ""}`} />
+							</div>
+							<div
+								id="eventButton"
+								onClick={handleEventBar}
+								className={`${event ? "text-[#FC7008] " : ""} hidden lg:flex items-center gap-1 cursor-pointer`}
+							>
+								EVENTS <IoMdArrowDropdown className={`text-[18px] duration-300 ${event ? "rotate-180" : ""}`} />
+							</div>
+							<a
+								href="#bookingSlot"
+								className="hidden md:block uppercase rounded-[2px] text-[#030303] text-[13px] lg:text-[15px] px-2.5 lg:px-[20px] xl:px-[35px] py-[10px] font-[600] bg-[#FC7008] "
+							>
+								BOOK GAMES
+							</a>
+						</div>
+						
+						{/* <div
+							id="hamburgButton"
+							onClick={handleNavSidebar}
+							className="hamburg cursor-pointer h-[30px] 2xs:h-[40px] w-[30px] 2xs:w-[40px] px-1 py-1.5 2xs:px-[7px] 2xs:py-[11px] bg-[#FC700833] space-y-1 flex flex-col justify-center overflow-hidden"
+						>
+							<div className="top h-[3px] w-full rounded-2xl bg-[linear-gradient(90deg,_#F37F09,_#E7660F,_#D60200)]"></div>
+							<div className="middle h-[3px] w-full rounded-2xl bg-[linear-gradient(90deg,_#F37F09,_#E7660F,_#D60200)]"></div>
+							<div className="bottom h-[3px] w-full rounded-2xl bg-[linear-gradient(90deg,_#F37F09,_#E7660F,_#D60200)]"></div>
+						</div> */}
+						<div
+							id="hamburgButton"
+							onClick={handleNavSidebar}
+							className="hamburg cursor-pointer h-[30px] 2xs:h-[40px] w-[30px] 2xs:w-[40px] px-1 py-1.5 2xs:px-[7px] 2xs:py-[11px] bg-[#001433] space-y-1 flex flex-col justify-center overflow-hidden"
+						>
+							<div className="top h-[3px] w-full rounded-2xl bg-[#BFBFBF]"></div>
+							<div className="middle h-[3px] w-full rounded-2xl bg-[#BFBFBF]"></div>
+							<div className="bottom h-[3px] w-full rounded-2xl bg-[#BFBFBF]"></div>
+						</div>
+					</div>
+				</div>
+
+				{/* <div className="flex justify-center w-full"> */}
+				<a
+					href="#bookingSlot"
+					className="flex justify-center md:hidden mt-2 uppercase w-full py-[7px] bg-[#D60200] font-[600] text-white font_poppins "
+				>
+					Book this game
+				</a>
+				{/* </div> */}
+			</div>
+
+			{/* ----------all pop up card------ */}
+
+			{/* ---location--- */}
+
+			<LocationCard isLocationOpen={isLocationOpen} handleLocationBarClose={handleLocationBarClose} />
+			<div
+				id="hamburgMenu"
+				className={`${
+					toggle ? " top-[50px] sm:top-[80px] md:top-[50px] flex flex-col sm:grid sm:grid-cols-2" : "hidden md:grid md:grid-cols-2 md:top-[-200%]"
+				}  duration-300  overflow-y-auto h-[100vh] sm:h-auto w-full sm:w-[480px] sm:border-[1px] border-[#3f3f3f70] fixed right-0 2xl:right-[calc((100%-1440px)/2)] z-40 px-8 py-10 bg-[#000A19] text-[#D9D9D9] font_poppins  gap-4 sm:gap-8`}
+			>
+				<ul className=" space-y-4 flex-none">
+					<li className="block lg:hidden">
+						<span
+							onClick={() => {
+								setEscapePopUp(!escapePopUp);
+								setEventPopUp(false);
+							}}
+							className="flex items-center gap-1 cursor-pointer"
+						>
+							ESCAPE ROOMS <IoMdArrowDropdown className="text-[18px]" />
+						</span>
+						<div
+							className={`ml-2.5 text-[14px] text-[#A3A3A3] space-y-[10px] overflow-hidden duration-300 ${
+								escapePopUp ? "h-auto pb-2.5 pt-1" : "h-0 "
+							}`}
+						>
+							<p className="flex items-center gap-1.5">
+								<Image src={Lock} alt="" height={14} width={12} />
+								Warlocked
+							</p>
+							<p className="flex items-center gap-1.5">
+								<Image src={Lock} alt="" height={14} width={12} />
+								Kablam
+							</p>
+							<p className="flex items-center gap-1.5">
+								<Image src={Lock} alt="" height={14} width={12} />
+								Resurrection
+							</p>
+							<p className="flex items-center gap-1.5">
+								<Image src={Lock} alt="" height={14} width={12} />
+								Polar Station
+							</p>
+							<p className="flex items-center gap-1.5">
+								<Image src={Lock} alt="" height={14} width={12} />
+								Da Vinci's Challenge
+							</p>
+						</div>
+					</li>
+					<li className="block lg:hidden">
+						<span
+							onClick={() => {
+								setEventPopUp(!eventPopUp);
+								setEscapePopUp(false);
+							}}
+							className="flex items-center gap-1 cursor-pointer"
+						>
+							EVENTS <IoMdArrowDropdown className="text-[18px]" />
+						</span>
+						<div
+							className={`ml-2.5 text-[14px] text-[#A3A3A3] space-y-[10px] overflow-hidden duration-300 ${
+								eventPopUp ? "h-auto pb-2.5 pt-1" : "h-0 "
+							}`}
+						>
+							<p className="flex items-center gap-1.5">
+								<Image src={Lock} alt="" height={14} width={12} />
+								Birthday Parties
+							</p>
+							<p className="flex items-center gap-1.5">
+								<Image src={Lock} alt="" height={14} width={12} />
+								Family Bonding
+							</p>
+							<p className="flex items-center gap-1.5">
+								<Image src={Lock} alt="" height={14} width={12} />
+								Bachelorette Parties
+							</p>
+							<p className="flex items-center gap-1.5">
+								<Image src={Lock} alt="" height={14} width={12} />
+								Team Building
+							</p>
+						</div>
+					</li>
+					<li>SCHEDULE</li>
+					<li>BLOG</li>
+					<li>PRICING</li>
+					<li>LOCATIONS</li>
+					<li>IN THE NEWS</li>
+					<li>SAFETY</li>
+				</ul>
+				<ul className="space-y-4 pb-8 sm:pb-0">
+					<li>GIFT CARDS</li>
+					<li>PROMOTIONS</li>
+
+					<li>FAQ</li>
+					<li>ABOUT US</li>
+				</ul>
+			</div>
+
+			{/* -------escaperoom------ */}
+			<RoomsCard escape={escape} locationGame={locationGame} />
+
+			{/* -------event------ */}
+			<EventCard event={event} />
+			
+
+			{/* --------breadcrum------ */}
+			<LocationWatcher />
+		</div>
+	);
+}
+
+export default NavBar;

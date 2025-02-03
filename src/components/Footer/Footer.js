@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "@/../../public/templet/thrillTheme/questroom_logo.svg";
 import location1 from "@/../../public/templet/thrillTheme/footer/location1.png";
 import location2 from "@/../../public/templet/thrillTheme/footer/location2.png";
@@ -15,90 +16,55 @@ import map1 from "@/../../public/templet/thrillTheme/footer/map1.png";
 import map2 from "@/../../public/templet/thrillTheme/footer/map2.png";
 import map3 from "@/../../public/templet/thrillTheme/footer/map3.png";
 import map4 from "@/../../public/templet/thrillTheme/footer/map4.png";
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaInstagramSquare } from "react-icons/fa";
-import { FaYoutubeSquare } from "react-icons/fa";
+
+import FooterCard from "./FooterCard";
+import { useSelector } from "react-redux";
+import QuickLinks from "./QuickLinks";
 
 function Footer() {
+	const [state, setState] = useState({
+		dallas: true,
+		los_angeles: true,
+	});
+
+	const { location, id } = useSelector((state) => state.location);
+
+	useEffect(() => {
+		if (id === "dallas" || id === "plano") {
+			setState((prev) => ({ ...prev, dallas: true, los_angeles: false }));
+
+			return;
+		}
+
+		if (id !== "home") {
+			setState((prev) => ({ ...prev, dallas: false, los_angeles: true }));
+			return;
+		} else {
+			setState((prev) => ({ ...prev, dallas: true, los_angeles: true }));
+		}
+	}, [id]);
+
 	return (
-		<div className="bg-[#000A19] bg-[url('/templet/thrillTheme/footer/footer_pattern.png')] bg-repeat  px-2.5 ">
-			<div className="pt-[67px] font_poppins">
-				<div className="flex justify-center pb-[25px]">
-					<Image src={logo} alt="logo" height={96} width={496} className="w-[200px] md:w-[300px]" />
-				</div>
-				<p className="text-[16px] md:text-lg text-[#808080] max-w-[762px] mx-auto text-center ">
-					At the core of our project's concept is the desire to provide people with maximum immersion. Each room has a meticulously thought-out story,
-					from a detailed script to a cinematic set on par with Hollywood.
-				</p>
-				<div className="pt-[42px] pb-[51px] text-[#A3A3A3] font_poppins text-[14px] font-[600] uppercase flex flex-wrap justify-center items-center gap-3">
-					<span className="cursor-pointer">Escape Rooms</span>
-					<span className="text-[18px]">•</span>
-					<span className="cursor-pointer">Events</span>
-					<span className="text-[18px]">•</span>
-					<span className="cursor-pointer">Gift Cards</span>
-					<span className="text-[18px]">•</span>
-					<span className="cursor-pointer">Schedule</span>
-					<span className="text-[18px]">•</span>
-					<span className="cursor-pointer">promotions</span>
-					<span className="text-[18px]">•</span>
-					<span className="cursor-pointer">pricing</span>
-					<span className="text-[18px]">•</span>
-					<span className="cursor-pointer">Faq</span>
-					<span className="text-[18px]">•</span>
-					<span className="cursor-pointer">About us</span>
-					<span className="text-[18px]">•</span>
-					<span className="cursor-pointer">in the news</span>
-					<span className="text-[18px]">•</span>
-					<span className="cursor-pointer">Blog</span>
-					<span className="text-[18px]">•</span>
-					<span className="cursor-pointer">Safety</span>
-				</div>
-				<div className="g_container--theme pb-[55px] grid lg:grid-cols-2 gap-y-[25px]  gap-x-5 border-b-[1px] border-[#001D4D]">
-					<div className="max-w-[710px] mx-auto bg-[#00112C] border-[#062352] border-[1px] rounded-[10px] overflow-hidden">
-						<Image src={location1} alt="" height={287} width={571} className="h-[229px] w-full object-cover" />
-						<div className=" px-3 sm:px-[27px] pt-[25px] pb-[30px] sm:pb-[42px] grid sm:grid-cols-2 gap-2.5 place-items-center ">
-							<div className="text-[#BFBFBF]">
-								<p className="text-[#A3A3A3] text-[14px]">04 Games</p>
-								<p className="text-[24px] font-[700] uppercase">Redondo Beach</p>
-								<div className="mt-[26px] space-y-[15px]">
-									<div className="group flex gap-2.5 items-center text-[14px] ">
-										<Image src={mail} alt="" height={10} width={13} className="flex-none object-cover" />
-										<a href="mailto:sbg@questroom.com" className="group-hover:text-[#0085FF]">
-											sbg@questroom.com
-										</a>
-									</div>
-									<div className=" group flex gap-2.5 items-start text-[14px]">
-										<Image src={location} alt="" height={15} width={11} className="flex-none object-cover mt-[2px]" />
-										<a href="https://maps.app.goo.gl/SLEhWwkZK8z7bHSy7" target="__blank" className="group-hover:text-[#0085FF]">
-											1815 Hawthorne Blvd, Redondo Beach, CA 90278
-										</a>
-									</div>
-									<div className="group flex gap-2.5 items-center text-[14px]">
-										<Image src={call} alt="" height={11} width={11} className="flex-none object-cover" />
-										<a href="tel:323-307-2090" className="group-hover:text-[#0085FF]">
-											323-307-2090
-										</a>
-									</div>
-									<div className="group flex gap-2.5 items-center text-[14px]">
-										<Image src={direction} alt="" height={14} width={14} className="flex-none object-cover" />
-										<a href="#" className="group-hover:text-[#0085FF]">
-											Get Directions
-										</a>
-									</div>
-									<div className="group flex gap-2.5 items-center text-[14px]">
-										<Image src={parking} alt="" height={11} width={11} className="flex-none object-cover" />
-										<a href="#" className="group-hover:text-[#0085FF]">
-											Parking instructions
-										</a>
-									</div>
-								</div>
-							</div>
-							<a href="https://maps.app.goo.gl/SLEhWwkZK8z7bHSy7" target="__blank" className="w-full">
-								<Image src={map1} alt="" height={250} width={240} className="pt-4 sm:pt-0 h-[180px] sm:h-[250px] w-full object-cover rounded" />
-							</a>
-						</div>
+		<div className="bg-[#001433] bg-[url('/footer/footer_bg.png')] bg-repeat bg-cover  px-2.5 ">
+			<div className={`pt-[60px] pb-16 font_poppins ${state.dallas && !state.los_angeles ? " md:flex justify-between gap-[35px] max-w-[1440px] mx-auto" : ""}`}>
+				<div className="bg-[#001e4d] bg-opacity-[0.8] rounded-md pt-[60px] pb-[20px] md:pb-[45px] px-2.5 md:px-5 max-w-[500px] md:max-w-[850px] xl:max-w-[1440px] mx-auto w-full">
+					<div className="flex justify-center pb-5 md:pb-[25px]">
+						<Image src={logo} alt="logo" height={96} width={496} className="w-[200px] md:w-[300px]" />
 					</div>
-					<div className="max-w-[710px] mx-auto bg-[#00112C] border-[#062352] border-[1px] rounded-[10px] overflow-hidden">
+					<p className="text-[14px] md:text-[16px] text-[#D9D9D9] max-w-[762px] mx-auto text-center ">
+						At the core of our project's concept is the desire to provide people with maximum immersion. Each room has a meticulously thought-out
+						story, from a detailed script to a cinematic set on par with Hollywood.
+					</p>
+
+					{state.los_angeles && (
+						<div className="mt-[45px] md:px-8 xl:px-0">
+							<p className="text-[32px] font-[700] text-[#D9D9D9] mb-5 md:mb-[28px] leading-[1]">Los Angeles, CA</p>
+							<div className=" grid grid-col-1 md:grid-cols-2 xl:grid-cols-4 gap-y-10 xl:gap-y-[25px]  gap-x-3 ">
+								{[...Array(4)].map((item, i) => {
+									return <FooterCard key={i} />;
+								})}
+
+								{/* <div className="max-w-[710px] mx-auto bg-[#00112C] border-[#062352] border-[1px] rounded-[10px] overflow-hidden">
 						<Image src={location2} alt="" height={287} width={571} className="h-[229px] w-full object-cover" />
 						<div className=" px-3 sm:px-[27px] pt-[25px] pb-[30px] sm:pb-[42px] grid sm:grid-cols-2 gap-2.5 place-items-center ">
 							<div className="text-[#BFBFBF]">
@@ -229,28 +195,40 @@ function Footer() {
 								<Image src={map4} alt="" height={250} width={240} className="pt-4 sm:pt-0 h-[180px] sm:h-[250px] w-full object-cover rounded" />
 							</a>
 						</div>
+					 </div> */}
+							</div>
+						</div>
+					)}
+
+					{/*------ layout change in Dallas location------*/}
+					<div className={`${state.dallas && !state.los_angeles ? "hidden md:block" : ""}`}>
+						{state.dallas && !state.los_angeles && <QuickLinks state={state} />}
+					</div>
+					<div className={`${state.dallas && !state.los_angeles ? "block md:hidden" : ""}`}>
+						{state.dallas && !state.los_angeles && (
+							<div>
+								<p className="text-[32px] font-[700] text-[#D9D9D9] mt-[45px] mb-[22px] ">Dallas, TX</p>
+								<FooterCard />
+							</div>
+						)}
 					</div>
 				</div>
-				<div className="g_container--theme flex flex-col-reverse md:flex-row  justify-between items-center pt-[30px] ">
-					
-					<div className="flex md:block flex-col items-center">
-						<p className="text-[#808080] text-[14px]">© 2025 QUESTRoom | All Rights Reserved</p>
-						<div className="pt-[2px] pb-[30px] md:pb-[40px]  text-[#545454] text-[12px] sm:text-[14px] flex justify-center items-center gap-1.5 sm:gap-3">
-							<span className="cursor-pointer">Privacy Policy</span>
-							<span className="text-[18px]">•</span>
-							<span className="cursor-pointer">Terms of Services</span>
-							<span className="text-[18px]">•</span>
-							<span className="cursor-pointer">Sitemap</span>
+				<div
+					className={`${
+						state.dallas && !state.los_angeles ? "lg:w-[380px] flex-none mt-[35px] md:mt-0" : "mt-[30px]"
+					} max-w-[500px] md:max-w-[850px] xl:max-w-[1440px] mx-auto flex flex-col md:flex-row gap-[35px] `}
+				>
+					{state.dallas === true && (
+						<div className={`${state.dallas && !state.los_angeles ? "hidden md:block" : ""} bg-[#001D4D] bg-opacity-[0.8] max-w-[500px] lg:w-[380px] h-full flex-none rounded-md px-2.5 md:px-5 pt-[20px] pb-[20px]`}>
+							<p className="text-[32px] font-[700] text-[#D9D9D9] mb-[22px] ">Dallas, TX</p>
+							<FooterCard />
 						</div>
-					</div>
-					<div className="flex md:block flex-col items-center">
-						<p className=" text-[18px] md:text-[22px] font-[500] text-[#808080]">FOLLOW US ON SOCIAL</p>
-						<div className="flex items-center gap-2 md:gap-4 pt-[12px] pb-[26px]">
-							<FaFacebookSquare className="text-[25px] md:text-[40px] text-[#737373]" />
-							<FaInstagramSquare className="text-[25px] md:text-[40px] text-[#737373]" />
-							<FaYoutubeSquare className="text-[25px] md:text-[40px] text-[#737373]" />
-						</div>
-					</div>
+					)}
+					{state.los_angeles && <QuickLinks state={state} />}
+
+					{state.dallas && !state.los_angeles && <div className={`${state.dallas && !state.los_angeles ? "block md:hidden" : ""}`}>
+						 <QuickLinks state={state} />
+					</div>}
 				</div>
 			</div>
 		</div>

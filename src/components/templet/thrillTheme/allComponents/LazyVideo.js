@@ -26,9 +26,9 @@ const LazyVideo = ({ src, poster, type }) => {
 				loop
 				muted={isMuted}
 				playsInline
-				className="h-full w-full object-cover"
+				className="h-full w-full object-cover  "
 			>
-				{isPageLoaded && <source src="https://res.cloudinary.com/duvvlysie/video/upload/v1736239911/hero_video_j91do9.mp4" type="video/mp4" />}
+				{/* {isPageLoaded && <source src="https://res.cloudinary.com/duvvlysie/video/upload/v1736239911/hero_video_j91do9.mp4" type="video/mp4" />} */}
 				
 			</video>
 			<button

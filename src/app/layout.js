@@ -1,6 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import NavBar from "@/components/templet/thrillTheme/NavBar";
+import NavBar from "@/components/Navbar/NavBar";
+import { Providers } from "@/lib/Providers";
+import Footer from "@/components/Footer/Footer";
 
 const bandexFont = localFont({
 	src: "../../public/fonts/BANDEX.ttf", // Correct path
@@ -35,14 +37,17 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<head>
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
-				<link rel="preconnect" href="https://fonts.gstatic.com"  />
+				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link rel="preload" href="/fonts/Rusoile-Grunge.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
 				<link rel="preload" href="/fonts/BANDEX.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
 				<link rel="icon" href="/favicon.svg" type="image/x-icon" sizes="32X30" />
 			</head>
 			<body className={`${bandexFont.variable} ${rusoileFont.variable}  antialiased`}>
-				<NavBar />
-				{children}
+				<Providers>
+					<NavBar />
+					{children}
+					<Footer />
+				</Providers>
 			</body>
 		</html>
 	);
