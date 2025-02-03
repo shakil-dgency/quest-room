@@ -6,11 +6,10 @@ import call from "@/../../public/templet/thrillTheme/footer/call.svg";
 import direction from "@/../../public/templet/thrillTheme/footer/direction.svg";
 import parking from "@/../../public/templet/thrillTheme/footer/parking.svg";
 import parkingInfo from "@/../../public/footer/parkingInfo.svg";
-import map1 from "@/../../public/templet/thrillTheme/footer/map1.png";
 import location1 from "@/../../public/templet/thrillTheme/footer/location1.png";
 import star from "@/../../public/templet/thrillTheme/star.svg";
 import yelp from "@/../../public/footer/yelp.svg";
-import tripAdvisor from "@/../../public/footer/trip_advisor.svg";
+import tripAdvisor from "@/../../public/footer/trip_Advisor.svg";
 
 function FooterCard() {
 	return (
