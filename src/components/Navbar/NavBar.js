@@ -315,7 +315,7 @@ function NavBar() {
 
 		handleLocationBarClose()
 		setEscape(false)
-		// setEvent(false)
+		setEvent(false)
 		
 	},[pathname])
 	
@@ -482,7 +482,7 @@ function NavBar() {
 					<li>PROMOTIONS</li>
 
 					<li>FAQ</li>
-					<li>ABOUT US</li>
+					<li><Link href={'/contact'}>ABOUT US</Link></li>
 				</ul>
 			</div>
 

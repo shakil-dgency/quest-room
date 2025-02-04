@@ -1,21 +1,23 @@
 import Image from "next/image";
 import React from "react";
 import mail from "@/../../public/templet/thrillTheme/footer/mail.svg";
-import location from "@/../../public/templet/thrillTheme/footer/location.svg";
+import locationIcon from "@/../../public/templet/thrillTheme/footer/location.svg";
 import call from "@/../../public/templet/thrillTheme/footer/call.svg";
 import direction from "@/../../public/templet/thrillTheme/footer/direction.svg";
 import parking from "@/../../public/templet/thrillTheme/footer/parking.svg";
 import parkingInfo from "@/../../public/footer/parkingInfo.svg";
-import location1 from "@/../../public/templet/thrillTheme/footer/location1.png";
+import locationCover from "@/../../public/templet/thrillTheme/footer/location1.png";
 import star from "@/../../public/templet/thrillTheme/star.svg";
 import yelp from "@/../../public/footer/yelp.svg";
 import tripAdvisor from "@/../../public/footer/trip_Advisor.svg";
 
-function FooterCard() {
+function FooterCard({item,location}) {
+	
+	
 	return (
-		<div className="max-w-[310px] mx-auto bg-[#00112C] border-[#062352] border-[1px] rounded-[10px] overflow-hidden">
+		<div className={`${location?.toLowerCase().includes(item?.name.toLowerCase())?"border-[#0085FF]":"border-[#062352]"} max-w-[310px] mx-auto bg-[#00112C]  border-[1px] rounded-[10px] overflow-hidden`}>
 			<div className="relative">
-				<Image src={location1} alt="" height={287} width={571} className="h-[165px] w-full object-cover" />
+				<Image src={locationCover} alt="" height={287} width={571} className="h-[165px] w-full object-cover" />
 				<div className="w-full flex justify-between px-2.5 absolute bottom-3 z-10">
 					<div>
 						<Image src={star} alt="" height={16} width={110} className="h-[11px] w-auto" />
@@ -30,29 +32,29 @@ function FooterCard() {
 			</div>
 			<div className=" px-3 sm:px-[27px] pt-[25px] pb-[30px] sm:pb-[24px]  ">
 				<div className="text-[#BFBFBF]">
-					<p className="text-[#A3A3A3] text-[14px] pb-2.5">04 Games</p>
-					<p className="text-[24px] font-[700] uppercase leading-[1]">Redondo Beach</p>
+					<p className="text-[#A3A3A3] text-[14px] pb-2.5">{item?.total_game} Games</p>
+					<p className="text-[24px] font-[700] uppercase leading-[1]">{item?.name}</p>
 					<div className="mt-[20px] space-y-[14px]">
 						<div className="group flex gap-2.5 items-center text-[14px] ">
 							<Image src={mail} alt="" height={10} width={13} className="flex-none object-cover" />
 							<a href="mailto:sbg@questroom.com" className="group-hover:text-[#0085FF]">
-								sbg@questroom.com
+								{item?.mail}
 							</a>
 						</div>
 						<div className=" group flex gap-2.5 items-start text-[14px]">
-							<Image src={location} alt="" height={15} width={11} className="flex-none object-cover mt-[2px]" />
+							<Image src={locationIcon} alt="" height={15} width={11} className="flex-none object-cover mt-[2px]" />
 							<a href="https://maps.app.goo.gl/SLEhWwkZK8z7bHSy7" target="__blank" className="group-hover:text-[#0085FF]">
-								1815 Hawthorne Blvd, Redondo Beach, CA 90278
+								{item?.address}
 							</a>
 						</div>
 						<div className="group flex gap-2.5 items-center text-[14px]">
 							<Image src={call} alt="" height={11} width={11} className="flex-none object-cover" />
 							<a href="tel:323-307-2090" className="group-hover:text-[#0085FF]">
-								323-307-2090
+								{item?.number}
 							</a>
 						</div>
 						<div className="flex justify-center pt-5">
-							<a href="#" className="text-[14px] uppercase text-[#00112C] font-[600] bg-[#FC7008] flex gap-2.5 py-2.5 px-5 rounded-[6px]">
+							<a href="#" className="text-[14px] uppercase text-[#00112C] font-[600] bg-[#FC7008] hover:bg-[#FD8F3A] flex gap-2.5 py-2.5 px-5 rounded-[6px]">
 								<Image src={direction} alt="" height={20} width={20} className="w-[20px] h-auto " />
 								<span>Get Directions</span>
 							</a>

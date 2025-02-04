@@ -48,7 +48,7 @@ export default function LocationWatcher() {
         })
 
         if(locationName.length === 0 ){
-            console.log(locationName);
+            // console.log(locationName);
             
             dispatch(setLocation({location:"Choose Your Location",id:'home'}))
             return
