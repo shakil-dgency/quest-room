@@ -1,10 +1,10 @@
-import ProjectMinotour from "@/components/pages/ProjectMinotour/ProjectMinotour";
 import { notFound, redirect } from "next/navigation";
+import dynamic from "next/dynamic";
+const ProjectMinotour = dynamic(() => import("@/components/pages/ProjectMinotour/ProjectMinotour"));
 
-export default async function DynamicPage({ params }) {
-	const { slug } = await params; // slug will be an array of URL segments
+export default function DynamicPage({ params }) {
+	const  slug  = params && params.slug; // slug will be an array of URL segments
 
-	// console.log(slug);
 
 	if (!slug || slug.length === 0) return notFound();
 

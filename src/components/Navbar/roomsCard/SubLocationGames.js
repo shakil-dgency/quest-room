@@ -3,25 +3,25 @@ import React from "react";
 import Lock from "@/../../public/templet/thrillTheme/navBar/lock.svg";
 import Link from "next/link";
 
-function SubLocationGames({ city }) {
+function SubLocationGames({ city,id }) {
 	return (
-		<div className="">
-			<div className="flex items-start gap-2.5 ">
-				<svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 22" fill="none">
+		<div className={`${id === 0?"mt-2.5":""}`}>
+			<div className="flex items-start gap-1.5 lg:gap-2.5 ">
+				<svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 15 22" fill="none" className="h-[13px] lg:h-[20px] w-auto">
 					<path
 						d="M7.49958 0.858398C3.63147 0.858398 0.484375 4.00549 0.484375 7.87361C0.484375 9.03481 0.774697 10.1862 1.32661 11.2074L7.11595 21.6779C7.19303 21.8175 7.33989 21.904 7.49958 21.904C7.65927 21.904 7.80614 21.8175 7.88321 21.6779L13.6747 11.2039C14.2245 10.1862 14.5148 9.03477 14.5148 7.87357C14.5148 4.00549 11.3677 0.858398 7.49958 0.858398ZM7.49958 11.3812C5.56553 11.3812 3.992 9.80766 3.992 7.87361C3.992 5.93955 5.56553 4.36602 7.49958 4.36602C9.43364 4.36602 11.0072 5.93955 11.0072 7.87361C11.0072 9.80766 9.43364 11.3812 7.49958 11.3812Z"
 						fill="#FC7008"
 					/>
 				</svg>
 				<div>
-					<p className="text-[18px] font-[600] leading-[1] mb-1 uppercase text-[#FC7008]">{city.name} Escape Rooms</p>
+					<p className="text-[14px] lg:text-[18px] font-[600] leading-[1] mb-1 uppercase text-[#FC7008]">{city.name} Escape Rooms</p>
 					<p className="text-[12px] text-[#7F8289] font-[300]">{city.address}</p>
 				</div>
 			</div>
 			<div className="pt-[15px] ml-6 space-y-[10px]">
 				{city.games.map((game, k) => (
 					<Link href={`${city.slug}/${game.slug}`} key={k} className="flex">
-						<p className="group hover:text-[#FC7008] flex items-center gap-1.5 text-[#BFBFBF] font-[500] text-[18px]">
+						<p className="group hover:text-[#FC7008] flex items-center gap-1.5 text-[#BFBFBF] font-[500] text-[14px] lg:text-[18px]">
 							<svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="-rotate-[8deg] group-hover:rotate-[10deg] duration-150">
 								<g id="Group 26">
 									<path

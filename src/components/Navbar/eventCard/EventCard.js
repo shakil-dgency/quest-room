@@ -224,7 +224,7 @@ const events = [
 	},
 ];
 
-function EventCard({ event }) {
+function EventCard({ event, setMobileViewEvent }) {
 	const [newEvents, setNewEvents] = useState();
 
 	const { location, id } = useSelector((state) => state.location);
@@ -242,20 +242,54 @@ function EventCard({ event }) {
 	};
 
 	useEffect(() => {
-		if (id === "dallas") {
+		if (window.innerWidth > 1024) {
+			if (id === "dallas") {
+				const dallasEvent = events.filter((item) => {
+					return item.name.toLowerCase().includes("plano");
+				});
+
+				setNewEvents(dallasEvent[0]);
+			} else {
+				const otherEvents = events.filter((item) => {
+					return location?.toLowerCase().includes(item.name.toLowerCase());
+				});
+
+				setNewEvents(otherEvents[0]);
+			}
+		} else {
+			//for mobile view
 			const dallasEvent = events.filter((item) => {
 				return item.name.toLowerCase().includes("plano");
 			});
 
-			setNewEvents(dallasEvent[0]);
-		} else {
 			const otherEvents = events.filter((item) => {
-				return location?.toLowerCase().includes(item.name.toLowerCase());
+				return item.name.toLowerCase() !== "plano";
 			});
 
-			setNewEvents(otherEvents[0]);
+			// event render based on location
+			setMobileViewEvent((prev) => {
+				if (id === "los") {
+					return { ...prev, los_angeles: otherEvents, dallas: [] };
+				}
+
+				if (id === "dallas") {
+					return { ...prev, los_angeles: [], dallas: dallasEvent };
+				}
+
+				if (id === "home") {
+					return { ...prev, los_angeles: otherEvents, dallas: dallasEvent };
+				}
+
+				return {
+					...prev,
+					los_angeles: otherEvents.filter((item) => location?.toLowerCase().includes(item.name.toLowerCase())),
+					dallas: dallasEvent.filter((item) => location?.toLowerCase().includes(item.name.toLowerCase())),
+				};
+			});
 		}
 	}, [id]);
+
+
 
 	return (
 		<div

@@ -10,12 +10,15 @@ import locationCover from "@/../../public/templet/thrillTheme/footer/location1.p
 import star from "@/../../public/templet/thrillTheme/star.svg";
 import yelp from "@/../../public/footer/yelp.svg";
 import tripAdvisor from "@/../../public/footer/trip_Advisor.svg";
+import SmallButton from "../buttons/SmallButton";
 
-function FooterCard({item,location}) {
-	
-	
+function FooterCard({ item, location }) {
 	return (
-		<div className={`${location?.toLowerCase().includes(item?.name.toLowerCase())?"border-[#0085FF]":"border-[#062352]"} max-w-[310px] mx-auto bg-[#00112C]  border-[1px] rounded-[10px] overflow-hidden`}>
+		<div
+			className={`${
+				location?.toLowerCase().includes(item?.name.toLowerCase()) ? "border-[#0085FF]" : "border-[#062352]"
+			} max-w-[310px] mx-auto bg-[#00112C]  border-[1px] rounded-[10px] overflow-hidden`}
+		>
 			<div className="relative">
 				<Image src={locationCover} alt="" height={287} width={571} className="h-[165px] w-full object-cover" />
 				<div className="w-full flex justify-between px-2.5 absolute bottom-3 z-10">
@@ -54,20 +57,21 @@ function FooterCard({item,location}) {
 							</a>
 						</div>
 						<div className="flex justify-center pt-5">
-							<a href="#" className="text-[14px] uppercase text-[#00112C] font-[600] bg-[#FC7008] hover:bg-[#FD8F3A] flex gap-2.5 py-2.5 px-5 rounded-[6px]">
+							<SmallButton>
 								<Image src={direction} alt="" height={20} width={20} className="w-[20px] h-auto " />
 								<span>Get Directions</span>
-							</a>
+							</SmallButton>
 						</div>
 						<div className="flex justify-center">
-							<a href="#" className="relative text-[14px] uppercase text-[#BFBFBF] font-[600] border-[1px] border-[#BFBFBF] flex gap-2.5 py-2.5 px-5 rounded-[6px]">
+							<a
+								href="#"
+								className="relative text-[14px] uppercase text-[#BFBFBF] font-[600] border-[1px] border-[#BFBFBF] flex gap-2.5 py-2.5 px-5 rounded-[6px]"
+							>
 								<Image src={parking} alt="" height={20} width={20} className="w-[20px] h-auto " />
 								<span>Parking instructions</span>
 								<Image src={parkingInfo} alt="" height={20} width={20} className="w-[15px] h-auto absolute -top-1.5 -right-1.5" />
 							</a>
 						</div>
-
-						
 					</div>
 				</div>
 				{/* <a href="https://maps.app.goo.gl/SLEhWwkZK8z7bHSy7" target="__blank" className="w-full">

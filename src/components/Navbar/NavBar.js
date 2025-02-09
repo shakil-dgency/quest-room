@@ -9,15 +9,15 @@ import Lock from "@/../../public/templet/thrillTheme/navBar/lock.svg";
 import { CiLocationOn } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
 
-
-
 import LocationCard from "./LocationCard";
 import RoomsCard from "./roomsCard/RoomsCard";
 import SelectLocation from "./SelectLocation";
 import LocationWatcher from "./LocationWatcher";
 import EventCard from "./eventCard/EventCard";
 import Link from "next/link";
-
+import SubLocationGames from "./roomsCard/SubLocationGames";
+import { useSelector } from "react-redux";
+import MediumButton from "../buttons/MediumButton";
 
 const locationGame = [
 	{
@@ -26,124 +26,140 @@ const locationGame = [
 			{
 				name: "Redondo Beach",
 				address: "1815 Hawthorne Blvd",
-				slug:"redondo-beach",
+				slug: "redondo-beach",
 				games: [
 					{
 						name: "Warlocked",
 						description: "You remember being with your friends, stuck on the side of the road. ",
 						image: "",
-						slug:"warlocked"
+						slug: "warlocked",
+						category: ['comedy', 'family']
 					},
 					{
 						name: "Kablam",
 						description: "You remember being with your friends, stuck on the side of the road. ",
 						image: "",
-						slug:"kablam"
+						slug: "kablam",
+						category: ['comedy', 'adult']
 					},
 					{
 						name: "Resurrection",
 						description: "You remember being with your friends, stuck on the side of the road. ",
 						image: "",
-						slug:"resurrection"
+						slug: "resurrection",
+						category: ['horror', 'family']
 					},
 					{
 						name: "Polar Station",
 						description: "You remember being with your friends, stuck on the side of the road. ",
 						image: "",
-						slug:"polar-station"
+						slug: "polar-station",
+						category: ['adventure']
 					},
 				],
 			},
 			{
 				name: "Hollywood",
 				address: "5517 Santa Monica Blvd",
-				slug:"hollywood",
+				slug: "hollywood",
 				games: [
 					{
 						name: "Project Minotaur",
 						description: "You remember being with your friends, stuck on the side of the road. ",
 						image: "",
-						slug:"project-minotour"
+						slug: "project-minotour",
+						category: ['comedy', 'family']
 					},
 					{
 						name: "Cannibal's Den 2.0",
 						description: "You remember being with your friends, stuck on the side of the road. ",
 						image: "",
-						slug:"cannibals-den"
+						slug: "cannibals-den",
+						category: ['horror', 'family']
 					},
 					{
 						name: "Perfumer",
 						description: "You remember being with your friends, stuck on the side of the road. ",
 						image: "",
-						slug:"perfumer"
+						slug: "perfumer",
+						category: ['horror', 'family']
 					},
 					{
 						name: "Red Giant",
 						description: "You remember being with your friends, stuck on the side of the road. ",
 						image: "",
-						slug:"red-giant"
+						slug: "red-giant",
+						category: ['adventure']
 					},
 					{
 						name: "Project Minotaur: Replay",
 						description: "You remember being with your friends, stuck on the side of the road. ",
 						image: "",
-						slug:"project-minotour-replay"
+						slug: "project-minotour-replay",
+						category: ['horror', 'family']
 					},
 				],
 			},
 			{
 				name: "Korea Town",
 				address: "170 S. Western Ave",
-				slug:"korea-town",
+				slug: "korea-town",
 				games: [
 					{
 						name: "Malediction",
 						description: "You remember being with your friends, stuck on the side of the road.",
 						image: "",
-						slug:"malediction"
+						slug: "malediction",
+						category: ['comedy', 'family']
 					},
 					{
 						name: "Spell Breakers",
 						description: "You remember being with your friends, stuck on the side of the road.",
 						image: "",
-						slug:"spell-breakers"
+						slug: "spell-breakers",
+						category: ['adventure']
 					},
 					{
 						name: "Heretics",
 						description: "You remember being with your friends, stuck on the side of the road.",
 						image: "",
-						slug:"heretics"
+						slug: "heretics",
+						category: ['horror', 'family']
 					},
 					{
 						name: "Da Vinci's Challenge",
 						description: "You remember being with your friends, stuck on the side of the road.",
 						image: "",
-						slug: "da-vincis-challenge"
+						slug: "da-vincis-challenge",
+						category: ['comedy', 'adult']
 					},
 				],
 			},
 			{
 				name: "Culver City",
 				address: "5235 W Adams Blvd",
-				slug:"culver-city",
+				slug: "culver-city",
 				games: [
 					{
 						name: "Amnesia",
 						description: "You remember being with your friends, stuck on the side of the road.",
 						image: "",
-						slug:"amnesia"
+						slug: "amnesia",
+						category: ['horror', 'family']
 					},
 					{
 						name: "Pirates: Wanted!",
 						description: "You remember being with your friends, stuck on the side of the road.",
 						image: "",
-						slug:"pirates-wanted"
+						slug: "pirates-wanted",
+						category: ['comedy', 'adult']
 					},
 					{
 						name: "Greedy",
 						description: "You remember being with your friends, stuck on the side of the road.",
 						image: "",
-						slug:"greedy"
+						slug: "greedy",
+						category: ['adventure']
 					},
 				],
 			},
@@ -155,52 +171,58 @@ const locationGame = [
 			{
 				name: "Plano",
 				address: "3420 K Ave Unit 309",
-				slug:"plano",
+				slug: "plano",
 				games: [
 					{
 						name: "Cannibal's Den",
 						description: "You remember being with your friends, stuck on the side of the road. ",
 						image: "",
-						slug:"canibals-den"
+						slug: "canibals-den",
+						category: ['horror', 'family']
 					},
 					{
 						name: "Da Vinci's Challenge",
 						description: "You remember being with your friends, stuck on the side of the road. ",
 						image: "",
-						slug:"da-vincis-challenge"
+						slug: "da-vincis-challenge",
+						category: ['adventure']
 					},
 					{
 						name: "Malediction",
 						description: "You remember being with your friends, stuck on the side of the road. ",
 						image: "",
-						slug:"malediction"
+						slug: "malediction",
+						category: ['horror', 'family']
 					},
 					{
 						name: "Red Giant",
 						description: "You remember being with your friends, stuck on the side of the road. ",
 						image: "",
-						slug:"red-giant"
+						slug: "red-giant",
+						category: ['adventure']
 					},
 					{
 						name: "Spell Breakers",
 						description: "You remember being with your friends, stuck on the side of the road. ",
 						image: "",
-						slug:"spell-breakers"
+						slug: "spell-breakers",
+						category: ['comedy', 'family']
 					},
 					{
 						name: "Heretics",
 						description: "You remember being with your friends, stuck on the side of the road. ",
 						image: "",
-						slug:"heretics"
+						slug: "heretics",
+						category: ['horror', 'family']
 					},
 				],
 			},
-	
 		],
 	},
 ];
 
 function NavBar() {
+	const [openIndex, setOpenIndex] = useState(null);
 	const [toggle, setToggle] = useState(false);
 	const [escape, setEscape] = useState(false);
 	const [event, setEvent] = useState(false);
@@ -208,6 +230,17 @@ function NavBar() {
 	const [resize, setResize] = useState();
 	const [escapePopUp, setEscapePopUp] = useState(false);
 	const [eventPopUp, setEventPopUp] = useState(false);
+	const [mobileViewEvent, setMobileViewEvent] = useState({
+		los_angeles: null,
+		dallas: null,
+	});
+	const [mobileRooms, setMobileRooms] = useState({
+		rooms: null,
+		isSingleLocation: false,
+	});
+
+	const { location, id } = useSelector((state) => state.location);
+
 	const pathname = usePathname();
 
 	const handleNavSidebar = () => {
@@ -247,15 +280,17 @@ function NavBar() {
 
 	useEffect(() => {
 		let hamburg = document.querySelector(".hamburg");
+		console.log(toggle);
+
 		if (toggle === false) {
 			hamburg.classList.remove("active");
-			if (window.innerWidth < 768) {
+			if (window.innerWidth < 1024) {
 				// document.documentElement.style.overflow = "visible"; // For the <html> element
 				document.body.style.overflow = "visible";
 			}
 		} else {
 			hamburg.classList.add("active");
-			if (window.innerWidth < 768) {
+			if (window.innerWidth < 1024) {
 				// document.documentElement.style.overflow = "hidden"; // For the <html> element
 				document.body.style.overflow = "hidden";
 			}
@@ -311,21 +346,46 @@ function NavBar() {
 		});
 	}, []);
 
-	useEffect(()=>{
+	useEffect(() => {
+		handleLocationBarClose();
+		setEscape(false);
+		setEvent(false);
+	}, [pathname]);
 
-		handleLocationBarClose()
-		setEscape(false)
-		setEvent(false)
-		
-	},[pathname])
-	
+	const handleToggleButton = (index) => {
+		setOpenIndex(openIndex === index ? null : index); // Toggle open/close
+	};
+
+	// this useEffect workes for mobile view escaperoom and event functionality.Data filtered based on location
+
+	useEffect(() => {
+		if (id === "home") {
+			setMobileRooms((prev) => ({ ...prev, rooms: locationGame, isSingleLocation: false }));
+		} else if (id === "los" || id === "dallas") {
+			// Find the Mejorcity object matching the selected location
+			const cityData = locationGame.find((city) => city.mejorcity.toLowerCase().includes(location?.toLowerCase()));
+			setMobileRooms((prev) => ({ ...prev, rooms: [cityData], isSingleLocation: false }));
+			return;
+		} else {
+			const subLocationData = locationGame
+				.map((item) => {
+					const foundSubcity = item.subcity.find((city) => location?.toLowerCase().includes(city.name.toLowerCase()));
+					return foundSubcity ? { mejorcity: item.mejorcity, subcity: [foundSubcity] } : null;
+				})
+				.filter((item) => item !== null); // Remove null values (cities with no matching subcity)
+
+			setMobileRooms((prev) => ({ ...prev, rooms: subLocationData, isSingleLocation: true }));
+		}
+	}, [id]);
+
+	console.log(mobileViewEvent.dallas);
 
 	return (
 		<div id="navbar" className="w-full z-50 sticky  top-0 duration-300">
 			<div className="bg-[#000A19] pt-2.5 md:py-[14px] relative z-40 sm:z-50 ">
 				<div className="g_container--theme flex justify-between items-center gap-2 ">
 					{/* Logo */}
-					<Link href={'/'} className="flex-none">
+					<Link href={"/"} className="flex-none">
 						<Image src={logo} alt="logo" height={44} width={227} className="h-[16px] 2xs:h-[20px] xs:h-[22px] sm:h-[35px] w-auto" />{" "}
 					</Link>
 
@@ -355,8 +415,9 @@ function NavBar() {
 							>
 								BOOK GAMES
 							</a>
+							{/* <MediumButton title="book games" /> */}
 						</div>
-						
+
 						{/* <div
 							id="hamburgButton"
 							onClick={handleNavSidebar}
@@ -396,78 +457,116 @@ function NavBar() {
 			<div
 				id="hamburgMenu"
 				className={`${
-					toggle ? " top-[50px] sm:top-[80px] md:top-[50px] flex flex-col sm:grid sm:grid-cols-2" : "hidden md:grid md:grid-cols-2 md:top-[-200%]"
-				}  duration-300  overflow-y-auto h-[100vh] sm:h-auto w-full sm:w-[480px] sm:border-[1px] border-[#3f3f3f70] fixed right-0 2xl:right-[calc((100%-1440px)/2)] z-40 px-8 py-10 bg-[#000A19] text-[#D9D9D9] font_poppins  gap-4 sm:gap-8`}
+					toggle ? " top-[50px] sm:top-[80px] md:top-[50px] flex flex-col lg:grid lg:grid-cols-2" : "hidden md:grid md:grid-cols-2 md:top-[-200%]"
+				}  duration-300  overflow-y-auto h-[100vh] lg:h-auto w-full sm:w-[480px] sm:border-[1px] border-[#3f3f3f70] fixed right-0 2xl:right-[calc((100%-1440px)/2)] z-40 pr-4 pl-6 2xs:pl-8 2xs:pr-8 py-10 bg-[#000A19] text-[#D9D9D9] font_poppins  gap-4 sm:gap-8`}
 			>
 				<ul className=" space-y-4 flex-none">
 					<li className="block lg:hidden">
 						<span
-							onClick={() => {
-								setEscapePopUp(!escapePopUp);
-								setEventPopUp(false);
-							}}
+							// onClick={() => {
+							// 	setEscapePopUp(!escapePopUp);
+							// 	setEventPopUp(false);
+							// }}
 							className="flex items-center gap-1 cursor-pointer"
 						>
-							ESCAPE ROOMS <IoMdArrowDropdown className="text-[18px]" />
+							ESCAPE ROOMS
 						</span>
-						<div
-							className={`ml-2.5 text-[14px] text-[#A3A3A3] space-y-[10px] overflow-hidden duration-300 ${
-								escapePopUp ? "h-auto pb-2.5 pt-1" : "h-0 "
-							}`}
-						>
-							<p className="flex items-center gap-1.5">
-								<Image src={Lock} alt="" height={14} width={12} />
-								Warlocked
-							</p>
-							<p className="flex items-center gap-1.5">
-								<Image src={Lock} alt="" height={14} width={12} />
-								Kablam
-							</p>
-							<p className="flex items-center gap-1.5">
-								<Image src={Lock} alt="" height={14} width={12} />
-								Resurrection
-							</p>
-							<p className="flex items-center gap-1.5">
-								<Image src={Lock} alt="" height={14} width={12} />
-								Polar Station
-							</p>
-							<p className="flex items-center gap-1.5">
-								<Image src={Lock} alt="" height={14} width={12} />
-								Da Vinci's Challenge
-							</p>
+						<div className={`ml-2.5  `}>
+							{mobileRooms.rooms?.map((item, i) => {
+								return (
+									<div key={i}>
+										{!mobileRooms.isSingleLocation && (
+											<p onClick={() => handleToggleButton(i)} className="mt-3 flex items-center gap-1 text-[16px] text-[#A3A3A3] font-[600]">
+												{item?.mejorcity} <IoMdArrowDropdown className={`text-[16px] duration-300 ${openIndex === i ? "rotate-180" : "rotate-0"}`} />
+											</p>
+										)}
+										<div
+											className={`${
+												!mobileRooms.isSingleLocation && (openIndex === i ? "max-h-[850px]" : "max-h-0")
+											} ml-2.5 space-y-4 overflow-hidden transition-all duration-300`}
+										>
+											{item.subcity.map((city, j) => {
+												return <SubLocationGames city={city} key={j} id={j} />;
+											})}
+										</div>
+									</div>
+								);
+							})}
 						</div>
 					</li>
 					<li className="block lg:hidden">
 						<span
-							onClick={() => {
-								setEventPopUp(!eventPopUp);
-								setEscapePopUp(false);
-							}}
+							// onClick={() => {
+							// 	setEventPopUp(!eventPopUp);
+							// 	setEscapePopUp(false);
+							// }}
 							className="flex items-center gap-1 cursor-pointer"
 						>
-							EVENTS <IoMdArrowDropdown className="text-[18px]" />
+							EVENTS
 						</span>
-						<div
-							className={`ml-2.5 text-[14px] text-[#A3A3A3] space-y-[10px] overflow-hidden duration-300 ${
-								eventPopUp ? "h-auto pb-2.5 pt-1" : "h-0 "
-							}`}
-						>
-							<p className="flex items-center gap-1.5">
-								<Image src={Lock} alt="" height={14} width={12} />
-								Birthday Parties
-							</p>
-							<p className="flex items-center gap-1.5">
-								<Image src={Lock} alt="" height={14} width={12} />
-								Family Bonding
-							</p>
-							<p className="flex items-center gap-1.5">
-								<Image src={Lock} alt="" height={14} width={12} />
-								Bachelorette Parties
-							</p>
-							<p className="flex items-center gap-1.5">
-								<Image src={Lock} alt="" height={14} width={12} />
-								Team Building
-							</p>
+						<div className={`ml-1.5 mt-2 text-[14px] text-[#A3A3A3] overflow-hidden duration-300 `}>
+							{mobileViewEvent.los_angeles?.length !== 0 && <p className="text-[16px] font-[600] text-[#545454]">LOS ANGELES</p>}
+							<div className=" mt-2 ml-2.5 space-y-2.5">
+								{mobileViewEvent.los_angeles?.map((item, i) => {
+									return (
+										<div key={i}>
+											{!mobileRooms.isSingleLocation && (
+												<p
+													onClick={() => handleToggleButton(i + "Los")}
+													className="mt-3 mb-2 flex items-center gap-1 text-[16px] text-[#A3A3A3] font-[600]"
+												>
+													{item?.name}{" "}
+													<IoMdArrowDropdown className={`text-[16px] duration-300 ${openIndex === i + "Los" ? "rotate-180" : "rotate-0"}`} />
+												</p>
+											)}
+											<div
+												className={`${
+													!mobileRooms.isSingleLocation && (openIndex === i + "Los" ? "max-h-[450px]" : "max-h-0")
+												} ml-4 space-y-4 overflow-hidden transition-all duration-300`}
+											>
+												{item?.events.map((singleEvent, j) => {
+													return (
+														<div key={j}>
+															<p className="text-[14px] text-[#BFBFBF]">{singleEvent.name}</p>
+														</div>
+													);
+												})}
+											</div>
+										</div>
+									);
+								})}
+							</div>
+							{mobileViewEvent.dallas?.length !== 0 && <p className=" text-[16px] font-[600] text-[#545454] ">DALLAS</p>}
+							<div className="mt-2 ml-2.5">
+								{mobileViewEvent.dallas?.map((item, i) => {
+									return (
+										<div key={i}>
+											{!mobileRooms.isSingleLocation && (
+												<p
+													onClick={() => handleToggleButton(i + "dallas")}
+													className="mt-3 mb-2 flex items-center gap-1 text-[16px] text-[#A3A3A3] font-[600]"
+												>
+													{item?.name}{" "}
+													<IoMdArrowDropdown className={`text-[16px] duration-300 ${openIndex === i + "dallas" ? "rotate-180" : "rotate-0"}`} />
+												</p>
+											)}
+											<div
+												className={`${
+													!mobileRooms.isSingleLocation && (openIndex === i + "dallas" ? "max-h-[450px]" : "max-h-0")
+												} ml-4 space-y-4 overflow-hidden transition-all duration-300`}
+											>
+												{item?.events.map((singleEvent, j) => {
+													return (
+														<div key={j}>
+															<p className="text-[14px] text-[#BFBFBF]">{singleEvent.name}</p>
+														</div>
+													);
+												})}
+											</div>
+										</div>
+									);
+								})}
+							</div>
 						</div>
 					</li>
 					<li>SCHEDULE</li>
@@ -482,7 +581,9 @@ function NavBar() {
 					<li>PROMOTIONS</li>
 
 					<li>FAQ</li>
-					<li><Link href={'/contact'}>ABOUT US</Link></li>
+					<li>
+						<Link href={"/contact"}>ABOUT US</Link>
+					</li>
 				</ul>
 			</div>
 
@@ -490,8 +591,7 @@ function NavBar() {
 			<RoomsCard escape={escape} locationGame={locationGame} />
 
 			{/* -------event------ */}
-			<EventCard event={event} />
-			
+			<EventCard event={event} setMobileViewEvent={setMobileViewEvent} />
 
 			{/* --------breadcrum------ */}
 			<LocationWatcher />

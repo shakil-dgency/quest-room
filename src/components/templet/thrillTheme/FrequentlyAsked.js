@@ -7,7 +7,7 @@ function FrequentlyAsked() {
 	return (
 		<div>
 			<div className="g_container--theme pt-10 pb-20">
-				<h2 className="header_2 mb-[20px] md:mb-[40px]">Frequently Asked Questions</h2>
+				<h2 className="text-[#EDEDED] mb-[20px] md:mb-[40px]">Frequently Asked Questions</h2>
 				<Accordion className="flex flex-col xl:ml-28" value={initialSelectedValue}>
 					<AccordianItem value="1" trigger="Can I add another player to my group?">
 						As long as you do not exceed the capacity limit listed on the website for the specific room you have booked you can! Call us in advance to
