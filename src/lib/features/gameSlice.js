@@ -12,7 +12,7 @@ const gameSlice = createSlice({
 		filterByCategory: (state, action) => {
 			const selectedCategory = action.payload;
 			state.filteredGames =
-				selectedCategory === "allgames"
+				selectedCategory === "all games"
 					? gamesData.flatMap((city) => city.subcity)
 					: state.allGames.flatMap((city) =>
 							city.subcity

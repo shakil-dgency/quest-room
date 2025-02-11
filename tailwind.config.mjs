@@ -12,6 +12,7 @@ export default {
 		},
 		// added custom break points for small device
 		screens: {
+			"3xs":{min: "360px"},
 			"2xs": { min: "400px" },
 			xs: { min: "475px" },
 			sm: { min: "640px" },

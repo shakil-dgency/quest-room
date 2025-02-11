@@ -1,13 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client"
 import React from "react";
 import Accordion, { AccordianItem } from "./allComponents/Faq/Accordion";
+import { useSelector } from "react-redux";
 
 function FrequentlyAsked() {
 	const initialSelectedValue = "1";
+	const {id} = useSelector(state=> state.location);
 	return (
 		<div>
 			<div className="g_container--theme pt-10 pb-20">
-				<h2 className="text-[#EDEDED] mb-[20px] md:mb-[40px]">Frequently Asked Questions</h2>
+				<h2 className={`text-[#EDEDED] mb-[20px] md:mb-[40px] ${id === 'los'?"text-center":""}`}>Frequently Asked Questions</h2>
 				<Accordion className="flex flex-col xl:ml-28" value={initialSelectedValue}>
 					<AccordianItem value="1" trigger="Can I add another player to my group?">
 						As long as you do not exceed the capacity limit listed on the website for the specific room you have booked you can! Call us in advance to

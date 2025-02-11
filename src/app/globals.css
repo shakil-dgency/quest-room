@@ -72,7 +72,7 @@
 	scroll-behavior: smooth;
 }
 body {
-	font-family: "Poppins", sans-serif;
+	font-family: "Poppins", sans-serif;;
 }
 
 h1 {
@@ -80,7 +80,7 @@ h1 {
 	font-size: 90px;
 	line-height: 90px;
 	font-weight: 400;
-	
+	text-shadow: 0px 0px 80px rgba(0, 133, 255, 0.40);
 }
 
 h2{
@@ -93,7 +93,6 @@ h2{
 
 .g_main-description{
 	font-size: 18px;
-
 }
 
 .g_container--theme {
@@ -339,6 +338,20 @@ h2{
 /* ------------------------------- */
 
 @media only screen and (max-width: 1024px) {
+
+	h1{
+		font-size: 60px;
+		line-height: 64px;
+	}
+	h2{
+		font-size: 40px;
+		line-height: 44px;
+	}
+	.g_main-description{
+		font-size: 16px;
+	}
+	
+
 	.header_2 {
 		font-size: 40px;
 		line-height: 48px;
@@ -357,6 +370,18 @@ h2{
 }
 
 @media only screen and (max-width: 640px) {
+	h1{
+		font-size: 34px;
+		line-height: 34px;
+	}
+	h2{
+		font-size: 28px;
+		line-height: 30px;
+	}
+	.g_main-description{
+		font-size: 14px;
+	}
+	
 	.header_2 {
 		font-size: 32px;
 		line-height: 38px;
@@ -365,6 +390,11 @@ h2{
 	.storyLine_header_2 {
 		font-size: 32px;
 		line-height: 38px;
+	}
+
+
+	.thrillTempletSwiper {
+		padding: 0 0 60px 0 !important;
 	}
 }
 

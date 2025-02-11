@@ -8,7 +8,7 @@ import SmallButton from "@/components/buttons/SmallButton";
 
 function GameCard({game}) {
 	return (
-		<div style={{backgroundImage: `url(${game.image})`}} className="relative group h-[580px] max-w-[345px] mx-aut  rounded-lg overflow-hidden  bg-center bg-no-repeat bg-cover ">
+		<div style={{backgroundImage: `url(${game.image})`}} className="relative group h-[580px] max-w-[345px] mx-auto  rounded-lg overflow-hidden  bg-center bg-no-repeat bg-cover ">
 			<VideoComponent />
 
 			<div className="absolute top-0 left-0 right-0 z-20 flex gap-3 justify-between text-[11px] 2xs:text-[14px] text-[#D9D9D9] font_roboto  mt-2.5 px-4">

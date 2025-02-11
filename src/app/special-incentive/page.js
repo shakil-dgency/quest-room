@@ -1,4 +1,5 @@
-import FilterSection from "@/components/pages/SpecialIncentive/FilterSection";
+
+import FilterSection from "@/components/pages/GlobalComponents/FilterSection";
 import Hero from "@/components/pages/SpecialIncentive/Hero";
 import FrequentlyAsked from "@/components/templet/thrillTheme/FrequentlyAsked";
 import Gallery from "@/components/templet/thrillTheme/Gallery";

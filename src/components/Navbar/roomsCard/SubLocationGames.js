@@ -20,7 +20,7 @@ function SubLocationGames({ city,id }) {
 			</div>
 			<div className="pt-[15px] ml-6 space-y-[10px]">
 				{city.games.map((game, k) => (
-					<Link href={`${city.slug}/${game.slug}`} key={k} className="flex">
+					<Link href={`/${city.slug}/${game.slug}`} key={k} className="flex">
 						<p className="group hover:text-[#FC7008] flex items-center gap-1.5 text-[#BFBFBF] font-[500] text-[14px] lg:text-[18px]">
 							<svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="-rotate-[8deg] group-hover:rotate-[10deg] duration-150">
 								<g id="Group 26">

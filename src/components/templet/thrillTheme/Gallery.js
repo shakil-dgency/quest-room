@@ -12,11 +12,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard, FreeMode } from "swiper/modules";
+import { useSelector } from "react-redux";
 
 function Gallery() {
+	const {id} = useSelector(state=> state.location);
 	return (
 		<div className=" pt-10 pb-20">
-			<h2 className="g_container--theme font_rusolie text-[#EDEDED] pb-[30px] md:pb-[42px]">Photo Gallery</h2>
+			{id !== 'los' && <h2 className="g_container--theme font_rusolie text-[#EDEDED] pb-[30px] md:pb-[42px]">Photo Gallery</h2>}
 
 			<Swiper
 				// slidesPerView={2.5}

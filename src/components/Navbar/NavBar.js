@@ -315,7 +315,7 @@ function NavBar() {
 			if (this.window.innerWidth < 768) {
 				if (scrollTop > 100) {
 					if (scrollTop > lastScrollTop) {
-						navbar.style.top = "-50px";
+						navbar.style.top = "-60px";
 					} else if (lastScrollTop > scrollTop + 20) {
 						navbar.style.top = "0";
 					} else if (scrollTop === 0) {

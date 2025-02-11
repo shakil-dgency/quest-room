@@ -10,8 +10,8 @@ import GameCard from "./GameCard";
 function GameCardWithCarusel({ data }) {
 	return (
 		<Swiper
-			slidesPerView={1.1}
-			spaceBetween={20}
+			slidesPerView={1}
+			spaceBetween={10}
 			loop={false}
 			speed={1000}
 			pagination={{
@@ -20,9 +20,13 @@ function GameCardWithCarusel({ data }) {
 			}}
 			navigation={true}
 			modules={[Pagination, Navigation]}
-			className="thrillGameSwiper thrillTempletSwiper "
+			className="thrillGameSwiper thrillTempletSwiper  "
 			style={{}}
 			breakpoints={{
+				360:{
+					slidesPerView: 1.1,
+					spaceBetween: 10,
+				},
 				520: {
 					slidesPerView: 1.5,
 					spaceBetween: 30,
