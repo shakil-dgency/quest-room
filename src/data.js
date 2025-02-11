@@ -4,7 +4,7 @@ const locationGame = [
 		subcity: [
 			{
 				name: "Redondo Beach",
-				address: "1815 Hawthorne Blvd, Redondo Beach, CA 90278 | 9.3 miles from Santa Monica",
+				address: "1815 Hawthorne Blvd, Redondo Beach, CA 90278 ",
 				slug: "redondo-beach",
 				games: [
 					{
@@ -39,7 +39,7 @@ const locationGame = [
 			},
 			{
 				name: "Hollywood",
-				address: "1815 Hawthorne Blvd, Redondo Beach, CA 90278 | 9.3 miles from Santa Monica",
+				address: "1815 Hawthorne Blvd, Redondo Beach, CA 90278 ",
 				slug: "hollywood",
 				games: [
 					{
@@ -81,7 +81,7 @@ const locationGame = [
 			},
 			{
 				name: "Korea Town",
-				address: "1815 Hawthorne Blvd, Redondo Beach, CA 90278 | 9.3 miles from Santa Monica",
+				address: "1815 Hawthorne Blvd, Redondo Beach, CA 90278 ",
 				slug: "korea-town",
 				games: [
 					{
@@ -116,7 +116,7 @@ const locationGame = [
 			},
 			{
 				name: "Culver City",
-				address: "1815 Hawthorne Blvd, Redondo Beach, CA 90278 | 9.3 miles from Santa Monica",
+				address: "1815 Hawthorne Blvd, Redondo Beach, CA 90278 ",
 				slug: "culver-city",
 				games: [
 					{

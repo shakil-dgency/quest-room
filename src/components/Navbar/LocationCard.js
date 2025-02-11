@@ -52,7 +52,7 @@ function LocationCard({ isLocationOpen, handleLocationBarClose }) {
 						</Link>
 						<div className="sm:pl-4 mt-[25px] flex flex-col space-y-[15px]">
 							<Link href={"/los-angeles/redondo-beach"}>
-								<div className="group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 bg-[#00122E] hover:bg-[#FC70081A] p-4 sm:p-2.5 rounded-lg">
+								<div className="group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 bg-[#00122E] hover:bg-[#001D4D] p-4 sm:p-2.5 rounded-lg">
 									<div className="relative h-[78px] w-full sm:w-auto rounded-lg flex-none overflow-hidden">
 										<Image
 											src={location1}
@@ -71,7 +71,7 @@ function LocationCard({ isLocationOpen, handleLocationBarClose }) {
 								</div>
 							</Link>
 							<Link href={"/los-angeles/hollywood"}>
-								<div className="group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 bg-[#00122E] hover:bg-[#FC70081A] p-4 sm:p-2.5 rounded-lg">
+								<div className="group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 bg-[#00122E] hover:bg-[#001D4D] p-4 sm:p-2.5 rounded-lg">
 									<div className="relative h-[78px] w-full sm:w-auto rounded-lg flex-none overflow-hidden">
 										<Image
 											src={location2}
@@ -90,7 +90,7 @@ function LocationCard({ isLocationOpen, handleLocationBarClose }) {
 								</div>
 							</Link>
 							<Link href={"/los-angeles/korea-town"}>
-								<div className="group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 bg-[#00122E] hover:bg-[#FC70081A] p-4 sm:p-2.5 rounded-lg">
+								<div className="group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 bg-[#00122E] hover:bg-[#001D4D] p-4 sm:p-2.5 rounded-lg">
 									<div className="relative h-[78px] w-full sm:w-auto rounded-lg flex-none overflow-hidden">
 										<Image
 											src={location3}
@@ -109,7 +109,7 @@ function LocationCard({ isLocationOpen, handleLocationBarClose }) {
 								</div>
 							</Link>
 							<Link href={"/los-angeles/culver-city"}>
-								<div className="group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 bg-[#00122E] hover:bg-[#FC70081A] p-4 sm:p-2.5 rounded-lg">
+								<div className="group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 bg-[#00122E] hover:bg-[#001D4D] p-4 sm:p-2.5 rounded-lg">
 									<div className="relative h-[78px] w-full sm:w-auto rounded-lg flex-none overflow-hidden">
 										<Image
 											src={location4}
@@ -150,7 +150,7 @@ function LocationCard({ isLocationOpen, handleLocationBarClose }) {
 						</Link>
 						<Link href={"/dallas/plano"}>
 							<div className="sm:pl-4 mt-[25px] space-y-[15px]">
-								<div className="group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 bg-[#00122E] hover:bg-[#FC70081A] p-4 sm:p-2.5 rounded-lg">
+								<div className="group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 bg-[#00122E] hover:bg-[#001D4D] p-4 sm:p-2.5 rounded-lg">
 									<div className="relative h-[78px] w-full sm:w-auto rounded-lg flex-none overflow-hidden">
 										<Image
 											src={dallas_mall}

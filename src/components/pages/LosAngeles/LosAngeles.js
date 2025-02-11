@@ -18,8 +18,8 @@ function LosAngeles() {
             <GiftCardSection />
             <AboutQroomLA />
             <TestimonialSection />
-            <Gallery />
-            <FrequentlyAsked />
+            <Gallery id="los" />
+            <FrequentlyAsked id="los" />
       
 		</div>
 	);

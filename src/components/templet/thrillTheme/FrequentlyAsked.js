@@ -2,11 +2,9 @@
 "use client"
 import React from "react";
 import Accordion, { AccordianItem } from "./allComponents/Faq/Accordion";
-import { useSelector } from "react-redux";
 
-function FrequentlyAsked() {
+function FrequentlyAsked({id}) {
 	const initialSelectedValue = "1";
-	const {id} = useSelector(state=> state.location);
 	return (
 		<div>
 			<div className="g_container--theme pt-10 pb-20">

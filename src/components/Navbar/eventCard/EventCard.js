@@ -330,7 +330,7 @@ function EventCard({ event, setMobileViewEvent }) {
 					return (
 						<div
 							key={j}
-							className="group flex flex-col sm:flex-row sm:items-center gap-3 bg-[#00122E] hover:bg-[#FC70081A] duration-300 p-4 sm:p-2 rounded-lg"
+							className="group flex flex-col sm:flex-row sm:items-center gap-3 bg-[#00122E] hover:bg-[#001D4D] duration-300 p-4 sm:p-2 rounded-lg"
 						>
 							<div className="relative h-[100px] w-full sm:w-auto rounded-lg flex-none overflow-hidden">
 								<Image

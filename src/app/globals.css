@@ -180,6 +180,9 @@ h2{
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
+.planoTestimonial{
+	/* mix-blend-mode: luminosity; */
+}
 
 /* .thrillTempletTestimonialSwiper .swiper-button-prev,
 .thrillTempletTestimonialSwiper .swiper-button-next {

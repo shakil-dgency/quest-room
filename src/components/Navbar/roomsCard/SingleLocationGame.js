@@ -7,7 +7,7 @@ import Link from "next/link";
 
 function SingleLocationGame({ game, citySlug }) {
 	return (
-		<div className="group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 bg-[#00122E] hover:bg-[#FC70081A] duration-300  p-4 sm:p-2.5 rounded-lg">
+		<div className="group flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5 bg-[#00122E] hover:bg-[#001D4D] duration-300  p-4 sm:p-2.5 rounded-lg">
 			<div className="relative h-[100px] w-full sm:w-auto rounded-lg flex-none overflow-hidden">
 				<Image
 					src={game1}

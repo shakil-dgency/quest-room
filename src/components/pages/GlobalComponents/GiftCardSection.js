@@ -16,7 +16,7 @@ function GiftCardSection() {
 				<div className="pt-[90px] flex">
 					<div className=" relative">
 						<BigButton title={"BUY GIFT CARD NOW"} />
-						<Image src={"/global/Gift_button.png"} height={139} width={144} alt="" className="absolute left-[90%] -bottom-1.5" />
+						<Image src={"/global/button_gift.png"} height={139} width={144} alt="" className="absolute left-[90%] -bottom-1.5" />
 					</div>
 				</div>
 			</div>

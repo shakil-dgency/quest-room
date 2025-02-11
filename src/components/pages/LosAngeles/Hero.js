@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import BigButton from "@/components/buttons/BigButton";
+import LazyVideo from "@/components/templet/thrillTheme/allComponents/LazyVideo";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -8,6 +9,7 @@ function Hero() {
 	return (
 		<div className="">
 			<div className="bg-[url('/pages/LosAngeles/losangeles_bg.png')] bg-no-repeat bg-cover bg-[center_top] relative ">
+				
 				<div className="g_container--theme grid grid-cols-5 pt-[50px] sm:pt-[70px] lg:pt-[112px] pb-[130px] md:pb-[190px]">
 					<div className="col-start-1 col-end-3  ">
 						<p className="text-[#D9D9D9] text-[20px] font-[500] mb-5">04 Nearby Locations | 14 Games</p>
@@ -20,7 +22,6 @@ function Hero() {
 						<div className="flex flex-col-reverse sm:flex-row items-center gap-[25px]">
 							<BigButton title="book games" />
 							<BigButton title="book events" isOutline={true} />
-							
 						</div>
 					</div>
 					<div className="relative col-start-3 col-end-6 ml-16">

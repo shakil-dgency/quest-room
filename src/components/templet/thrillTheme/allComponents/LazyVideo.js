@@ -1,4 +1,5 @@
-import { useEffect, useState,useRef } from "react";
+"use client"
+import {  useState,useRef } from "react";
 import { ImVolumeMute2 } from "react-icons/im";
 import { GoUnmute } from "react-icons/go";
 import usePageLoad from "@/hooks/usePageLoad";

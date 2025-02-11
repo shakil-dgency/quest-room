@@ -1,6 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import dynamic from "next/dynamic";
 import LosAngeles from "@/components/pages/LosAngeles/LosAngeles";
+import Plano from "@/components/pages/Dallas/Plano/Plano";
 const ProjectMinotour = dynamic(() => import("@/components/pages/ProjectMinotour/ProjectMinotour"));
 
 
@@ -23,13 +24,22 @@ export const revalidate = 60; // Revalidate every 60 seconds (ISR)
 export default function DynamicPage({ params }) {
 	const  slug  = params?.slug; // slug will be an array of URL segments
 
+	console.log(slug[0]);
+	
+
 
 	if (!slug || slug.length === 0) return notFound();
 
 	if (slug.length === 1) {
+
+
+		if (slug[0] === "los-angeles") {
+			return <LosAngeles />;
+		}
+
 		return (
-			<div className="">
-				<LosAngeles />
+			<div className="h-[100vh] pt-5 pl-5">
+				<h1>SubLocation: {decodeURIComponent(slug)} </h1>
 			</div>
 		);
 	}
@@ -42,7 +52,7 @@ export default function DynamicPage({ params }) {
 		}
 
 		if (secondParam === "plano") {
-			return <ProjectMinotour />;
+			return <Plano/>;
 		}
 
 		return (
