@@ -1,16 +1,11 @@
 import React from "react";
 import VideoTestimonial from "../GlobalComponents/VideoTestimonial";
+import SectionStarter from "../GlobalComponents/SectionStarter";
 
 function TestimonialSection() {
 	return (
-		<div>
-			<div className="max-w-[1330px] mx-auto pb-[75px] px-2.5 pt-[70px]">
-				<h2 className="text-[#EDEDED] text-center">Host Unforgettable Escape Room Events and Parties in Los Angeles</h2>
-				<p className="text-[14px] sm:text-[16px] pt-3 text-[#A3A3A3] text-center max-w-[680px] mx-auto">
-					Make your next event unforgettable with Quest Room! From bachelor parties to corporate team-building, our escape room events in LA offer
-					fun, immersive experiences for every occasion.
-				</p>
-			</div>
+		<div className="pt-[70px]">
+			<SectionStarter title="What Our Adventurers Are Saying" description="Hear directly from our guests about why Quest Room is home to the best escape rooms in Los Angeles, and find out what makes our thrilling, immersive games an experience you’ll never forget!" />
 			<div className="g_container--theme pb-20">
 				<VideoTestimonial />
 			</div>

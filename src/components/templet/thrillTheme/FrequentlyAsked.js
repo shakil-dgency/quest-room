@@ -9,7 +9,7 @@ function FrequentlyAsked({id}) {
 		<div>
 			<div className="g_container--theme pt-10 pb-20">
 				<h2 className={`text-[#EDEDED] mb-[20px] md:mb-[40px] ${id === 'los'?"text-center":""}`}>Frequently Asked Questions</h2>
-				<Accordion className="flex flex-col xl:ml-28" value={initialSelectedValue}>
+				<Accordion className={`flex flex-col max-w-[1095px] ${id==='los'?" mx-auto":"xl:ml-28"}`}  value={initialSelectedValue}>
 					<AccordianItem value="1" trigger="Can I add another player to my group?">
 						As long as you do not exceed the capacity limit listed on the website for the specific room you have booked you can! Call us in advance to
 						let us know, and we will add a player to your game so everyone can do their waivers before arriving. We can take care of payment when you

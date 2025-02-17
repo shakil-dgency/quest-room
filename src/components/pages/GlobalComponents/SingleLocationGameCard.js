@@ -71,7 +71,7 @@ const gameData = [
 
 function SingleLocationGameCard() {
 	return (
-		<div className="g_container--theme pt-[150px] pb-[150px]">
+		<div id="singlelocation_gamecard" className="g_container--theme pt-[150px] pb-[150px]">
 			<div className="max-w-[1330px] mx-auto pb-[75px] px-2.5 ">
 				<h2 className="text-[#EDEDED] text-center">Exciting Escape Rooms For A Thrilling Birthday Party</h2>
 				<p className="text-[14px] sm:text-[16px] pt-3 text-[#A3A3A3] text-center max-w-[680px] mx-auto">

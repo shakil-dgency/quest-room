@@ -34,7 +34,7 @@ export function AccordianItem({ children, value, trigger, ...props }) {
 	const ref = useRef(null);
 
 	return (
-		<li className="max-w-[1095px]  font_poppins" {...props}>
+		<li className=" font_poppins" {...props}>
 			<header
 				role="button"
 				onClick={() => setSelected(open ? null : value)}
@@ -47,7 +47,7 @@ export function AccordianItem({ children, value, trigger, ...props }) {
 				<IoIosArrowDown size={23} className={` text-[#D9D9D9] rounded-full p-[3px] transition-transform absolute right-0 sm:right-4 ${open ? "rotate-180" : ""}`} />
 			</header>
 			<div
-				className="overflow-y-hidden transition-all border-b-[1px] border-b-[#1C2B17] max-w-[1095px] mx-auto text-[14px] md:text-[18px] leading-[1.6] text-[#A3A3A3]"
+				className="overflow-y-hidden transition-all border-b-[1px] border-b-[#1C2B17] text-[14px] md:text-[18px] leading-[1.6] text-[#A3A3A3]"
 				style={{ height: open && reRender ? ref.current?.offsetHeight || 0 : 0 }}
 			>
 				<div className=" pb-5 px-[px]" ref={ref}>

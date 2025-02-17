@@ -16,8 +16,8 @@ function LosAngeles() {
             <FilterSection />
             <EventSection />
             <GiftCardSection />
-            <AboutQroomLA />
             <TestimonialSection />
+            <AboutQroomLA />
             <Gallery id="los" />
             <FrequentlyAsked id="los" />
       

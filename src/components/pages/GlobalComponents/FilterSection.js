@@ -36,11 +36,11 @@ function FilterSection() {
 	};
 
 	return (
-		<div className="pt-[80px] pb-[80px] bg-[url('/pages/SpecialIncentive/special_incentive_bg.png')] bg-repeat relative ">
+		<div className="pb-[80px] bg-[url('/pages/SpecialIncentive/special_incentive_bg.png')] bg-repeat relative ">
 			<div className="max-w-[1330px] mx-auto pb-[64px] px-2.5">
-				<p className="text-[#D9D9D9] text-center mb-2.5 text-[16px] sm:text-[20px] font-[500]">04 Nearby Locations | 14 Games</p>
+				<p className="subtitle_S text-[#D9D9D9] text-center mb-[15px] ">04 Nearby Locations | 14 Games</p>
 				<h2 className="text-[#EDEDED] text-center">Explore The #1 Escape Rooms in Los Angeles</h2>
-				<p className="text-[14px] sm:text-[16px] pt-3 text-[#A3A3A3] text-center max-w-[950px] mx-auto">
+				<p className="body-paragraph_L pt-2.5 text-[#A3A3A3] text-center max-w-[950px] mx-auto">
 					No other escape rooms in Los Angeles are as immersive, challenging, and fun as the ones at Quest Room! With themes like comedy, horror, and
 					filters for all skill levels, families, and big groups, there’s something for everyone!
 				</p>
@@ -59,7 +59,7 @@ function FilterSection() {
 				</button>
 				<div
 					onClick={handleDropdown}
-					className=" lg:bg-[#001A43] rounded-lg  lg:px-5 py-2.5 lg:py-[15px] mb-[70px] w-full sticky top-[70px] z-40 "
+					className=" lg:bg-[#001A43] rounded-lg  lg:px-5 py-2.5 lg:py-[15px] mb-[50px] w-full sticky top-[20px] 2xs:top-[25px] md:top-[60px] lg:top-[70px] z-40 "
 				>
 					<div className="lg:hidden flex items-center gap-[7px]">
 						<button className="bg-[#001A43] relative px-4 rounded-lg py-[18px] text-[14px] cursor-default flex items-center gap-2 text-[#A3A3A3] ">
@@ -158,9 +158,9 @@ function FilterSection() {
 				</div>
 				{filteredGames?.map((item, i) => (
 					<div key={i}>
-						<p className=" text-[14px] sm:text-[16px] lg:text-[18px] leading-[1] text-[#A3A3A3] mt-2 mb-1 sm:mb-0">{item.games.length} games</p>
-						<p className="text-[#D9D9D9] text-[22px] sm:text-[30px] lg:text-[40px] uppercase font-[700]">{item.name} Escape Rooms</p>
-						<div className=" group flex gap-2.5 items-center mb-[25px] lg:mb-[50px]">
+						<p className=" body-paragraph_L text-[#A3A3A3] mt-2 mb-1 sm:mb-2.5">{item.games.length} games</p>
+						<p className="text-[#D9D9D9] subtitle_XL uppercase ">{item.name} Escape Rooms</p>
+						<div className=" group flex gap-2.5 items-center mt-[15px] mb-[25px] lg:mb-[50px]">
 							<Image src={locationIcon} alt="" height={15} width={11} className="flex-none object-cover " />
 							<p className="text-[#A3A3A3] text-[13px]">{item.address}</p>
 						</div>
