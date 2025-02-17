@@ -5,7 +5,7 @@ import BigButton from "@/components/buttons/BigButton";
 
 function Hero() {
 	return (
-		<div className="h-[950px] w-full bg-[url('/pages/event/eventHero.png')] bg-no-repeat object-cover relative mb-[200px]">
+		<div className="h-[950px] w-full bg-[url('/pages/Event/eventHero.png')] bg-no-repeat object-cover relative mb-[200px]">
 			{/* <Image src="/pages/event/eventHero.png" height={950} width={1980} alt="" className="h-full w-full object-cover" /> */}
 			<div className=" flex justify-center">
 				<div className="absolute -bottom-[150px]">
