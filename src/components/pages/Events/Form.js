@@ -7,7 +7,7 @@ function Form({ pricingState,setPricingState }) {
     }
 	return (
 		<div className={`${pricingState?"block":"hidden"} bg-[#131313] bg-opacity-[0.9] h-full w-full absolute z-20 top-0 left-0`} >
-			<div className=" bg-[url('/pages/Event/form_bg.png')] bg-[length:100%_100%] max-w-[900px] px-[100px] pt-[60px] pb-[65px] sticky top-[50%] left-[50%] translate-y-[-45%] translate-x-[-50%] z-20 ">
+			<div className=" bg-[url('/pages/Event/form_bg.png')] bg-no-repeat bg-cover max-w-[900px] px-[100px] pt-[60px] pb-[65px] sticky top-[50%] left-[50%] translate-y-[-45%] translate-x-[-50%] z-20 ">
                 <p onClick={handleClose} className="flex justify-center items-center cursor-pointer text-[#EDEDED] rotate-45 -mt-5 border rounded-full h-[20px] w-[20px] text-[18px] absolute right-14">+</p>
 				<p className="subtitle_S text-[#EDEDED]">Your Estimated Quote </p>
 				<p className="text-[14px] text-white/80">

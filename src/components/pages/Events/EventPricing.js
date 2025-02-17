@@ -148,7 +148,7 @@ const Card = ({ data, setPricingState }) => {
 					onClick={() => players === "21+" && setState((prev) => ({ ...prev, teamToggle: !state.teamToggle }))}
 					className={`${
 						state.teamToggle ? "rounded-b-0" : " rounded-b-[4px]"
-					} rounded-t-[4px] w-full py-2 pl-[24px] px-[15px] flex justify-between items-center bg-[#002766] text-[#BFBFBF] body-paragraph_M`}
+					} rounded-t-[4px] cursor-pointer w-full py-2 pl-[24px] px-[15px] flex justify-between items-center bg-[#002766] text-[#BFBFBF] body-paragraph_M`}
 				>
 					<p>{state.teamSize ? state.teamSize + " Players" : "Your Team Size"}</p>
 					<span>
@@ -174,7 +174,7 @@ const Card = ({ data, setPricingState }) => {
 									<span
 										onClick={() => setState((prev) => ({ ...prev, teamSize: num }))}
 										key={i}
-										className="px-[20px] py-1.5 bg-[#01194090] border-[1px] border-[#003180] text-[#D9D9D9]"
+										className="px-[20px] py-1.5 bg-[#01194090] border-[1px] border-[#003180] text-[#D9D9D9] cursor-pointer"
 									>
 										{num}
 									</span>
@@ -189,7 +189,7 @@ const Card = ({ data, setPricingState }) => {
 					onClick={() => setState((prev) => ({ ...prev, gameToggle: !state.gameToggle }))}
 					className={`${
 						state.gameToggle ? "rounded-b-0" : " rounded-b-[4px]"
-					} rounded-t-[4px] w-full py-2 pl-[24px] px-[15px] flex justify-between items-center bg-[#002766] text-[#BFBFBF] body-paragraph_M`}
+					} rounded-t-[4px] w-full py-2 pl-[24px] px-[15px] cursor-pointer flex justify-between items-center bg-[#002766] text-[#BFBFBF] body-paragraph_M`}
 				>
 					<p>{state.gameSelect.length !== 0 ? state.gameSelect.length + " Games Selected" : "Choose Your Escape Game"}</p>
 					<span>
@@ -209,7 +209,7 @@ const Card = ({ data, setPricingState }) => {
 									}))
 								}
 								key={i}
-								className="px-[20px] py-1.5  text-[#D9D9D9] flex items-center gap-3"
+								className="px-[20px] py-1.5  text-[#D9D9D9] flex items-center gap-3 cursor-pointer"
 							>
 								<button
 									className={`h-[15px] w-[15px] rounded-full border ${state.gameSelect.includes(game) ? "bg-[#fff]" : "bg-transparent"}`}

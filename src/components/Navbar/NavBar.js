@@ -31,28 +31,28 @@ const locationGame = [
 					{
 						name: "Warlocked",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "",
+						image: "/templet/thrillTheme/gameCard/pairets.png",
 						slug: "warlocked",
 						category: ['comedy', 'family']
 					},
 					{
 						name: "Kablam",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "",
+						image: "/templet/thrillTheme/gameCard/Kablam.png",
 						slug: "kablam",
 						category: ['comedy', 'adult']
 					},
 					{
 						name: "Resurrection",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "",
+						image: "/templet/thrillTheme/gameCard/reply.jpg",
 						slug: "resurrection",
 						category: ['horror', 'family']
 					},
 					{
 						name: "Polar Station",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "",
+						image: "/templet/thrillTheme/gameCard/Heretics.png",
 						slug: "polar-station",
 						category: ['adventure']
 					},
@@ -66,35 +66,35 @@ const locationGame = [
 					{
 						name: "Project Minotaur",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "",
+						image: "/templet/thrillTheme/navBar/game1.png",
 						slug: "project-minotour",
 						category: ['comedy', 'family']
 					},
 					{
 						name: "Cannibal's Den 2.0",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "",
+						image: "/templet/thrillTheme/gameCard/Cannibal.jpg",
 						slug: "cannibals-den",
 						category: ['horror', 'family']
 					},
 					{
 						name: "Perfumer",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "",
+						image: "/templet/thrillTheme/gameCard/Perfumer.jpg",
 						slug: "perfumer",
 						category: ['horror', 'family']
 					},
 					{
 						name: "Red Giant",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "",
+						image: "/templet/thrillTheme/gameCard/RedGiant.png",
 						slug: "red-giant",
 						category: ['adventure']
 					},
 					{
 						name: "Project Minotaur: Replay",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "",
+						image: "/templet/thrillTheme/gameCard/reply.jpg",
 						slug: "project-minotour-replay",
 						category: ['horror', 'family']
 					},
@@ -108,28 +108,28 @@ const locationGame = [
 					{
 						name: "Malediction",
 						description: "You remember being with your friends, stuck on the side of the road.",
-						image: "",
+						image: "/global/games/Malediction.png",
 						slug: "malediction",
 						category: ['comedy', 'family']
 					},
 					{
 						name: "Spell Breakers",
 						description: "You remember being with your friends, stuck on the side of the road.",
-						image: "",
+						image: "/global/games/Spell_breakers.png",
 						slug: "spell-breakers",
 						category: ['adventure']
 					},
 					{
 						name: "Heretics",
 						description: "You remember being with your friends, stuck on the side of the road.",
-						image: "",
+						image: "/templet/thrillTheme/gameCard/Heretics.png",
 						slug: "heretics",
 						category: ['horror', 'family']
 					},
 					{
 						name: "Da Vinci's Challenge",
 						description: "You remember being with your friends, stuck on the side of the road.",
-						image: "",
+						image: "/global/games/da_vinchi.png",
 						slug: "da-vincis-challenge",
 						category: ['comedy', 'adult']
 					},
@@ -143,21 +143,21 @@ const locationGame = [
 					{
 						name: "Amnesia",
 						description: "You remember being with your friends, stuck on the side of the road.",
-						image: "",
+						image: "/templet/thrillTheme/gameCard/Cannibal.jpg",
 						slug: "amnesia",
 						category: ['horror', 'family']
 					},
 					{
 						name: "Pirates: Wanted!",
 						description: "You remember being with your friends, stuck on the side of the road.",
-						image: "",
+						image: "/templet/thrillTheme/gameCard/pairets.png",
 						slug: "pirates-wanted",
 						category: ['comedy', 'adult']
 					},
 					{
 						name: "Greedy",
 						description: "You remember being with your friends, stuck on the side of the road.",
-						image: "",
+						image: "/templet/thrillTheme/gameCard/Kablam.png",
 						slug: "greedy",
 						category: ['adventure']
 					},
@@ -176,42 +176,42 @@ const locationGame = [
 					{
 						name: "Cannibal's Den",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "",
+						image: "/templet/thrillTheme/gameCard/Cannibal.jpg",
 						slug: "canibals-den",
 						category: ['horror', 'family']
 					},
 					{
 						name: "Da Vinci's Challenge",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "",
+						image: "/global/games/da_vinchi.png",
 						slug: "da-vincis-challenge",
 						category: ['adventure']
 					},
 					{
 						name: "Malediction",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "",
+						image: "/global/games/Malediction.png",
 						slug: "malediction",
 						category: ['horror', 'family']
 					},
 					{
 						name: "Red Giant",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "",
+						image: "/templet/thrillTheme/gameCard/RedGiant.png",
 						slug: "red-giant",
 						category: ['adventure']
 					},
 					{
 						name: "Spell Breakers",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "",
+						image: "/global/games/Spell_breakers.png",
 						slug: "spell-breakers",
 						category: ['comedy', 'family']
 					},
 					{
 						name: "Heretics",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "",
+						image: "/templet/thrillTheme/gameCard/Heretics.png",
 						slug: "heretics",
 						category: ['horror', 'family']
 					},

@@ -87,14 +87,14 @@ const locationGame = [
 					{
 						name: "Malediction",
 						description: "You remember being with your friends, stuck on the side of the road.",
-						image: "/templet/thrillTheme/gameCard/Cannibal.jpg",
+						image: "/global/games/Malediction.png",
 						slug: "malediction",
 						category: ['comedy', 'family']
 					},
 					{
 						name: "Spell Breakers",
 						description: "You remember being with your friends, stuck on the side of the road.",
-						image: "/templet/thrillTheme/gameCard/Kablam.png",
+						image: "/global/games/Spell_breakers.png",
 						slug: "spell-breakers",
 						category: ['adventure']
 					},
@@ -108,7 +108,7 @@ const locationGame = [
 					{
 						name: "Da Vinci's Challenge",
 						description: "You remember being with your friends, stuck on the side of the road.",
-						image: "/templet/thrillTheme/gameCard/Cannibal.jpg",
+						image: "/global/games/da_vinchi.png",
 						slug: "da-vincis-challenge",
 						category: ['family', 'experts','adventure']
 					},
@@ -162,14 +162,14 @@ const locationGame = [
 					{
 						name: "Da Vinci's Challenge",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "/templet/thrillTheme/gameCard/pairets.png",
+						image: "/global/games/da_vinchi.png",
 						slug: "da-vincis-challenge",
 						category: ['family', 'experts','adventure']
 					},
 					{
 						name: "Malediction",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "/templet/thrillTheme/gameCard/Heretics.png",
+						image: "/global/games/Malediction.png",
 						slug: "malediction",
 						category: ['fantasy', 'comedy']
 					},
@@ -183,7 +183,7 @@ const locationGame = [
 					{
 						name: "Spell Breakers",
 						description: "You remember being with your friends, stuck on the side of the road. ",
-						image: "/templet/thrillTheme/gameCard/Kablam.png",
+						image: "/global/games/Spell_breakers.png",
 						slug: "spell-breakers",
 						category: ['comedy', 'family']
 					},
