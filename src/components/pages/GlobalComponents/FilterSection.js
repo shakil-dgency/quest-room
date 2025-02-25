@@ -158,7 +158,7 @@ function FilterSection() {
 				</div>
 				{filteredGames?.map((item, i) => (
 					<div key={i}>
-						<p className=" body-paragraph_L text-[#A3A3A3] mt-2 mb-1 sm:mb-2.5">{item.games.length} games</p>
+						<p className=" body-paragraph_L text-[#A3A3A3] mt-2 mb-1 sm:mb-2.5">{item?.games?.length} games</p>
 						<p className="text-[#D9D9D9] subtitle_XL uppercase ">{item.name} Escape Rooms</p>
 						<div className=" group flex gap-2.5 items-center mt-[15px] mb-[25px] lg:mb-[50px]">
 							<Image src={locationIcon} alt="" height={15} width={11} className="flex-none object-cover " />

@@ -1,15 +1,31 @@
 /* eslint-disable react/no-unescaped-entities */
-"use client"
+"use client";
 import React from "react";
 import Accordion, { AccordianItem } from "./allComponents/Faq/Accordion";
 
-function FrequentlyAsked({id}) {
+const PARAM_STYLES = {
+	"birthday-parties": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.accent.300/60%)]",
+	},
+	"family-fun-activity": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.family.300/60%)]",
+	},
+};
+
+function FrequentlyAsked({ id, param }) {
 	const initialSelectedValue = "1";
+	const styles = PARAM_STYLES[param] || {};
 	return (
 		<div>
 			<div className="g_container--theme pt-10 pb-20">
-				<h2 className={`text-[#EDEDED] mb-[20px] md:mb-[40px] ${id === 'los'?"text-center":""}`}>Frequently Asked Questions</h2>
-				<Accordion className={`flex flex-col max-w-[1095px] ${id==='los'?" mx-auto":"xl:ml-28"}`}  value={initialSelectedValue}>
+				<h2
+					className={`text-[#EDEDED] mb-[20px] md:mb-[40px] ${id === "los" ? "text-center" : ""} ${
+						styles.textShadow ? styles.textShadow : "[text-shadow:0px_0px_120px_theme(colors.accent.300/60%)]"
+					}`}
+				>
+					Frequently Asked Questions
+				</h2>
+				<Accordion className={`flex flex-col max-w-[1095px] ${id === "los" ? " mx-auto" : "xl:ml-28"}`} value={initialSelectedValue}>
 					<AccordianItem value="1" trigger="Can I add another player to my group?">
 						As long as you do not exceed the capacity limit listed on the website for the specific room you have booked you can! Call us in advance to
 						let us know, and we will add a player to your game so everyone can do their waivers before arriving. We can take care of payment when you

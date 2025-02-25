@@ -21,6 +21,7 @@ const locationsMap = {
 // Dynamic imports for events
 const eventsMap = {
 	"birthday-parties": EventPage,
+	"family-fun-activity": EventPage
 	// Add remaining 3 events here...
 };
 
@@ -58,7 +59,7 @@ export default function DynamicPage({ params }) {
 
 		const Component = gamesMap[secondParam] || locationsMap[secondParam] || eventsMap[secondParam];
 		return Component ? (
-			<Component />
+			<Component param={secondParam} />
 		) : (
 			<div className="h-[100vh] pt-5 pl-5">
 				<h1>

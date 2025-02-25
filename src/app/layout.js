@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "@/components/Navbar/NavBar";
 import { Providers } from "@/lib/Providers";
 import Footer from "@/components/Footer/Footer";
+import LocationFilter from "@/components/LocationFilter";
 
 const bandexFont = localFont({
 	src: "../../public/fonts/BANDEX.ttf", // Correct path
@@ -47,6 +48,7 @@ export default function RootLayout({ children }) {
 					<NavBar />
 					{children}
 					<Footer />
+					<LocationFilter />
 				</Providers>
 			</body>
 		</html>

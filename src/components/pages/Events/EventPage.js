@@ -9,23 +9,37 @@ import Gallery from "@/components/templet/thrillTheme/Gallery";
 import FrequentlyAsked from "@/components/templet/thrillTheme/FrequentlyAsked";
 import Testimonial from "../Dallas/Plano/Testimonial";
 
-function EventPage() {
+
+const PARAM_STYLES = {
+	'birthday-parties': {
+		bgColour:'bg-accent-900'
+	},
+	'family-fun-activity': {
+		bgColour:'bg-family-900'
+	},
+};
+
+
+function EventPage({param}) {
+
+	const styles = PARAM_STYLES[param] || {};
+
 	return (
-		<div className="bg-[#000A19] relative">
-			<Hero />
+		<div className={`${styles.bgColour} relative`}>
+			<Hero param={param} />
 			<UspSection />
-			<SingleLocationGameCard />
-			<AgeGroup />
-			<EventPricing />
+			<SingleLocationGameCard param={param} />
+			<AgeGroup param={param} />
+			<EventPricing param={param} />
 			<GiftCardSection />
 			<div className="mt-20">
-				<Testimonial />
+				<Testimonial param={param} />
 			</div>
 			<div className="mt-20">
 				<Gallery id="los" />
 			</div>
 			<div className="mt-10">
-				<FrequentlyAsked id="los" />
+				<FrequentlyAsked id="los" param={param} />
 			</div>
 		</div>
 	);

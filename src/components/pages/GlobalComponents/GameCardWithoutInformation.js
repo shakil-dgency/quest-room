@@ -36,10 +36,11 @@ function GameCardWithoutInformation({src,poster, index}) {
 		}
 	};
 	return (
-		<div className="group w-[407px] h-[688px] relative">
+		<div className="group max-w-[340px] lg:max-w-[407px] h-[576px] lg:h-[688px] relative z-10 flex-none">
 			<video
 				ref={(el) => (videoRefs.current[index] = el)}
 				poster={poster}
+				// autoPlay
 				loop
 				muted
 				playsInline

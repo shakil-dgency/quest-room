@@ -19,13 +19,12 @@ function Plano() {
 				buttonBottom="Hollywood, 5517 Santa Monica Blvd, Los Angeles"
 			/>
 			<SingleLocationGameCard />
-            <Testimonial />
-            <EventSection />
-            <GiftCardSection />
-            <TestimonialSection />
-            <Gallery id="los" />
-            <FrequentlyAsked id="los" />
-		
+			<Testimonial />
+			<EventSection />
+			<GiftCardSection />
+			<TestimonialSection />
+			<Gallery id="los" />
+			<FrequentlyAsked id="los" />
 		</div>
 	);
 }

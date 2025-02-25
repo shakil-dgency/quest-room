@@ -527,7 +527,7 @@ function NavBar() {
 												{item?.events.map((singleEvent, j) => {
 													return (
 														<div key={j}>
-															<p className="text-[14px] text-[#BFBFBF]">{singleEvent.name}</p>
+															<Link href={`/${item?.slug}/${singleEvent?.slug}`} className="text-[14px] text-[#BFBFBF]">{singleEvent.name}</Link>
 														</div>
 													);
 												})}
@@ -558,7 +558,7 @@ function NavBar() {
 												{item?.events.map((singleEvent, j) => {
 													return (
 														<div key={j}>
-															<p className="text-[14px] text-[#BFBFBF]">{singleEvent.name}</p>
+															<Link href={`/${item?.slug}/${singleEvent?.slug}`} className="text-[14px] text-[#BFBFBF]">{singleEvent.name}</Link>
 														</div>
 													);
 												})}

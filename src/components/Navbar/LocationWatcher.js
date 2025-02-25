@@ -46,6 +46,7 @@ export default function LocationWatcher() {
            return pathname.includes(ele.slug)
             
         })
+		
 
         if(locationName.length === 0 ){
             // console.log(locationName);
@@ -54,7 +55,7 @@ export default function LocationWatcher() {
             return
         }
 
-        
+        // if url is like /los-angeles/hollywood
         if(locationName.length > 1){
             let secondValue = pathname.split('/').filter(Boolean)[1]
 

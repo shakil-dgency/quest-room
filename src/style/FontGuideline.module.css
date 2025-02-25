@@ -3,7 +3,7 @@ h1 {
 	font-size: 90px;
 	line-height: 90px;
 	font-weight: 400;
-	text-shadow: 0px 0px 80px rgba(0, 133, 255, 0.40);
+	/* text-shadow: 0px 0px 80px rgba(0, 133, 255, 0.40); */
 }
 
 h2{
@@ -11,7 +11,7 @@ h2{
 	font-size: 68px;
 	line-height: 68px;
 	font-weight: 400;
-	text-shadow: 0px 0px 80px rgba(0, 133, 255, 0.40);
+	/* text-shadow: 0px 0px 80px rgba(0, 133, 255, 0.40); */
 }
 
 .subtitle_XL{
