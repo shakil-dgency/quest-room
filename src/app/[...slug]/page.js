@@ -21,7 +21,11 @@ const locationsMap = {
 // Dynamic imports for events
 const eventsMap = {
 	"birthday-parties": EventPage,
-	"family-fun-activity": EventPage
+	"family-fun-activity": EventPage,
+	"team-building": EventPage,
+	"corporate-events": EventPage,
+	"bachelor-or-bachelorette-party": EventPage,
+	"field-trip-or-school-events": EventPage,
 	// Add remaining 3 events here...
 };
 

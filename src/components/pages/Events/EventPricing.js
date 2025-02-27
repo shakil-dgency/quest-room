@@ -45,6 +45,38 @@ const PARAM_STYLES = {
 		dropDownColor: "bg-family-600",
 		iconColor: "fill-family-300",
 	},
+	"team-building": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.team.300/60%)]",
+		bgGradient: "bg-[radial-gradient(89.3%_50%_at_50%_52%,_theme(colors.team.700)_0%,_theme(colors.team.900)_100%)]",
+		cardBackground: "bg-team-700",
+		cardBorder: "border-team-500",
+		dropDownColor: "bg-team-600",
+		iconColor: "fill-team-300",
+	},
+	"corporate-events": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.corporate.300/60%)]",
+		bgGradient: "bg-[radial-gradient(89.3%_50%_at_50%_52%,_theme(colors.corporate.700)_0%,_theme(colors.corporate.900)_100%)]",
+		cardBackground: "bg-corporate-700",
+		cardBorder: "border-corporate-500",
+		dropDownColor: "bg-corporate-600",
+		iconColor: "fill-corporate-300",
+	},
+	"bachelor-or-bachelorette-party": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.bachelor.300/60%)]",
+		bgGradient: "bg-[radial-gradient(89.3%_50%_at_50%_52%,_theme(colors.bachelor.700)_0%,_theme(colors.bachelor.900)_100%)]",
+		cardBackground: "bg-bachelor-700",
+		cardBorder: "border-bachelor-500",
+		dropDownColor: "bg-bachelor-600",
+		iconColor: "fill-bachelor-300",
+	},
+	"field-trip-or-school-events": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.school.300/60%)]",
+		bgGradient: "bg-[radial-gradient(89.3%_50%_at_50%_52%,_theme(colors.school.700)_0%,_theme(colors.school.900)_100%)]",
+		cardBackground: "bg-school-700",
+		cardBorder: "border-school-500",
+		dropDownColor: "bg-school-600",
+		iconColor: "fill-school-300",
+	},
 };
 
 const Card = ({ data, setPricingState, styles }) => {

@@ -17,6 +17,18 @@ const PARAM_STYLES = {
 	'family-fun-activity': {
 		bgColour:'bg-family-900'
 	},
+	'team-building': {
+		bgColour:'bg-team-900'
+	},
+	'corporate-events': {
+		bgColour:'bg-corporate-900'
+	},
+	'bachelor-or-bachelorette-party': {
+		bgColour:'bg-bachelor-900'
+	},
+	'field-trip-or-school-events': {
+		bgColour:'bg-school-900'
+	},
 };
 
 
@@ -25,7 +37,7 @@ function EventPage({param}) {
 	const styles = PARAM_STYLES[param] || {};
 
 	return (
-		<div className={`${styles.bgColour} relative`}>
+		<div className={`${styles.bgColour? styles.bgColour : "bg-accent-900" } relative`}>
 			<Hero param={param} />
 			<UspSection />
 			<SingleLocationGameCard param={param} />

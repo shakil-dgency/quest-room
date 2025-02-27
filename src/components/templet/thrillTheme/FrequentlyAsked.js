@@ -10,6 +10,18 @@ const PARAM_STYLES = {
 	"family-fun-activity": {
 		textShadow: "[text-shadow:0px_0px_120px_theme(colors.family.300/60%)]",
 	},
+	"team-building": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.team.300/60%)]",
+	},
+	"corporate-events": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.corporate.300/60%)]",
+	},
+	"bachelor-or-bachelorette-party": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.bachelor.300/60%)]",
+	},
+	"field-trip-or-school-events": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.school.300/60%)]",
+	},
 };
 
 function FrequentlyAsked({ id, param }) {

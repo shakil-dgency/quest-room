@@ -83,6 +83,24 @@ const PARAM_STYLES = {
 		categoryBackground: "bg-family-800",
 		iconColor: "fill-family-300",
 	},
+	"team-building": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.team.300/60%)]",
+		borderColor: "border-team-300",
+		categoryBackground: "bg-team-800",
+		iconColor: "fill-team-300",
+	},
+	"bachelor-or-bachelorette-party": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.bachelor.300/60%)]",
+		borderColor: "border-bachelor-300",
+		categoryBackground: "bg-bachelor-800",
+		iconColor: "fill-bachelor-300",
+	},
+	"field-trip-or-school-events": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.school.300/60%)]",
+		borderColor: "border-school-300",
+		categoryBackground: "bg-school-800",
+		iconColor: "fill-school-300",
+	},
 };
 
 function SingleLocationGameCard({ param }) {

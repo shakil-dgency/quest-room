@@ -23,6 +23,22 @@ const PARAM_STYLES = {
 		textShadow: "[text-shadow:0px_0px_120px_theme(colors.family.300/60%)]",
 		bgColour:'bg-family-900'
 	},
+	"team-building": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.team.300/60%)]",
+		bgColour:'bg-team-900'
+	},
+	"corporate-events": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.corporate.300/60%)]",
+		bgColour:'bg-corporate-900'
+	},
+	"bachelor-or-bachelorette-party": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.bachelor.300/60%)]",
+		bgColour:'bg-bachelor-900'
+	},
+	"field-trip-or-school-events": {
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.school.300/60%)]",
+		bgColour:'bg-school-900'
+	},
 };
 
 function Testimonial({ param }) {

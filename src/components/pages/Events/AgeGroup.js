@@ -12,6 +12,26 @@ const PARAM_STYLES = {
 		bgBottom: "fill-family-600",
 		textShadow: "[text-shadow:0px_0px_120px_theme(colors.family.300/60%)]",
 	},
+	"team-building": {
+		bgTop: "fill-team-800",
+		bgBottom: "fill-team-600",
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.team.300/60%)]",
+	},
+	"corporate-events": {
+		bgTop: "fill-corporate-800",
+		bgBottom: "fill-corporate-600",
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.corporate.300/60%)]",
+	},
+	"bachelor-or-bachelorette-party": {
+		bgTop: "fill-bachelor-800",
+		bgBottom: "fill-bachelor-600",
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.bachelor.300/60%)]",
+	},
+	"field-trip-or-school-events": {
+		bgTop: "fill-school-800",
+		bgBottom: "fill-school-600",
+		textShadow: "[text-shadow:0px_0px_120px_theme(colors.school.300/60%)]",
+	},
 };
 
 function AgeGroup({ param }) {
